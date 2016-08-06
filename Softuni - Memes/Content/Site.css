@@ -26,4 +26,18 @@ textarea {
 
 #softuni-memes {
     color:#00bfff;
+    background-image: url("/logo.png");
+    width: 200px;
+    height: 45px;
 }
+
+.meme-button {
+    
+    margin-top: -65px;
+    margin-left: 20px;
+    background-image: url("/create-meme-button.png");
+    height: 50px;
+    width: 200px;
+
+}
+
