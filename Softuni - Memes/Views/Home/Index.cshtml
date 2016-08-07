@@ -2,12 +2,25 @@
     ViewBag.Title = "Home Page";
 }
 
+
 <link href="~/Content/Site.css" rel="stylesheet" />
 
-<center>
-    <img src="/homelogo.png">
-</center>
+<video playsinline autoplay muted loop id="bgvid">
+    
+    <source src="/video.mp4" type="video/mp4">
+</video>
 
-<center>
-    <input type="button" class="meme-button" />
-</center>
+    <div id="headhomeview">
+        <center>
+            <img src="/homelogo.png" class="homelogo-view">
+            <br />
+            <input type="button" class="meme-button" />
+        </center>
+    </div>
+
+    <div id="bodyhomeview">
+
+        <img src="/wizzard-left.png" class="wizzard-view-left" />
+        <img src="/wizzard-right.png" class="wizzard-view-right" />
+    </div>
+

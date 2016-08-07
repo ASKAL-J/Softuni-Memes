@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -31,23 +32,95 @@ textarea {
     height: 45px;
 }
 
+#headhomeview {
+
+   margin-top: 50px;
+   display: flex;
+   align-content: center;
+   justify-content: center;
+   
+}
+
+#bodyhomeview {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
 .meme-button {
-    margin-top: -65px;
-    margin-left: 20px;
-    background-image: url("/create-meme-button.png");
-    height: 50px;
+
+    border: 0px;
+    border-radius: 10px;
     width: 200px;
+    height: 50px;
+    margin-top: -25px;
+    background: url('/create-meme-button.png') repeat-y;
+    
+    
+}
+
+.meme-button:hover {
+
+    border: 0px;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    margin-top: -25px;
+    background: url('/create-meme-button-hover.png') repeat-y;
+    
+}
+
+
+
+.wizzard-view-left {
+
+    width: 500px;
+    height: 360px;
+   
+}
+
+.wizzard-view-right {
+
+    width: 500px;
+    height: 360px; 
+}
+
+.homelogo-view {
+
+    margin-top: -30px;
+    width: 200px;
+    height: 200px;
 }
 
 #top-bar {
     background: #224364;
 }
 
-#footer-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1150px; 
-    height: 10px; 
-    margin-bottom: 10px;
+
+footer {
+    
+    position: absolute;
+    height: auto;
+    width: 100%;
+    left: 0px;
+    background: #224364;
+    color: #fff;
+    padding: 5px;
+    
+}
+
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
 }
