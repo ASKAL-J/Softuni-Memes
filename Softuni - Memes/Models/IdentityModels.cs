@@ -29,5 +29,7 @@ namespace Softuni___Memes.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Softuni___Memes.Models.ImageModel> ImageModels { get; set; }
     }
 }
