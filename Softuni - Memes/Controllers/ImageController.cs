@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using Softuni___Memes.Models;
 
 namespace Softuni___Memes.Controllers
@@ -59,6 +60,7 @@ namespace Softuni___Memes.Controllers
             {
                 ImageModel imageModel = new ImageModel();
                 imageModel.Image = Convert.FromBase64String(image);
+                imageModel.AuthorId = User.Identity.GetUserId();
                 db.ImageModels.Add(imageModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");

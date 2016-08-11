@@ -16,10 +16,6 @@ namespace Softuni___Memes.Models
         [Column("image", TypeName = "image")]
         public byte[] Image { get; set; }
 
-        public ImageModel()
-        {
-
-        }
-
+        public string AuthorId { get; set; }
     }
 }
