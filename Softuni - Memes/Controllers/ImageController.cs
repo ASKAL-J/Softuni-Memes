@@ -53,13 +53,24 @@ namespace Softuni___Memes.Controllers
         // GET: Image/Create
         public ActionResult Create()
         {
+            var image = Request.Params["base64"];
+
+            if (image != null)
+            {
+                ImageModel imageModel = new ImageModel();
+                imageModel.Image = Convert.FromBase64String(image);
+                db.ImageModels.Add(imageModel);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
             return View();
         }
 
         // POST: Image/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+      /*  [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Image")] ImageModel imageModel)
         {
@@ -71,7 +82,7 @@ namespace Softuni___Memes.Controllers
             }
 
             return View(imageModel);
-        }
+        }*/
 
         // GET: Image/Delete/5
         public ActionResult Delete(int? id)
