@@ -30,33 +30,18 @@
     <div class="container body-content">
         @RenderBody()
         
+      
+       <!--
         <footer>
-            <ul class="nav navbar-nav" >
-                <li><h2>Memes</h2></li>
-                <br />
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <br/>
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-            </ul>
+            <div id="footer">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>        
+        </footer>            
+      -->
 
-            <ul class="nav navbar-nav">
-                <li><h2>Memes </h2></li>
-                <br />
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <br />
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-            </ul>
-
-            <ul class="nav navbar-nav">
-                <li><h2>Memes </h2></li>
-                <br />
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <br />
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-            </ul>
-            
-            
-        </footer>
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

@@ -5,22 +5,25 @@
 
 <link href="~/Content/Site.css" rel="stylesheet" />
 
-<video playsinline autoplay muted loop id="bgvid">
-    
-    <source src="/video.mp4" type="video/mp4">
-</video>
 
+<div id="backgroundhome">
     <div id="headhomeview">
         <center>
-            <img src="/homelogo.png" class="homelogo-view">
+            <img src="/Images/homelogo.png" class="homelogo-view">
             <br />
-            <input type="button" class="meme-button", onclick="location.href='@Url.Action("Create", "Image")'" />
+            <input type="button" class="meme-button" , onclick="location.href='@Url.Action("Create", "Image")'" />
         </center>
     </div>
 
+     
     <div id="bodyhomeview">
-
-        <img src="/wizzard-left.png" class="wizzard-view-left" />
-        <img src="/wizzard-right.png" class="wizzard-view-right" />
+        <img src="/Images/wizzard-left.png" class="wizzard-view-left" />
+        <img src="/Images/wizzard-right.png" class="wizzard-view-right" />
     </div>
+
+    <div id="reglogview">
+        <a href="/Account/Register"><img src="/Images/reg.png" id="reglogbutton"/></a>
+        <a href="/Account/Login"><img src="/Images/login.png" id="reglogbutton" /></a>
+    </div>
+</div>
 

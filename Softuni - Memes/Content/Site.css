@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-
+    height: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -27,9 +27,24 @@ textarea {
 
 #softuni-memes {
     color: #00bfff;
-    background-image: url("/logo.png");
+    background-image: url("/Images/logo.png");
     width: 200px;
     height: 45px;
+}
+
+#backgroundhome {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url("/Images/softuni.png");
+    background-size: cover; 
 }
 
 #headhomeview {
@@ -39,6 +54,7 @@ textarea {
    align-content: center;
    justify-content: center;
    
+   
 }
 
 #bodyhomeview {
@@ -46,7 +62,8 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
- 
+    margin-top: -5px;
+
 }
 
 .meme-button {
@@ -56,19 +73,18 @@ textarea {
     width: 200px;
     height: 50px;
     margin-top: -25px;
-    background: url('/create-meme-button.png') repeat-y;
+    background: url('/Images/create-meme-button.png') repeat-y;
     
     
 }
 
 .meme-button:hover {
 
-    border: 0px;
     border-radius: 10px;
     width: 200px;
     height: 50px;
     margin-top: -25px;
-    background: url('/create-meme-button-hover.png') repeat-y;
+    background: url('/Images/create-meme-button-hover.png') repeat-y;
     
 }
 
@@ -90,37 +106,50 @@ textarea {
 .homelogo-view {
 
     margin-top: -30px;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 }
 
 #top-bar {
     background: #224364;
 }
 
+/*
+#footer {
 
-footer {
+     position: absolute;
+     z-index: 10;
+     width: 100%;
+     margin: auto;
+     bottom: 0px;
+     left: 0px;
+     height: 150px;    
+     background: #224364;
+}
+*/
+
+#registerLink {
     
-    position: absolute;
-    height: auto;
-    width: 100%;
-    left: 0px;
-    background: #224364;
-    color: #fff;
-    padding: 5px;
-    
+    color: white;
+    background: red;
 }
 
+#loginLink {
 
-video#bgvid { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover;
+    background: green;
+    color: white;
 }
+
+#reglogview {
+
+    text-align: center;
+    margin-top: -4em;
+}
+
+#reglogbutton {
+
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+}
+ 
