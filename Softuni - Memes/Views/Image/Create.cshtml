@@ -1,40 +1,38 @@
 ﻿@model Softuni___Memes.Models.ImageModel
-
 @{
     ViewBag.Title = "Create";
 }
-
 <h2>Create new Image</h2>
-
 
 @using (Html.BeginForm())
 {
-  @Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
 
-        <div class="form-horizontal">
+    <div class="form-horizontal">
         <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.Label("Convert from Base64", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Image, new { htmlAttributes = new { @class = "form-control" } , rows=25, cols=50})
-                @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
-
-            </div>
+        <div class="col-md-5">
+            <canvas width="600" height="400" id="canvas"></canvas><br>
+            <a href="#" id="download">Download as image</a>
+            <aside>
+                Top text:
+                <input class="tb" id="text-box1" type="text"><input class="tb" id="size-font1" type="number" value="60" min="40" max="80"><br>
+                Bottom text:
+                <input class="tb" id="text-box2" type="text"><input class="tb" id="size-font2" type="number" value="60" min="40" max="80"><br>
+                Template:
+                <input id="img" type="file" accept="image/*">
+            </aside>
         </div>
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="button" value="Create" class="btn btn-default" id="create-button" />
             </div>
         </div>
     </div>
 }
-
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/memeScript.js")
 }
