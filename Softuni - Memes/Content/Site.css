@@ -91,16 +91,15 @@ textarea {
 
 
 .wizzard-view-left {
+    width: 40em;
+    height: 25em;
 
-    width: 500px;
-    height: 360px;
-   
 }
 
 .wizzard-view-right {
 
-    width: 500px;
-    height: 360px; 
+    width: 40em;
+    height: 25em; 
 }
 
 .homelogo-view {
