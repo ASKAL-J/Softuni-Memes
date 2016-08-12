@@ -4,10 +4,9 @@ window.onload = (function () {
     ctx.fillStyle = '#fff';
     ctx.font = 60 + 'px impact';
     ctx.textAlign = "center";
-    ctx.shadowBlur = 20;
+    ctx.shadowBlur = 25;
     ctx.shadowColor = "black"
-    ctx.fillText("Upload your template !", canvas.width / 2, canvas.height / 2);
-    ctx.strokeText("Upload your template !", canvas.width / 2, canvas.height / 2);
+    wrapTopText(ctx, "Upload image or choose from given below", canvas.width / 2, canvas.height/3, canvas.width - 60, 50);
 })
 // Draw in canvas tag
 lines = 0;
@@ -54,8 +53,33 @@ function readURL(input) {
 }
 $("#img").change(function () {
     readURL(this);
+    $('#text-box1').val('');
+    $('#text-box2').val('');
 });
+function reply_click(clicked_id) {
+    $('#text-box1').val('');
+    $('#text-box2').val('');
+    name = clicked_id;
+    image = new Image();
+    srcimg = '../Images/' + name + '.jpg';
+    image.src = srcimg;
+    draw($('#text-box1').val(), $('#text-box2').val(), $('#size-font1').val(), $('#size-font2').val(), image);
+    $('#img').val(undefined);
+}
 
+function toDataUrl(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.responseType = 'blob';
+    xhr.onload = function () {
+        var reader = new FileReader();
+        reader.onloadend = function () {
+            callback(reader.result);
+        }
+        reader.readAsDataURL(xhr.response);
+    };
+    xhr.open('GET', url);
+    xhr.send();
+}
 // Positioning of top text 
 function wrapTopText(context, text, x, y, maxWidth, lineHeight) {
     var words = text.split(' '),
