@@ -5458,12 +5458,12 @@ a.list-group-item:focus {
 }
 
 .panel-primary {
-  border-color: #428bca;
+  border-color: rgb(35,68,100);
 }
 
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #428bca;
+  background-color: rgb(35,68,100);
   border-color: #428bca;
 }
 

@@ -23,8 +23,6 @@ function draw(text1, text2, size1, size2, img) {
         ctx.font = size2 + 'px impact';
         ctx.font = 'impact';
         wrapBottomText(ctx, text2, canvas.width / 2, canvas.height - lines * (size2 - 10) - 10, canvas.width - 60, size2 - 10);
-    } else {
-
     }
 }
 
@@ -137,6 +135,15 @@ function wrapBottomText(context, text, x, y, maxWidth, lineHeight) {
     context.strokeText(line, x, y);
 }
 
+// Download link
+function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+}
+document.getElementById('download').addEventListener('click', function () {
+    downloadCanvas(this, 'canvas', 'test.png');
+}, false);
+
 // Save memes in db
 document.getElementById('create-button').addEventListener('click', function () {
     let baseStr = document.getElementById('canvas').toDataURL();
@@ -151,11 +158,3 @@ document.getElementById('create-button').addEventListener('click', function () {
     });
 })
 
-// Download link
-function downloadCanvas(link, canvasId, filename) {
-    link.href = document.getElementById(canvasId).toDataURL();
-    link.download = filename;
-}
-document.getElementById('download').addEventListener('click', function () {
-    downloadCanvas(this, 'canvas', 'test.png');
-}, false);
