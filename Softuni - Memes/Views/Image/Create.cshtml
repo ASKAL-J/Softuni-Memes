@@ -10,17 +10,17 @@
 
     <div class="form-horizontal">
         <hr />
-        <div class="col-md-5">
-            <canvas width="600" height="400" id="canvas"></canvas><br>
-            <a href="#" id="download">Download as image</a>
-            <aside>
+        <div class="col-md-offset-2">
+            <canvas width="600" height="400" id="canvas" style="border: 1px solid black"></canvas><br>
+            <aside id="aside" style="align-content: center" hidden >
+                <a href="#" id="download">Download as image</a><br/>
                 Top text:
-                <input class="tb" id="text-box1" type="text"><input class="tb" id="size-font1" type="number" value="60" min="40" max="80"><br>
+                <input class="tb" id="text-box1" type="text" ><input class="tb" id="size-font1" type="number" value="60" min="40" max="80" ><br>
                 Bottom text:
-                <input class="tb" id="text-box2" type="text"><input class="tb" id="size-font2" type="number" value="60" min="40" max="80"><br>
-                Template:
-                <input id="img" type="file" accept="image/*">
+                <input class="tb" id="text-box2" type="text" ><input class="tb" id="size-font2" type="number" value="60" min="40" max="80" ><br>
+                
             </aside>
+            Template: <input id="img" type="file" accept="image/*">
         </div>
         <div class="form-group">
             @if (Request.IsAuthenticated)

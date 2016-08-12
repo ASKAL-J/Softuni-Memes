@@ -1,12 +1,21 @@
 var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d');
+window.onload = (function () {
+    ctx.fillStyle = '#fff';
+    ctx.font = 60 + 'px impact';
+    ctx.textAlign = "center";
+    ctx.shadowBlur = 20;
+    ctx.shadowColor = "black"
+    ctx.fillText("Upload your template !", canvas.width / 2, canvas.height / 2);
+    ctx.strokeText("Upload your template !", canvas.width / 2, canvas.height / 2);
+})
 // Draw in canvas tag
 lines = 0;
 function draw(text1, text2, size1, size2, img) {
     /* draw something */
-    if (img == undefined) {
-        // TODO: What happens when there is no img uploaded !
-    } else {
+    if (img != undefined) {
+        $('#aside').removeAttr('hidden');
+        ctx.shadowBlur = 10;
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         ctx.fillStyle = '#fff';
         ctx.font = size1 + 'px impact';
@@ -14,6 +23,8 @@ function draw(text1, text2, size1, size2, img) {
         ctx.font = size2 + 'px impact';
         ctx.font = 'impact';
         wrapBottomText(ctx, text2, canvas.width / 2, canvas.height - lines * (size2 - 10) - 10, canvas.width - 60, size2 - 10);
+    } else {
+
     }
 }
 
