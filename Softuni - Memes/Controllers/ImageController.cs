@@ -60,7 +60,6 @@ namespace Softuni___Memes.Controllers
             {
                 ImageModel imageModel = new ImageModel();
                 imageModel.Image = Convert.FromBase64String(image);
-                imageModel.AuthorId = User.Identity.GetUserId();
                 db.ImageModels.Add(imageModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");

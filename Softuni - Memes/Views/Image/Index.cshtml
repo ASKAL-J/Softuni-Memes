@@ -28,8 +28,8 @@
 
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new {id = item.Id})<br>
-                @if (item.AuthorId.Equals(User.Identity.GetUserId()))
+                @Html.ActionLink("Details", "Details", new { id = item.Id })<br>
+                @if (item.AuthorId.Equals(this.User.Identity.GetUserId()))
                 {
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })<br>
                 }
