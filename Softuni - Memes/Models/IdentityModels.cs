@@ -31,5 +31,7 @@ namespace Softuni___Memes.Models
         }
 
         public System.Data.Entity.DbSet<Softuni___Memes.Models.ImageModel> ImageModels { get; set; }
+
+        public System.Data.Entity.DbSet<Softuni___Memes.Models.Comment> Comments { get; set; }
     }
 }

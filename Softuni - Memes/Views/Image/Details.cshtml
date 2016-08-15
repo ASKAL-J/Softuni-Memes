@@ -18,6 +18,21 @@
             <img src="@Url.Action("GetImage","Image",new { id = Model.Id})"/>
         </dd>
 
+        <dt>
+            @Html.DisplayName("Comments")
+        </dt>
+
+        @foreach (var item in ViewBag.Comments)
+        {
+            <dd>
+                <p>@item.Body</p>
+            </dd>
+        }
+        
+
+        <dd>
+            <button class="btn btn-default" onclick="window.location='@Url.Action("Create","Comments",new { id = Model.Id})'">Add Comment</button>
+        </dd>
     </dl>
 </div>
 <p>

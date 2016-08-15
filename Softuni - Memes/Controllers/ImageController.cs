@@ -44,6 +44,10 @@ namespace Softuni___Memes.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             ImageModel imageModel = db.ImageModels.Find(id);
+
+            var comments = db.Comments.ToList();
+            ViewBag.Comments = comments.Where(i => i.ImageId == id);
+
             if (imageModel == null)
             {
                 return HttpNotFound();
