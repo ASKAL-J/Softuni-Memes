@@ -7,6 +7,7 @@
         background: url('../Images/softuni.png') no-repeat center center fixed;
         background-size: cover;
     }
+
     #chose-file-style {
         background-color: rgb(255,160,0);
         font-size: 16px;
@@ -40,7 +41,7 @@
         }
 
     .panel-body {
-        height: auto;
+        height: 300px;
     }
 
     .choose-button {
@@ -95,7 +96,7 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="panel panel-primary">
-                                <div class="panel-heading" style="background-color: rgb(35,68,100)">Nakov v 4ti klas</div>
+                                <div class="panel-heading" style="background-color: rgb(35,68,100)">Soft Uni Memes</div>
                                 <div class="panel-body"><img src="~/Images/1.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
                                 <div class="panel-footer"><button type="button" id="1" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
                             </div>
@@ -143,9 +144,6 @@
         </div>
     </div>
 }
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/Scripts/memeScript.js")

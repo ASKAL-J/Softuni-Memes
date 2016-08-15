@@ -6,7 +6,7 @@ window.onload = (function () {
     ctx.textAlign = "center";
     ctx.shadowBlur = 25;
     ctx.shadowColor = "black"
-    wrapTopText(ctx, "Upload image or choose from given below", canvas.width / 2, canvas.height/3, canvas.width - 60, 50);
+    wrapTopText(ctx, "Upload image or choose from given below", canvas.width / 2, canvas.height / 3, canvas.width - 60, 50);
 })
 // Draw in canvas tag
 lines = 0;
@@ -159,6 +159,12 @@ function wrapBottomText(context, text, x, y, maxWidth, lineHeight) {
     context.strokeText(line, x, y);
 }
 
+$('.choose-button').click(function (
+
+    ) {
+    $('html, body').animate({ scrollTop: 0 }, 800);
+    return false;
+});
 // Download link
 function downloadCanvas(link, canvasId, filename) {
     link.href = document.getElementById(canvasId).toDataURL();
