@@ -183,7 +183,7 @@ textarea {
 #registerTitle {
    margin-top: 80px;
    text-align:center;
-   font-family: Oswald;
+   font-family: Lato;
 }
 
 #bodyRegister{
@@ -202,7 +202,7 @@ textarea {
 #createAccount {
     margin-top: 20px;
     text-align: center;
-    font-family: Oswald;
+    font-family: Lato;
 }
 
 #headerButton{
@@ -215,8 +215,6 @@ textarea {
   top: 15px;
 }
 
-
-
 #button{
     border-radius: 5px;
     background: #D18003;
@@ -224,6 +222,9 @@ textarea {
     margin-top: 5px;
     margin-bottom: 5px;
     font: 20px Lato;
+    margin-right: 0px;
+    margin-left: 0px;
+
 }
 #button:hover{
     border-color: #D18003;
@@ -251,19 +252,35 @@ textarea {
 }
 
 #registerNewUserLink{
-    font-family: Oswald;
+    font-family: Lato;
     text-align: center;
-    font: 20px Oswald;
+    font: 20px Lato;
 }
 
 #registerNewUserLink:hover {
-    font-family: Oswald;
+    font-family: Lato;
     color: #224364;
     text-decoration: underline;
     text-align: center;
-    font: 20px Oswald;
+    font: 20px Lato;
 }
 
 #rememberMeCheckbox{
-    font: 15px Oswald;
+    font: 15px Lato;
+}
+#img{
+    text-align: center;
+}
+
+#buttons{
+    float:right;
+}
+#menuLogout{
+    display:inline;
+}
+#greeting{
+    font: 20px Lato;
+}
+#checkbox{
+    font: 17px Lato;
 }

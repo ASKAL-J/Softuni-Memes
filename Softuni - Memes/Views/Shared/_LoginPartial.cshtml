@@ -6,17 +6,24 @@
     {
     @Html.AntiForgeryToken()
     <ul class="nav navbar-nav navbar-right">
-        <li>
+        <li id="greeting">
            @Html.ActionLink("Hello, " + @Html.Raw(Html.Action("GetCurrentUserName", "Account")) + "!", "Index", "Manage", routeValues: new { area = "" }, htmlAttributes: new { title = "Manage" })
         </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+        <li>
+        <a id="menuLogout" href="javascript:document.getElementById('logoutForm').submit()">
+            <button type='button' class='btn btn-primary' id="button">Log off</button>
+        </a>
+        </li>
     </ul>
     }
 }
 else
 {
-    <button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Login", "Account")'">Login</button>
-    <button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Register", "Account")'">Sign up</button>
+    <li id="buttons">
+        <button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Login", "Account")'">Login</button>
+        <button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Register", "Account")'">Sign up</button>
+    </li>
+    
     /*<ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink(" ", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
         <li>@Html.ActionLink(" ", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>      
