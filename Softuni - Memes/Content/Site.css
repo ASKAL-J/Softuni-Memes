@@ -129,26 +129,42 @@ textarea {
 
 #registerLink {
     
-    color: white;
-    background: red;
+    background: url("/Images/reg.png") no-repeat;
+    height: auto;
+    width: auto;
+    min-height: 50px;
+    min-width: 100px;
+}
+
+#registerLink:hover {
+    
+    background: url("/Images/reg-hover.png") no-repeat;
+    height: auto;
+    width: auto;
+    min-height: 50px;
+    min-width: 100px;
 }
 
 #loginLink {
 
-    background: green;
-    color: white;
+    background: url("/Images/login.png") no-repeat;
+    height: auto;
+    width: auto;
+    min-height: 50px;
+    min-width: 100px;
 }
 
-#reglogview {
+/*
+    #reglogview {
 
     text-align: center;
     margin-top: -4em;
 }
 
-#reglogbutton {
+    #reglogbutton {
 
     width: 200px;
     height: 50px;
     border-radius: 10px;
 }
- 
+   */
