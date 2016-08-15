@@ -9,36 +9,35 @@
     {
         @Html.AntiForgeryToken()
         <h4 id="createAccount">Create a new account.</h4>
-        <hr />
         @Html.ValidationSummary("", new { @class = "text-danger" })
         <div class="form-group" id="formGroup">
             <div class="col-md-10">
-                <div>@Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @placeholder = "First name" })</div>
+                <div>@Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @placeholder = "First name*" })</div>
             </div>
         </div>
         <div class="form-group" id="formGroup">
             <div class="col-md-10">
-                <div>@Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @placeholder = "Last name" })</div>
+                <div>@Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @placeholder = "Last name*" })</div>
             </div>
         </div>
         <div class="form-group" id="formGroup">
             <div class="col-md-10">
-                <div>@Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })</div>
+                <div>@Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email*" })</div>
             </div>
         </div>
         <div class="form-group" id="formGroup">
             <div class="col-md-10">
-                <div>@Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })</div>
+                <div>@Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password*" })</div>
             </div>
         </div>
         <div class="form-group" id="formGroup">
             <div class="col-md-10">
-                <div>@Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirm password" })</div>
+                <div>@Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirm password*" })</div>
             </div>
         </div>
         <div class="form-group" id="formButton">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" class="btn btn-default" value="Register" />
+                <input type="submit" class="btn btn-default" value="Register" id="button" />
             </div>
         </div>
     }
