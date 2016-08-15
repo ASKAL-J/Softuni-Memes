@@ -1,4 +1,7 @@
-﻿body {
+﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
     height: 100%;
@@ -128,7 +131,6 @@ textarea {
 */
 
 #registerLink {
-    
     background: url("/Images/reg.png") no-repeat;
     height: auto;
     width: auto;
@@ -137,7 +139,6 @@ textarea {
 }
 
 #registerLink:hover {
-    
     background: url("/Images/reg-hover.png") no-repeat;
     height: auto;
     width: auto;
@@ -168,3 +169,66 @@ textarea {
     border-radius: 10px;
 }
    */
+
+#formGroup{
+    margin-left: 36%;
+    margin-right:36%;
+}
+
+#formButton{
+    margin-left: 39%;
+    margin-right:39%;
+}
+
+#registerTitle {
+   margin-top: 80px;
+   text-align:center;
+}
+
+#bodyRegister{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url("/Images/softuni.png");
+    background-size: cover; 
+}
+#createAccount {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#headerButton{
+    display:inline;
+    margin: 0 0 0 5px;
+}
+.btn-group{
+  bottom: 15px;
+  position: relative;
+  top: 15px;
+}
+
+
+
+#button{
+    border-radius: 5px;
+    background:#44d3b0;
+    font-family: Oswald;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font: 20px Lato;
+}
+#button:hover{
+    border-color: #44d3b0;
+    border-radius: 5px;
+    background: none;
+    font-family: Oswald;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font: 20px Lato;
+}

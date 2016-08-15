@@ -15,8 +15,10 @@
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right">
+    <button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Login", "Account")'">Login</button>
+    <button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Register", "Account")'">Sign up</button>
+    /*<ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink(" ", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
         <li>@Html.ActionLink(" ", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>      
-    </ul>
+    </ul>*/
 }
