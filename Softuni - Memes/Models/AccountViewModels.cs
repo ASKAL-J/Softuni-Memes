@@ -65,12 +65,10 @@ namespace Softuni___Memes.Models
     public class RegisterViewModel
     {
         [Required]
-        [EmailAddress]
         [Display(Name = "First name")]
         public string FirstName { get; set; }
 
         [Required]
-        [EmailAddress]
         [Display(Name = "Last name")]
         public string LastName { get; set; }
 

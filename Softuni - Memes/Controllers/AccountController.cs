@@ -151,7 +151,13 @@ namespace Softuni___Memes.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName                 
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -421,6 +427,13 @@ namespace Softuni___Memes.Controllers
             }
 
             base.Dispose(disposing);
+        }
+
+        public string GetCurrentUserName()
+        {
+            var user = UserManager.FindByEmail(User.Identity.GetUserName());
+
+            return user.FirstName;
         }
 
         #region Helpers
