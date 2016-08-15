@@ -11,7 +11,7 @@ namespace Softuni___Memes.Models
     {
         public Comment()
         {
-            this.UserId = HttpContext.Current.User.Identity.GetUserId();
+            this.UserName = HttpContext.Current.User.Identity.GetUserName();
             this.Date = DateTime.Now;
         }
 
@@ -24,6 +24,6 @@ namespace Softuni___Memes.Models
 
         public int ImageId { get; set; }
 
-        public string UserId { get; set; }
+        public string UserName { get; set; }
     }
 }

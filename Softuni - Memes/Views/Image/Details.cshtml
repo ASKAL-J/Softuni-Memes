@@ -1,4 +1,5 @@
-﻿@model Softuni___Memes.Models.ImageModel
+﻿@using Microsoft.AspNet.Identity
+@model Softuni___Memes.Models.ImageModel
 
 @{
     ViewBag.Title = "Details";
@@ -21,18 +22,27 @@
         <dt>
             @Html.DisplayName("Comments")
         </dt>
-
+        @if (ViewBag.Comments.Count == 0)
+        {
+            <dd>
+                No Comments
+            </dd>
+        }
         @foreach (var item in ViewBag.Comments)
         {
             <dd>
+                <p>Comment by <b>@item.UserName</b> On <em>@item.Date<em></p>
                 <p>@item.Body</p>
             </dd>
         }
         
-
-        <dd>
-            <button class="btn btn-default" onclick="window.location='@Url.Action("Create","Comments",new { id = Model.Id})'">Add Comment</button>
-        </dd>
+        @if (User.Identity.GetUserId() != null)
+        {
+            <dd>
+                <button class="btn btn-default" onclick="window.location='@Url.Action("Create","Comments",new { id = Model.Id})'">Add Comment</button>
+            </dd>
+        }
+        
     </dl>
 </div>
 <p>

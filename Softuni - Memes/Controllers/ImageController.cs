@@ -46,7 +46,8 @@ namespace Softuni___Memes.Controllers
             ImageModel imageModel = db.ImageModels.Find(id);
 
             var comments = db.Comments.ToList();
-            ViewBag.Comments = comments.Where(i => i.ImageId == id);
+
+            ViewBag.Comments = comments.Where(i => i.ImageId == id).ToList();
 
             if (imageModel == null)
             {
