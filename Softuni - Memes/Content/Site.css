@@ -183,6 +183,7 @@ textarea {
 #registerTitle {
    margin-top: 80px;
    text-align:center;
+   font-family: Oswald;
 }
 
 #bodyRegister{
@@ -195,12 +196,13 @@ textarea {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-    background: url("/Images/softuni.png");
+    background: url("/Images/softuni2background.jpg");
     background-size: cover; 
 }
 #createAccount {
     margin-top: 20px;
     text-align: center;
+    font-family: Oswald;
 }
 
 #headerButton{
@@ -217,18 +219,51 @@ textarea {
 
 #button{
     border-radius: 5px;
-    background:#44d3b0;
+    background: #D18003;
     font-family: Oswald;
     margin-top: 5px;
     margin-bottom: 5px;
     font: 20px Lato;
 }
 #button:hover{
-    border-color: #44d3b0;
+    border-color: #D18003;
+    border-width: 1px;
     border-radius: 5px;
     background: none;
     font-family: Oswald;
     margin-top: 5px;
     margin-bottom: 5px;
     font: 20px Lato;
+}
+
+#loginBody{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url("/Images/softuni2background.jpg");
+    background-size: cover; 
+}
+
+#registerNewUserLink{
+    font-family: Oswald;
+    text-align: center;
+    font: 20px Oswald;
+}
+
+#registerNewUserLink:hover {
+    font-family: Oswald;
+    color: #224364;
+    text-decoration: underline;
+    text-align: center;
+    font: 20px Oswald;
+}
+
+#rememberMeCheckbox{
+    font: 15px Oswald;
 }
