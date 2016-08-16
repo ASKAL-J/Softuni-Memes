@@ -2,23 +2,13 @@
 @model IEnumerable<Softuni___Memes.Models.ImageModel>
 
 @{
-    ViewBag.Title = "All Pictures";
+    ViewBag.Title = "All Memes";
 }
 
-<h2>@ViewBag.Title</h2>
+<center><h2>@ViewBag.Title</h2></center>
 
-<button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Create New", "Create")'">Create new</button>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Create", "Image")'">Create new</button>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Image)
-        </th>
-        <th></th>
-    </tr>
-
     @foreach (var item in Model)
     {
         <tr>
