@@ -9,7 +9,9 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
+<body style="margin:0;">
+<div id="loader"></div>
+<div id="myDiv" class="animate-bottom">
     <div class="navbar navbar-inverse navbar-fixed-top" id="top-bar">
         <div class="container">
             <div class="navbar-header">
@@ -19,7 +21,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink(" ", "Index", "Home",
-               new {area = ""}, new {@class = "navbar-brand", @id = "softuni-memes"})
+               new { area = "" }, new { @class = "navbar-brand", @id = "softuni-memes" })
                 <button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("index", "Image")'">View all memes</button>
             </div>
             <div class="navbar-collapse collapse">
@@ -29,22 +31,37 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        
-      
-       <!--
-        <footer>
-            <div id="footer">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>        
-        </footer>            
-      -->
 
+
+        <!--
+          <footer>
+              <div id="footer">
+                  <ul class="nav navbar-nav">
+                      <li>@Html.ActionLink("About", "About", "Home")</li>
+                      <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                  </ul>
+              </div>
+          </footer>
+        -->
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+</div>
+    <script>
+
+        $(document).ready(function () {
+            setTimeout(function(){
+                document.getElementById("loader").style.opacity = 0;
+                document.getElementById("myDiv").style.opacity = 1;
+
+                setTimeout(function(){
+                    document.getElementById("loader").style.display = 'none';
+                }, 1000);
+            }, 500);
+        });
+
+
+    </script>
 </body>
 </html>
