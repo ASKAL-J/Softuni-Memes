@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using Softuni___Memes.Extensions;
+using Softuni___Memes.Models;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using Softuni___Memes.Models;
 
 namespace Softuni___Memes.Controllers
 {
@@ -54,7 +51,8 @@ namespace Softuni___Memes.Controllers
             {
                 db.Comments.Add(comment);
                 db.SaveChanges();
-                return RedirectToAction("Details","Image", new { id = comment.ImageId });
+                this.AddNotification("Comment created successfully", NotificationType.SUCCESS);
+                return RedirectToAction("Details", "Image", new { id = comment.ImageId });
             }
 
             return View(comment);
@@ -86,6 +84,7 @@ namespace Softuni___Memes.Controllers
             {
                 db.Entry(comment).State = EntityState.Modified;
                 db.SaveChanges();
+                this.AddNotification("Comment successfully updated.", NotificationType.SUCCESS);
                 return RedirectToAction("Index");
             }
             return View(comment);
@@ -114,6 +113,7 @@ namespace Softuni___Memes.Controllers
             Comment comment = db.Comments.Find(id);
             db.Comments.Remove(comment);
             db.SaveChanges();
+            this.AddNotification("Comment successfully deleted.", NotificationType.INFO);
             return RedirectToAction("Index");
         }
 

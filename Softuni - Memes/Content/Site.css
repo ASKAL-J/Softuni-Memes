@@ -35,6 +35,10 @@ textarea {
     height: 45px;
 }
 
+.alert {
+    margin-top: 10px;
+}
+
 #backgroundhome {
     
     position: fixed;

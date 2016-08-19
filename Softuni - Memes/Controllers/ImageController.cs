@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Softuni___Memes.Extensions;
+using Softuni___Memes.Models;
+using System;
 using System.Data;
-using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Softuni___Memes.Models;
 
 namespace Softuni___Memes.Controllers
 {
@@ -33,7 +30,7 @@ namespace Softuni___Memes.Controllers
         {
             var image = db.ImageModels.Single(p => p.Id == id).Image;
             return File(
-         image, System.Net.Mime.MediaTypeNames.Application.Octet, id.ToString()+".png");
+         image, System.Net.Mime.MediaTypeNames.Application.Octet, id.ToString() + ".png");
         }
 
         // GET: Image/Details/5
@@ -76,19 +73,20 @@ namespace Softuni___Memes.Controllers
         // POST: Image/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-      /*  [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Image")] ImageModel imageModel)
-        {
-            if (ModelState.IsValid)
-            {
-                db.ImageModels.Add(imageModel);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        /*  [HttpPost]
+          [ValidateAntiForgeryToken]
+          public ActionResult Create([Bind(Include = "Id,Image")] ImageModel imageModel)
+          {
+              if (ModelState.IsValid)
+              {
+                  db.ImageModels.Add(imageModel);
+                  db.SaveChanges();
+                  this.AddNotification("Image created.", NotificationType.SUCCESS);
+                  return RedirectToAction("Index");
+              }
 
-            return View(imageModel);
-        }*/
+              return View(imageModel);
+          }*/
 
         // GET: Image/Delete/5
         public ActionResult Delete(int? id)
@@ -113,6 +111,7 @@ namespace Softuni___Memes.Controllers
             ImageModel imageModel = db.ImageModels.Find(id);
             db.ImageModels.Remove(imageModel);
             db.SaveChanges();
+            this.AddNotification("Image created.", NotificationType.SUCCESS);
             return RedirectToAction("Index");
         }
 
