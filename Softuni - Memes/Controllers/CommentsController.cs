@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Softuni___Memes.Controllers
 {
+    [ValidateInput(false)]
     public class CommentsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
