@@ -7,7 +7,6 @@
     <title>@ViewBag.Title - Softuni Memes</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body style="margin:0;">
 <div id="loader"></div>
@@ -48,6 +47,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    @RenderSection("styles", required: false)
 </div>
     <script>
 

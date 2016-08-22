@@ -14,9 +14,9 @@
         <tr>
             <td>
                 @*@Html.DisplayFor(modelItem => item.Image)*@
-
+                
                 <img src="@Url.Action("GetImage", "Image",new { id = item.Id})" />
-
+                
             </td>
             <td>
                 @Html.ActionLink("Details", "Details", new {id = item.Id})<br>
@@ -25,8 +25,21 @@
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })<br>
                 }
                 @Html.ActionLink("Download", "DownloadImage", new { id = item.Id })
+                <div style="position:absolute">
+                    <input id="rank-@item.Id" class="rating rating-loading" value="3" data-step="0.5" data-max="5" data-min="0" data-show-clear="false" data-size="sm"/>
+                    <input id="rate" class="btn btn-default" type="submit" value="Rate" />
+                 </div>
             </td>
         </tr>
     }
-
+    
 </table>
+@section Styles {
+    <link href="@Url.Content("~/Content/star-rating.css")" rel="stylesheet" type="text/css" />
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/star-rating.js")
+    @Scripts.Render("~/Scripts/rateIt.js")
+}
+
