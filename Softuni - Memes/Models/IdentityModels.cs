@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.ComponentModel.DataAnnotations;
+using Softuni___Memes.Migrations;
 
 namespace Softuni___Memes.Models
 {
@@ -30,6 +31,8 @@ namespace Softuni___Memes.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            var migration = new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>();
+            Database.SetInitializer(migration);
         }
 
         public static ApplicationDbContext Create()
@@ -40,5 +43,7 @@ namespace Softuni___Memes.Models
         public System.Data.Entity.DbSet<Softuni___Memes.Models.ImageModel> ImageModels { get; set; }
 
         public System.Data.Entity.DbSet<Softuni___Memes.Models.Comment> Comments { get; set; }
+
+        public System.Data.Entity.DbSet<Softuni___Memes.Models.Rating> Ratings { get; set; }
     }
 }

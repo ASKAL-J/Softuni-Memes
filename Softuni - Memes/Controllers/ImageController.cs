@@ -15,6 +15,17 @@ namespace Softuni___Memes.Controllers
         // GET: Image
         public ActionResult Index()
         {
+            var score = Request.Params["rate"];
+            var imageId = Request.Params["ImageId"];
+            if (score != null)
+            {
+                Rating rating = new Rating();
+                rating.Score = int.Parse(score);
+                rating.ImageId = int.Parse(imageId);
+                db.Ratings.Add(rating);
+                db.SaveChanges();
+            }
+
             return View(db.ImageModels.ToList());
         }
 
@@ -109,7 +120,9 @@ namespace Softuni___Memes.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             ImageModel imageModel = db.ImageModels.Find(id);
+            Rating rating = db.Ratings.Single(r =>r.ImageId == id);
             db.ImageModels.Remove(imageModel);
+            db.Ratings.Remove(rating);
             db.SaveChanges();
             this.AddNotification("Image created.", NotificationType.SUCCESS);
             return RedirectToAction("Index");
