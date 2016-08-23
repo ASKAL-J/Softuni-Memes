@@ -21,9 +21,9 @@
             <td>
                 @if (item.AuthorId.Equals(User.Identity.GetUserId()))
                 {
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })<br>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }) <br>
                 }
-                @Html.ActionLink("Download", "DownloadImage", new { id = item.Id })
+                @Html.ActionLink(" ", "DownloadImage" , new { id = item.Id }, new { @class = "navbar-brand", @id = "download"}) 
                 <div>Overall score: @item.OverallScore</div>
                 @if (Request.IsAuthenticated)
                 {
