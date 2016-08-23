@@ -20,15 +20,18 @@ namespace Softuni___Memes.Controllers
             if (score != null)
             {
                 Rating rating = new Rating();
-                rating.Score = int.Parse(score);
+                rating.Score = double.Parse(score);
                 rating.ImageId = int.Parse(imageId);
+
+                string userId = rating.UserId;
+                this.AddScoreToPicture(double.Parse(score), int.Parse(imageId), userId);
+
                 db.Ratings.Add(rating);
                 db.SaveChanges();
             }
 
-            return View(db.ImageModels.ToList());
+            return View(db.ImageModels.OrderByDescending(img => img.OverallScore).ToList());
         }
-
 
         public ActionResult GetImage(int id)
         {
@@ -74,7 +77,7 @@ namespace Softuni___Memes.Controllers
                 ImageModel imageModel = new ImageModel();
                 imageModel.Image = Convert.FromBase64String(image);
                 db.ImageModels.Add(imageModel);
-                db.SaveChanges();
+                db.SaveChanges();           
                 return RedirectToAction("Index");
             }
 
@@ -120,9 +123,9 @@ namespace Softuni___Memes.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             ImageModel imageModel = db.ImageModels.Find(id);
-            Rating rating = db.Ratings.Single(r =>r.ImageId == id);
+            var ratings = db.Ratings.Where(r =>r.ImageId == id);
             db.ImageModels.Remove(imageModel);
-            db.Ratings.Remove(rating);
+            db.Ratings.RemoveRange(ratings);
             db.SaveChanges();
             this.AddNotification("Image created.", NotificationType.SUCCESS);
             return RedirectToAction("Index");
@@ -135,6 +138,19 @@ namespace Softuni___Memes.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        private void AddScoreToPicture(double score, int imageId, string userId)
+        {
+            ImageModel image = this.db.ImageModels.Single(img => img.Id == imageId);
+            bool ratingExists = db.Ratings.Any(r => r.ImageId == imageId && r.UserId == userId);
+
+            if (!ratingExists)
+            {
+                image.OverallScore += score;
+            }
+
+            db.SaveChanges();
         }
     }
 }
