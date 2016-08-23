@@ -143,10 +143,16 @@ namespace Softuni___Memes.Controllers
         private void AddScoreToPicture(double score, int imageId, string userId)
         {
             ImageModel image = this.db.ImageModels.Single(img => img.Id == imageId);
-            bool ratingExists = db.Ratings.Any(r => r.ImageId == imageId && r.UserId == userId);
+            Rating rating = db.Ratings.FirstOrDefault(r => r.ImageId == imageId && r.UserId == userId);
 
-            if (!ratingExists)
+            if (rating == null)
             {
+                image.OverallScore += score;
+            }
+            else
+            {
+                image.OverallScore -= rating.Score;
+                rating.Score = score;
                 image.OverallScore += score;
             }
 
