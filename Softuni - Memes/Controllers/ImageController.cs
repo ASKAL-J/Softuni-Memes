@@ -77,7 +77,7 @@ namespace Softuni___Memes.Controllers
                 ImageModel imageModel = new ImageModel();
                 imageModel.Image = Convert.FromBase64String(image);
                 db.ImageModels.Add(imageModel);
-                db.SaveChanges();           
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -123,11 +123,11 @@ namespace Softuni___Memes.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             ImageModel imageModel = db.ImageModels.Find(id);
-            var ratings = db.Ratings.Where(r =>r.ImageId == id);
+            var ratings = db.Ratings.Where(r => r.ImageId == id);
             db.ImageModels.Remove(imageModel);
             db.Ratings.RemoveRange(ratings);
             db.SaveChanges();
-            this.AddNotification("Image created.", NotificationType.SUCCESS);
+            this.AddNotification("Image deleted.", NotificationType.INFO);
             return RedirectToAction("Index");
         }
 
@@ -157,6 +157,7 @@ namespace Softuni___Memes.Controllers
             }
 
             db.SaveChanges();
+            this.AddNotification("Image successfully rated.", NotificationType.SUCCESS);
         }
     }
 }

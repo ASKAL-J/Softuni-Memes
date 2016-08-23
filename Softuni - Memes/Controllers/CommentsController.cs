@@ -52,7 +52,7 @@ namespace Softuni___Memes.Controllers
             {
                 db.Comments.Add(comment);
                 db.SaveChanges();
-                this.AddNotification("Comment created successfully", NotificationType.SUCCESS);
+                this.AddNotification("You have successfully commented.", NotificationType.SUCCESS);
                 return RedirectToAction("Details", "Image", new { id = comment.ImageId });
             }
 

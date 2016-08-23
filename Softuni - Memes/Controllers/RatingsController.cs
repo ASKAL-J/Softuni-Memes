@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Softuni___Memes.Extensions;
+using Softuni___Memes.Models;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using Softuni___Memes.Models;
 
 namespace Softuni___Memes.Controllers
 {
@@ -85,6 +83,7 @@ namespace Softuni___Memes.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(rating).State = EntityState.Modified;
+                this.AddNotification("Image updated successfully.", NotificationType.SUCCESS);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -114,6 +113,7 @@ namespace Softuni___Memes.Controllers
             Rating rating = db.Ratings.Find(id);
             db.Ratings.Remove(rating);
             db.SaveChanges();
+            this.AddNotification("Image deleted successfully.", NotificationType.SUCCESS);
             return RedirectToAction("Index");
         }
 
