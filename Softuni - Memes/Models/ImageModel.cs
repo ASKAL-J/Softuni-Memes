@@ -28,5 +28,7 @@ namespace Softuni___Memes.Models
         public string AuthorId { get; set; }
 
         public double OverallScore { get; set; }
+
+        public double AverageScore { get; set; }
     }
 }

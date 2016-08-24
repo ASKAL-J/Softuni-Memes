@@ -24,13 +24,12 @@ namespace Softuni___Memes.Controllers
                 rating.ImageId = int.Parse(imageId);
 
                 string userId = rating.UserId;
-                this.AddScoreToPicture(double.Parse(score), int.Parse(imageId), userId);
+                this.AddScore(double.Parse(score), int.Parse(imageId), userId, rating);
 
-                db.Ratings.Add(rating);
                 db.SaveChanges();
             }
 
-            return View(db.ImageModels.OrderByDescending(img => img.OverallScore).ToList());
+            return View(db.ImageModels.OrderByDescending(img => img.AverageScore).ToList());
         }
 
         public ActionResult GetImage(int id)
@@ -140,14 +139,16 @@ namespace Softuni___Memes.Controllers
             base.Dispose(disposing);
         }
 
-        private void AddScoreToPicture(double score, int imageId, string userId)
+        private void AddScore(double score, int imageId, string userId, Rating rating1)
         {
             ImageModel image = this.db.ImageModels.Single(img => img.Id == imageId);
             Rating rating = db.Ratings.FirstOrDefault(r => r.ImageId == imageId && r.UserId == userId);
+            int numberOfRatingsForModel = db.Ratings.Count(r => r.ImageId == imageId);
 
             if (rating == null)
             {
                 image.OverallScore += score;
+                db.Ratings.Add(rating1);
             }
             else
             {
@@ -156,6 +157,7 @@ namespace Softuni___Memes.Controllers
                 image.OverallScore += score;
             }
 
+            image.AverageScore = image.OverallScore/numberOfRatingsForModel;
             db.SaveChanges();
             this.AddNotification("Image successfully rated.", NotificationType.SUCCESS);
         }
