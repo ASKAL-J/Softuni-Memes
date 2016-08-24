@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 namespace Softuni___Memes.Controllers
 {
@@ -58,9 +59,8 @@ namespace Softuni___Memes.Controllers
             }
             ImageModel imageModel = db.ImageModels.Find(id);
 
-            var comments = db.Comments.ToList();
-
-            ViewBag.Comments = comments.Where(i => i.ImageId == id).ToList();
+            var comments = db.Comments.Where(i => i.ImageId == id).ToList();
+            ViewBag.Comments = comments;
 
             if (imageModel == null)
             {
@@ -126,10 +126,13 @@ namespace Softuni___Memes.Controllers
         {
             ImageModel imageModel = db.ImageModels.Find(id);
             var ratings = db.Ratings.Where(r => r.ImageId == id);
+            var comments = db.Comments.Where(comment => comment.ImageId == id);
+            db.Comments.RemoveRange(comments);
             db.ImageModels.Remove(imageModel);
             db.Ratings.RemoveRange(ratings);
             db.SaveChanges();
             this.AddNotification("Image deleted.", NotificationType.INFO);
+
             return RedirectToAction("Index");
         }
 
