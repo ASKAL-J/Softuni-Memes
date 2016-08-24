@@ -7,16 +7,17 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
+using X.PagedList;
 
 namespace Softuni___Memes.Controllers
 {
     public class ImageController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        private const int MaxImagesPerPage = 3;
 
         // GET: Image
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             var score = Request.Params["rate"];
@@ -33,7 +34,25 @@ namespace Softuni___Memes.Controllers
                 db.SaveChanges();
             }
 
-            return View(db.ImageModels.OrderByDescending(img => img.AverageScore).ToList());
+            //Paging the images
+
+            //number of images
+            var images = db.ImageModels.OrderByDescending(img => img.AverageScore).ToList();
+            //If no page specified in query, we set the default to 1
+            var pageNumber = page ?? 1;
+
+            //May need a different formula, but it's working fine for now
+            if (pageNumber > (images.Count / MaxImagesPerPage) + 1)
+            {
+                this.AddNotification("This page does not exist.", NotificationType.WARNING);
+                return RedirectToAction("Index");
+            }
+
+            var onePageOfImages = images.ToPagedList(pageNumber, MaxImagesPerPage);
+
+            ViewBag.OnePageOfImages = onePageOfImages;
+
+            return View();
         }
 
         public ActionResult GetImage(int id)

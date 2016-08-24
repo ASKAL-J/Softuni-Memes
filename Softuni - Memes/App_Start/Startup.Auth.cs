@@ -53,9 +53,9 @@ namespace Softuni___Memes
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            app.UseFacebookAuthentication(
-               appId: "562372510633043",
-               appSecret: "9544b129a0926ca856d760096a0b6bf3");
+            //            app.UseFacebookAuthentication(
+            //               appId: "562372510633043",
+            //               appSecret: "9544b129a0926ca856d760096a0b6bf3");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

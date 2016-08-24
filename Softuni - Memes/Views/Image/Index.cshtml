@@ -1,15 +1,21 @@
 ﻿@using Microsoft.AspNet.Identity
+@using X.PagedList
+@using X.PagedList.Mvc
 @model IEnumerable<Softuni___Memes.Models.ImageModel>
 
 @{
     ViewBag.Title = "All Memes";
 }
 
-<center><h2>@ViewBag.Title</h2></center>
+<center>
+    <h2>@ViewBag.Title</h2>
+</center>
+
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 <button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Create", "Image")'">Create new</button>
 <table class="table">
-    @foreach (var item in Model)
+    @foreach (var item in ViewBag.OnePageOfImages)
     {
         <tr>
             <td>
@@ -21,22 +27,24 @@
             <td>
                 @if (item.AuthorId.Equals(User.Identity.GetUserId()))
                 {
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }) <br>
+                    @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+                    <br>
                 }
-                @Html.ActionLink(" ", "DownloadImage" , new { id = item.Id }, new { @class = "navbar-brand", @id = "download"}) 
+                @Html.ActionLink(" ", "DownloadImage", new {id = item.Id}, new {@class = "navbar-brand", @id = "download"})
                 <div>Average score: @($"{item.AverageScore:F1}")</div>
                 @if (Request.IsAuthenticated)
                 {
-                    <div style="position:absolute">
-                        <input id="rank-@item.Id" class="rating rating-loading" value="3" data-step="0.5" data-max="5" data-min="0" data-show-clear="false" data-size="sm" />
-                        <input id="rate" class="rate btn btn-default" type="submit" value="Rate" />
+                    <div style="position: absolute">
+                        <input id="rank-@item.Id" class="rating rating-loading" value="3" data-step="0.5" data-max="5" data-min="0" data-show-clear="false" data-size="sm"/>
+                        <input id="rate" class="rate btn btn-default" type="submit" value="Rate"/>
                     </div>
                 }
             </td>
         </tr>
     }
-    
 </table>
+    @Html.PagedListPager((IPagedList) ViewBag.OnePageOfImages, page => Url.Action("Index", new {page}))
+
 @section Styles {
     <link href="@Url.Content("~/Content/star-rating.css")" rel="stylesheet" type="text/css" />
 }
