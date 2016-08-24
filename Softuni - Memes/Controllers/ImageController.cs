@@ -149,6 +149,7 @@ namespace Softuni___Memes.Controllers
             {
                 image.OverallScore += score;
                 db.Ratings.Add(rating1);
+                db.SaveChanges();
             }
             else
             {
@@ -157,7 +158,7 @@ namespace Softuni___Memes.Controllers
                 image.OverallScore += score;
             }
 
-            image.AverageScore = image.OverallScore/numberOfRatingsForModel;
+            image.AverageScore = image.OverallScore / numberOfRatingsForModel;
             db.SaveChanges();
             this.AddNotification("Image successfully rated.", NotificationType.SUCCESS);
         }
