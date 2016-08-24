@@ -7,7 +7,8 @@
         url: "/Image",
         type: "post",
         data: { rate: score, ImageId: imageId },
-        success: function(){
+        success: function () {
+            window.location = "/Image";
         }
     })
 });
