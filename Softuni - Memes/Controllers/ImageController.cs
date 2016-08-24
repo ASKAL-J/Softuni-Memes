@@ -2,8 +2,10 @@
 using Softuni___Memes.Models;
 using System;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Net;
+using System.Threading;
 using System.Web.Mvc;
 
 namespace Softuni___Memes.Controllers
@@ -15,6 +17,7 @@ namespace Softuni___Memes.Controllers
         // GET: Image
         public ActionResult Index()
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             var score = Request.Params["rate"];
             var imageId = Request.Params["ImageId"];
             if (score != null)
@@ -148,6 +151,7 @@ namespace Softuni___Memes.Controllers
             if (rating == null)
             {
                 image.OverallScore += score;
+                numberOfRatingsForModel++;
                 db.Ratings.Add(rating1);
                 db.SaveChanges();
             }
