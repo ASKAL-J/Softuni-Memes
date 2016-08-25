@@ -3,8 +3,8 @@
 }
 
 
-<link href="~/Content/Site.css" rel="stylesheet" />
-
+<link href="~/Content/Site.css" rel="stylesheet"/>
+<link href="~/Content/csshake.css" rel="stylesheet" type="text/css" />
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 col-md-6 logo">
@@ -14,22 +14,19 @@
 
     <div class="row">
         <div class="col-md-offset-4 col-md-4 logoButton">
-            <input type="button" class="meme-button" onclick="location.href='@Url.Action("Create", "Image")'" />
+            <input type="button" class="meme-button" onclick="location.href = '@Url.Action("Create", "Image")'"/>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4 wizard-left">
-            <img class="img-responsive" src="/Images/wizzard-left.png" />
+            <img class="img-responsive" src="/Images/wizzard-left.png"/>
         </div>
 
         <div class="col-md-offset-4 col-md-4 wizard-right">
-            <img class="img-responsive" src="/Images/wizzard-right.png" />
+            <img class="img-responsive" src="/Images/wizzard-right.png"/>
         </div>
     </div>
 </div>
-<script>
-    $
-</script>
 <!--
     <div id="reglogview">
     @if (Request.IsAuthenticated)
