@@ -23,7 +23,7 @@
  * Released under the MIT license
  * http://jquery.org/license
  *
- * Date: 2013-07-03T13:48Z
+ * DateCreated: 2013-07-03T13:48Z
  */
 (function( window, undefined ) {
 
@@ -990,7 +990,7 @@ jQuery.ready.promise = function( obj ) {
 };
 
 // Populate the class2type map
-jQuery.each("Boolean Number String Function Array Date RegExp Object Error".split(" "), function(i, name) {
+jQuery.each("Boolean Number String Function Array DateCreated RegExp Object Error".split(" "), function(i, name) {
 	class2type[ "[object " + name + "]" ] = name.toLowerCase();
 });
 
@@ -1021,7 +1021,7 @@ rootjQuery = jQuery(document);
  * Released under the MIT license
  * http://jquery.org/license
  *
- * Date: 2013-07-03
+ * DateCreated: 2013-07-03
  */
 (function( window, undefined ) {
 

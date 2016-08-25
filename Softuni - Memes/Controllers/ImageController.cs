@@ -95,8 +95,11 @@ namespace Softuni___Memes.Controllers
 
             if (image != null)
             {
-                ImageModel imageModel = new ImageModel();
-                imageModel.Image = Convert.FromBase64String(image);
+                ImageModel imageModel = new ImageModel
+                {
+                    Image = Convert.FromBase64String(image),
+                    DateCreated = DateTime.Now
+                };
                 db.ImageModels.Add(imageModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
