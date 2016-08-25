@@ -13,6 +13,7 @@ namespace Softuni___Memes.Models
     {
         public ImageModel()
         {
+            this.DateCreated = DateTime.Now;
             this.AuthorId = HttpContext.Current.User.Identity.GetUserId();
         }
 

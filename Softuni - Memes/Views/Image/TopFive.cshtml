@@ -1,0 +1,28 @@
+﻿@using Softuni___Memes.Models
+@{
+    ViewBag.Title = "Top 5 Memes";
+}
+
+<center>
+    <h2>@ViewBag.Title</h2>
+</center>
+
+@model List<ImageModel>
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="@Url.Action("GetImage", "Image",new { id = item.Id})" onclick="location.href='@Url.Action($"Details/{item.Id}")'" />
+            </td>
+            <td>
+                <div style="align-content:center">@Html.ActionLink(" ", "DownloadImage", new { id = item.Id }, new { @class = "navbar-brand", @id = "downloads" })</div>
+            </td>
+            <td>
+                <div>Average score: @($"{item.AverageScore:F1}")</div>
+            </td>
+        </tr>
+    }
+</table>
+
+

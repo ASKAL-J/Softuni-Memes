@@ -1,6 +1,7 @@
 ﻿using Softuni___Memes.Extensions;
 using Softuni___Memes.Models;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
 using System.Linq;
@@ -37,7 +38,8 @@ namespace Softuni___Memes.Controllers
             //Paging the images
 
             //number of images
-            var images = db.ImageModels.OrderByDescending(img => img.AverageScore).ToList();
+            var images = db.ImageModels
+                .OrderByDescending(img => img.DateCreated).ToList();
             //If no page specified in query, we set the default to 1
             var pageNumber = page ?? 1;
 
@@ -53,6 +55,17 @@ namespace Softuni___Memes.Controllers
             ViewBag.OnePageOfImages = onePageOfImages;
 
             return View();
+        }
+
+        public ActionResult TopFive()
+        {
+            List<ImageModel> topRatedImages =
+                this.db.ImageModels
+                .OrderByDescending(img => img.AverageScore)
+                .Take(5)
+                .ToList();
+
+            return View(topRatedImages);
         }
 
         public ActionResult GetImage(int id)
@@ -98,8 +111,8 @@ namespace Softuni___Memes.Controllers
                 ImageModel imageModel = new ImageModel
                 {
                     Image = Convert.FromBase64String(image),
-                    DateCreated = DateTime.Now
                 };
+
                 db.ImageModels.Add(imageModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
