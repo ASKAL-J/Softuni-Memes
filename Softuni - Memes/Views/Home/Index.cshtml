@@ -5,37 +5,41 @@
 
 <link href="~/Content/Site.css" rel="stylesheet" />
 
-
-
-    <div id="headhomeview">
-        <center>
-            <div class="logo"><img src="/Images/homelogo.png" class="homelogo-view"></div>
-            <div class="logoButton"><input type="button" class="meme-button" , onclick="location.href='@Url.Action("Create", "Image")'" /></div>
-        </center>
-    </div>
-
-
-    <div id="bodyhomeview">
-        <div class="wizard-left"><img src="/Images/wizzard-left.png" class="wizzard-view-left" /></div>
-        <div class="wizard-right"><img src="/Images/wizzard-right.png" class="wizzard-view-right" /></div>
-    
-   
-
-         <!--
-            <div id="reglogview">
-            @if (Request.IsAuthenticated)
-            {
-                <a href="javascript:document.getElementById('logoutForm').submit()"><img src="/Images/log-off.png" id="reglogbutton" /></a>
-            }
-            else
-            {
-                <a href="/Account/Register"><img src="/Images/reg.png" id="reglogbutton" /></a>
-                <a href="/Account/Login"><img src="/Images/login.png" id="reglogbutton" /></a>
-            }
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <img class="img-responsive" src="/Images/homelogo.png">
         </div>
-            -->
     </div>
 
-    
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <input type="button" class="meme-button" onclick="location.href='@Url.Action("Create", "Image")'" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-responsive" src="/Images/wizzard-left.png" />
+        </div>
 
-
+        <div class="col-md-offset-4 col-md-4">
+            <img class="img-responsive" src="/Images/wizzard-right.png" />
+        </div>
+    </div>
+</div>
+<script>
+    $
+</script>
+<!--
+    <div id="reglogview">
+    @if (Request.IsAuthenticated)
+    {
+        <a href="javascript:document.getElementById('logoutForm').submit()"><img src="/Images/log-off.png" id="reglogbutton" /></a>
+    }
+    else
+    {
+        <a href="/Account/Register"><img src="/Images/reg.png" id="reglogbutton" /></a>
+        <a href="/Account/Login"><img src="/Images/login.png" id="reglogbutton" /></a>
+    }
+</div>
+    -->

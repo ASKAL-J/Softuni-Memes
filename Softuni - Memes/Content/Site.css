@@ -8,7 +8,10 @@ body {
     background: url("/Images/softuni.png");
     background-size: 100%;
 }
-
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -61,25 +64,19 @@ textarea {
 }
 
 .meme-button {
-
-    border: 0px;
+    border: none !important;
     border-radius: 10px;
     width: 200px;
     height: 50px;
-    margin-top: -25px;
     background: url('/Images/create-meme-button.png') repeat-y;
-    
     
 }
 
 .meme-button:hover {
-
     border-radius: 10px;
     width: 200px;
     height: 50px;
-    margin-top: -25px;
     background: url('/Images/create-meme-button-hover.png') repeat-y;
-    
 }
 
 
@@ -405,7 +402,7 @@ textarea {
   transition: opacity 3s ease-in-out;
 }
 
-/*-------------------Sliding home components----------------------*/
+/*
 
 .wizard-right {
     -webkit-animation-duration:2s;
@@ -537,57 +534,57 @@ textarea {
     0% {
         top:500px;
         opacity:0;
-        left: 9em;
+        
     }
     25% {
         opacity:1;
-        left: 9em;
+        
     }
     35% {
         top:-20px;
-        left: 9em;
+        
     }
     100% {
         top:250px;
-        left: 9em;
+        
     }
 }
 @-moz-keyframes wizard-left {
     0% {
         top:500px;
         opacity:0;
-        left: 9em;
+        
     }
     25% {
         opacity:1;
-        left: 9em;
+        
     }
     35% {
         top:-20px;
-        left: 9em;
+        
     }
     100% {
         top:250px;
-        left: 9em;
+        
     }
 }
 @-o-keyframes wizard-left {
     0% {
         top:500px;
         opacity:0;
-        left: 9em;
+        
     }
     25% {
         opacity:1;
-        left: 9em;
+        
     }
     35% {
         top:-20px;
-        left: 9em;
+        
     }
     100% {
         top:250px;
-        left: 9em;
+        
     }
 }
 @-keyframes wizard-left {
@@ -595,19 +592,19 @@ textarea {
     0% {
         top:500px;
         opacity:0;
-        left: 9em;
+        
     }
     25% {
         opacity:1;
-        left: 9em;
+        
     }
     35% {
         top:-20px;
-        left: 9em;
+        
     }
     100% {
         top:250px;
-        left: 9em;
+        
     }
 }
 .logo {
@@ -638,80 +635,80 @@ textarea {
     0% {
         bottom:100px;
         opacity:0;
-        left: 39.5em;
+        
     }
     25% {
         opacity:1;
-        left: 39.5em;
+        
     }
     35% {
         bottom:-20px;
-        left: 39.5em;
+        
     }
     100% {
         bottom:28em;
-        left: 39.5em;
+        
     }
 }
 @-moz-keyframes logo {
     0% {
         bottom:500px;
         opacity:0;
-        left: 39.5em;
+        
     }
     25% {
         opacity:1;
-        left: 39.5em;
+        
     }
     35% {
         bottom:-20px;
-        left: 39.5em;
+        
     }
     100% {
         bottom:28em;
-        left: 39.5em;
+        
     }
 }
 @-o-keyframes logo {
     0% {
         bottom:500px;
         opacity:0;
-        left: 39.5em;
+        
     }
     25% {
         opacity:1;
-        left: 39.5em;
+        
     }
     35% {
         bottom:-20px;
-        left: 39.5em;
+        
     }
     100% {
         bottom:28em;
-        left: 39.5em;
+        
     }
 }
 @-keyframes logo {
     0% {
        bottom:100px;
         opacity:0;
-        left: 39.5em;
+        
     }
     25% {
         opacity:1;
-        left: 39.5em;
+        
     }
     35% {
         bottom:-20px;
-        left: 39.5em;
+        
     }
     100% {
         bottom:28em;
-        left: 39.5em;
+        
     }
 }
 
-.logoButton{
+.logoButton {
     -webkit-animation-duration:2s;
     -moz-animation-duration:2s;
     -o-animation-duration:2s;
@@ -739,76 +736,76 @@ textarea {
     0% {
         bottom:100px;
         opacity:0;
-        left: 41.5em;
+        
     }
     25% {
         opacity:1;
-        left: 41.5em;
+        
     }
     35% {
         bottom:-20px;
-        left: 41.5em;
+        
     }
     100% {
         bottom:25em;
-        left: 41.5em;
+        
     }
 }
 @-moz-keyframes logoButton {
     0% {
         bottom:300px;
         opacity:0;
-        left: 41.5em;
+        
     }
     25% {
         opacity:1;
-        left: 41.5em;
+        
     }
     35% {
         bottom:-20px;
-        left: 41.5em;
+        
     }
     100% {
         bottom:25em;
-        left: 41.5em;
+        
     }
 }
 @-o-keyframes logoButton {
     0% {
         bottom:300px;
         opacity:0;
-        left: 41.5em;
+        
     }
     25% {
         opacity:1;
-        left: 41.5em;
+        
     }
     35% {
         bottom:-20px;
-        left: 41.5em;
+        
     }
     100% {
         bottom:25em;
-        left: 41.5em;
+        
     }
 }
 @-keyframes logoButton {
     0% {
        bottom:100px;
         opacity:0;
-        left: 41.5em;
+        
     }
     25% {
         opacity:1;
-        left: 41.5em;
+        
     }
     35% {
         bottom:-20px;
-        left: 41.5em;
+        
     }
     100% {
         bottom:25em;
-        left: 41.5em;
+        
     }
 }
-}
+}*/
