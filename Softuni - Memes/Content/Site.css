@@ -403,7 +403,6 @@ textarea {
   transition: opacity 3s ease-in-out;
 }
 
-/*
 
 .wizard-right {
     -webkit-animation-duration:2s;
@@ -426,84 +425,77 @@ textarea {
     -moz-animation-fill-mode:forwards;
     -o-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
-    position:absolute;
     top:500px;
 }
 @-webkit-keyframes wizard-right {
     0% {
-        top:500px;
+        top:150px;
         opacity:0;
-        right: 9em;
     }
     25% {
         opacity:1;
-        right: 9em;
     }
     35% {
-        top:-20px;
-        right: 9em;
+        top:-40px;
+        
     }
     100% {
-        top:250px;
-        right: 9em;
+        top:15px;
     }
 }
 @-moz-keyframes wizard-right {
     0% {
-        top:500px;
+        top:150px;
         opacity:0;
-        right: 9em;
     }
     25% {
         opacity:1;
-        right: 9em;
+        
     }
     35% {
-        top:-20px;
-        right: 9em;
+        top:-40px;
+        
     }
     100% {
-        top:250px;
-        right: 9em;
+        top:15px;
+        
     }
 }
 @-o-keyframes wizard-right {
     0% {
-        top:500px;
+        top:150px;
         opacity:0;
-        right: 9em;
+        
     }
     25% {
         opacity:1;
-        right: 9em;
+        
     }
     35% {
-        top:-20px;
-        right: 9em;
+        top:-40px;
+        
     }
     100% {
-        top:250px;
-        right: 9em;
+        top:15px;
+        
     }
 }
 @-keyframes wizard-right {
 
     0% {
-        top:500px;
-        opacity:0;
-        right: 9em;
+        top:150px;
+        opacity:0;  
     }
     25% {
         opacity:1;
-        right: 9em;
+       
     }
     35% {
-        top:-20px;
-        right: 9em;
+        top:-40px;
+        
     }
     100% {
-        top:250px;
-        right: 9em;
+        top:15px;
     }
 }
 
@@ -528,12 +520,11 @@ textarea {
     -moz-animation-fill-mode:forwards;
     -o-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
-    position:absolute;
     top:500px;
 }
 @-webkit-keyframes wizard-left {
     0% {
-        top:500px;
+        top:150px;
         opacity:0;
         
     }
@@ -546,13 +537,13 @@ textarea {
         
     }
     100% {
-        top:250px;
+         top:15px;
         
     }
 }
 @-moz-keyframes wizard-left {
     0% {
-        top:500px;
+        top:150px;
         opacity:0;
         
     }
@@ -565,13 +556,13 @@ textarea {
         
     }
     100% {
-        top:250px;
+         top:15px;
         
     }
 }
 @-o-keyframes wizard-left {
     0% {
-        top:500px;
+        top:150px;
         opacity:0;
         
     }
@@ -584,14 +575,14 @@ textarea {
         
     }
     100% {
-        top:250px;
+         top:15px;
         
     }
 }
 @-keyframes wizard-left {
 
     0% {
-        top:500px;
+        top:150px;
         opacity:0;
         
     }
@@ -604,7 +595,7 @@ textarea {
         
     }
     100% {
-        top:250px;
+         top:15px;
         
     }
 }
@@ -629,7 +620,6 @@ textarea {
     -moz-animation-fill-mode:forwards;
     -o-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
-    position:absolute;
     bottom:500px;
 }
 @-webkit-keyframes logo {
@@ -647,8 +637,7 @@ textarea {
         
     }
     100% {
-        bottom:28em;
-        
+        bottom:3em;
     }
 }
 @-moz-keyframes logo {
@@ -666,7 +655,7 @@ textarea {
         
     }
     100% {
-        bottom:28em;
+         bottom:3em;
         
     }
 }
@@ -685,7 +674,7 @@ textarea {
         
     }
     100% {
-        bottom:28em;
+         bottom:3em;
         
     }
 }
@@ -704,7 +693,7 @@ textarea {
         
     }
     100% {
-        bottom:28em;
+        bottom:3em;
         
     }
 }
@@ -730,7 +719,6 @@ textarea {
     -moz-animation-fill-mode:forwards;
     -o-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
-    position:absolute;
     bottom:500px;
 }
 @-webkit-keyframes logoButton {
@@ -748,7 +736,7 @@ textarea {
         
     }
     100% {
-        bottom:25em;
+        bottom:2em;
         
     }
 }
@@ -767,7 +755,7 @@ textarea {
         
     }
     100% {
-        bottom:25em;
+       bottom:2em;
         
     }
 }
@@ -786,7 +774,7 @@ textarea {
         
     }
     100% {
-        bottom:25em;
+        bottom:2em;
         
     }
 }
@@ -805,7 +793,7 @@ textarea {
         
     }
     100% {
-        bottom:25em;
+        bottom:2em;
         
     }
 }
