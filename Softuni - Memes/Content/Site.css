@@ -174,7 +174,8 @@ textarea {
     display: inline-block;
     width: 500px;
     height: 500px;
-    background: url("/Images/homelogo1.png");
+    margin-top:5%;
+    background: url("/Images/homelogo1-glow.png");
     
 }
 
@@ -279,6 +280,7 @@ textarea {
 #button{
     border-radius: 5px;
     background: #D18003;
+    color: white;
     font-family: Oswald;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -289,7 +291,7 @@ textarea {
 }
 #button:hover{
     border-color: #D18003;
-    color: #fff;
+    color: black;
     border-width: 1px;
     border-radius: 5px;
     background: none;
@@ -298,7 +300,6 @@ textarea {
     margin-bottom: 5px;
     font: 20px Lato;
 }
-
 #loginBody{
     position: fixed;
     top: 50%;
