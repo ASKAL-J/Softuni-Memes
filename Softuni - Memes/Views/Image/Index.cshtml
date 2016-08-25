@@ -10,42 +10,45 @@
 <center>
     <h2>@ViewBag.Title</h2>
 </center>
+<div class="wrapper">
+    <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
-<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+    <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("Create", "Image")'">Create new</button>
 
-<button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("Create", "Image")'">Create new</button>
 
-<table class="table">
-    @foreach (var item in ViewBag.OnePageOfImages)
-    {
-        <tr>
-            <td>
-                <img src="@Url.Action("GetImage", "Image",new { id = item.Id})" onclick="location.href='@Url.Action($"Details/{item.Id}")'" />
-            </td>
-            <td>
+    <div class="row animate-box" data-animate-effect="fadeInLeft">
+        @foreach (var item in ViewBag.OnePageOfImages)
+        {
+            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
+                <a>
+                    <img img src="@Url.Action("GetImage", "Image",new { id = item.Id})" onclick="location.href='@Url.Action($"Details/{item.Id}")'" class="img-responsive" />
+                </a>
+                <div class="fh5co-work-title">
+                    <div class="col-md-4 col-sm-4 col-xs-4 col-xxs-4" style="align-content:center">
+                        @Html.ActionLink(" ", "DownloadImage", new { id = item.Id }, new { @class = "navbar-brand", @id = "downloads" })
+                    </div>
+                    <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-4 col-xxs-4">
+                        <p>Average score: @($"{item.AverageScore:F1}")</p>
+                    </div>
+                    @if (Request.IsAuthenticated)
+                    {
+
+                        <input id="rank-@item.Id" class="rating rating-loading" value="@($"{item.AverageScore:F1}")" data-step="0.1" data-max="5" data-min="0" data-show-clear="false" data-size="sm" data-show-caption="false" />
+                            <input id="rate" class="rate btn btn-default" type="submit" value="Rate" />
+                    }
+                </div>
+
+
+
                 @if (item.AuthorId.Equals(User.Identity.GetUserId()))
                 {
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 }
-            </td>
-            <td>
-            <div style="align-content:center">@Html.ActionLink(" ", "DownloadImage", new { id = item.Id }, new { @class = "navbar-brand", @id = "downloads" })</div>
-            <br /><br /><br />
-            <div>Average score: @($"{item.AverageScore:F1}")</div>
-                @if (Request.IsAuthenticated)
-                {
-                    <div style="position:absolute">
-                        <input id="rank-@item.Id" class="rating rating-loading" value="@($"{item.AverageScore:F1}")" data-step="0.1" data-max="5" data-min="0" data-show-clear="false" data-size="sm" data-show-caption="false" />
-                        <input id="rate" class="rate btn btn-default" type="submit" value="Rate" />
-                    </div>
-                    <br>
-                }
-            </td>
-        </tr>
-    }
-</table>
-@Html.PagedListPager((IPagedList)ViewBag.OnePageOfImages, page => Url.Action("Index", new { page }))
-
+            </div>
+        }
+    </div>
+    @Html.PagedListPager((IPagedList)ViewBag.OnePageOfImages, page => Url.Action("Index", new { page }))
+</div>
 @section Styles {
     <link href="@Url.Content("~/Content/star-rating.css")" rel="stylesheet" type="text/css" />
 }

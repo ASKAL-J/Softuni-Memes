@@ -8,6 +8,12 @@
  * Licensed under the BSD 3-Clause
  * https://github.com/kartik-v/bootstrap-star-rating/blob/master/LICENSE.md
  */
+.wrapper {
+    background: rgba(255, 255, 255, 0.60);
+    border-radius: 20px;
+    padding: 50px;
+}
+
 .rating-loading {
     width: 25px;
     height: 25px;
@@ -161,4 +167,38 @@
     .rating-container .clear-rating {
         display: none;
     }
+}
+
+
+
+.work-item {
+  margin-bottom: 30px;
+}
+.work-item a {
+  border: none;
+  text-align: center;
+}
+.work-item a img {
+  margin-bottom: 10px;
+  float: left;
+  border: 10px solid transparent;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.work-item a h3 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.work-item a p {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 0;
+}
+.work-item a:hover, .work-item a:active, .work-item a:focus {
+  text-decoration: none;
+}
+.work-item a:hover img, .work-item a:active img, .work-item a:focus img {
+  border: 10px solid #000;
 }

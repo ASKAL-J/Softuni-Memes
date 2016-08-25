@@ -15,7 +15,7 @@ namespace Softuni___Memes.Controllers
     public class ImageController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        private const int MaxImagesPerPage = 3;
+        private const int MaxImagesPerPage = 9;
 
         // GET: Image
         public ActionResult Index(int? page)
