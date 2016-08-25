@@ -13,7 +13,13 @@
 
 <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
-<button type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Create", "Image")'">Create new</button>
+<button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("Create", "Image")'">Create new</button>
+<select>
+    <option value="dateD">Date in descending</option>
+    <option value="dateA">Date in ascending</option>
+    <option value="ratingD">Rating in descending</option>
+    <option value="ratingA">Rating in ascending</option>
+</select>
 <table class="table">
     @foreach (var item in ViewBag.OnePageOfImages)
     {
@@ -39,7 +45,6 @@
                         <input id="rate" class="rate btn btn-default" type="submit" value="Rate" />
                     </div>
                 }
-
             </td>
         </tr>
     }

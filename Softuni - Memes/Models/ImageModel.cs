@@ -22,6 +22,8 @@ namespace Softuni___Memes.Models
         [Column("image", TypeName = "image")]
         public byte[] Image { get; set; }
 
+        public DateTime DateCreated { get; set; }
+
         [ForeignKey("AuthorId")]
         public ApplicationUser Author { get; set; }
 

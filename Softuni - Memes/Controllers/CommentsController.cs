@@ -79,7 +79,7 @@ namespace Softuni___Memes.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Body,Date,ImageId,UserId")] Comment comment)
+        public ActionResult Edit([Bind(Include = "Id,Body,DateCreated,ImageId,UserId")] Comment comment)
         {
             if (ModelState.IsValid)
             {
