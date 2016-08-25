@@ -5,7 +5,8 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
     height: 100%;
-    background: url("/Images/softuni.png")
+    background: url("/Images/softuni.png");
+    background-size: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -160,9 +161,9 @@ textarea {
 }
    */
 
-#download {
+#downloads {
     
-    width: 180px;
+    width: 120px;
     height: 50px;
     background: url("/Images/download.png");
     margin-top: -5px;
@@ -195,6 +196,7 @@ textarea {
 
 
 #bodyRegister{
+
     position: fixed;
     top: 50%;
     left: 50%;
@@ -209,16 +211,30 @@ textarea {
 
 #registerView {
     
-    background: #fff;
+    background: #224364;
     width: 40%;
     height: auto;
     float: right;
-    color: #000;
+    color: #fff;
     margin-top: 5em;
     margin-right: 5em;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 2px 6px 5px #224364 ;
+    box-shadow: 0px 2px 6px 5px #fff ;
+}
+
+#loginView {
+    
+    background: #224364;
+    width: 40%;
+    height: auto;
+    float: right;
+    color: #fff;
+    margin-top: 5em;
+    margin-right: 5em;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 6px 5px #fff ;
 }
 
 
@@ -227,17 +243,18 @@ textarea {
     font-family: Oswald;
     margin-top: 5px;
     font: 20px Lato; 
-    width: 300%;
-
+    width: 400%;
+    margin-left: -5.3em;
 }
 
 #button-register:hover{
     background: #224364;
     font-family: Oswald;
+    color: #fff;
     margin-top: 5px;
     font: 20px Lato; 
-    width: 300%;
-    color: #fff;
+    width: 400%;
+    margin-left: -5.3em;
 
 }
 
@@ -272,6 +289,7 @@ textarea {
 }
 #button:hover{
     border-color: #D18003;
+    color: #fff;
     border-width: 1px;
     border-radius: 5px;
     background: none;
@@ -291,7 +309,6 @@ textarea {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-    background: url("/Images/softuni2background.jpg");
     background-size: cover; 
 }
 
@@ -303,10 +320,11 @@ textarea {
 
 #registerNewUserLink:hover {
     font-family: Lato;
-    color: #224364;
+    color: #fff;
     text-decoration: underline;
     text-align: center;
     font: 20px Lato;
+    cursor: pointer;
 }
 
 #rememberMeCheckbox{

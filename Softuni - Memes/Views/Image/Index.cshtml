@@ -30,7 +30,7 @@
                     @Html.ActionLink("Delete", "Delete", new {id = item.Id})
                     <br>
                 }
-                @Html.ActionLink(" ", "DownloadImage", new {id = item.Id}, new {@class = "navbar-brand", @id = "download"})
+                @Html.ActionLink(" ", "DownloadImage", new {id = item.Id}, new {@class = "navbar-brand", @id = "downloads"})
                 <div>Average score: @($"{item.AverageScore:F1}")</div>
                 @if (Request.IsAuthenticated)
                 {
