@@ -77,9 +77,29 @@ textarea {
     width: 200px;
     height: 50px;
     background: url('/Images/create-meme-button-hover.png') repeat-y;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
 
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
 .wizzard-view-left {
     width: 40em;
@@ -166,13 +186,13 @@ textarea {
     margin-top: -5px;
 }
 
-#homelogo1 {
+#homelogo1{
     
     display: inline-block;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     margin-top:5%;
-    background: url("/Images/homelogo1-glow.png");
+    background: url("/Images/homelogo1.png");
     
 }
 
@@ -288,7 +308,7 @@ textarea {
 }
 #button:hover{
     border-color: #D18003;
-    color: black;
+    color: #fff;
     border-width: 1px;
     border-radius: 5px;
     background: none;
@@ -296,6 +316,7 @@ textarea {
     margin-top: 5px;
     margin-bottom: 5px;
     font: 20px Lato;
+
 }
 #loginBody{
     position: fixed;
