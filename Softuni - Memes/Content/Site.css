@@ -124,19 +124,18 @@ textarea {
     background: #224364;
 }
 
-/*
-#footer {
 
+#footer {
+     
      position: absolute;
      z-index: 10;
      width: 100%;
      margin: auto;
      bottom: 0px;
-     left: 0px;
-     height: 150px;    
+     left: 0px;   
      background: #224364;
 }
-*/
+
 
 #registerLink {
     background: url("/Images/reg.png") no-repeat;
