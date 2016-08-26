@@ -57,6 +57,11 @@ namespace Softuni___Memes.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Takes the top 5 rated images from the Database
+        /// and orders them in descending order
+        /// </summary>
+        /// <returns>The needed view</returns>
         public ActionResult TopFive()
         {
             List<ImageModel> topRatedImages =
@@ -68,6 +73,11 @@ namespace Softuni___Memes.Controllers
             return View(topRatedImages);
         }
 
+        /// <summary>
+        /// Returns the image with the requested id
+        /// </summary>
+        /// <param name="id">The id of the image to return</param>
+        /// <returns>Transformed byte array to img file</returns>
         public ActionResult GetImage(int id)
         {
             var image = db.ImageModels.Single(p => p.Id == id).Image;
@@ -75,6 +85,12 @@ namespace Softuni___Memes.Controllers
             return File(image, "image/png");
         }
 
+        /// <summary>
+        /// Downoads the image with the given id
+        /// </summary>
+        /// <param name="id">The id of the image to download</param>
+        /// <returns>Transformed byte array to img file
+        /// and the location of the download</returns>
         public ActionResult DownloadImage(int id)
         {
             var image = db.ImageModels.Single(p => p.Id == id).Image;
@@ -121,24 +137,6 @@ namespace Softuni___Memes.Controllers
             return View();
         }
 
-        // POST: Image/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        /*  [HttpPost]
-          [ValidateAntiForgeryToken]
-          public ActionResult Create([Bind(Include = "Id,Image")] ImageModel imageModel)
-          {
-              if (ModelState.IsValid)
-              {
-                  db.ImageModels.Add(imageModel);
-                  db.SaveChanges();
-                  this.AddNotification("Image created.", NotificationType.SUCCESS);
-                  return RedirectToAction("Index");
-              }
-
-              return View(imageModel);
-          }*/
-
         // GET: Image/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -180,23 +178,33 @@ namespace Softuni___Memes.Controllers
             base.Dispose(disposing);
         }
 
-        private void AddScore(double score, int imageId, string userId, Rating rating1)
+        /// <summary>
+        /// Adds the score to the image model
+        /// and created a rating with the given score
+        /// or overwrites an existing one
+        /// </summary>
+        /// <param name="score">The score of the rating</param>
+        /// <param name="imageId">The id of the image</param>
+        /// <param name="userId">The user id of the rating</param>
+        /// <param name="rating">The rating to add in the database</param>
+        private void AddScore(double score, int imageId, string userId, Rating rating)
         {
             ImageModel image = this.db.ImageModels.Single(img => img.Id == imageId);
-            Rating rating = db.Ratings.FirstOrDefault(r => r.ImageId == imageId && r.UserId == userId);
+            Rating existingRating = db.Ratings
+                .FirstOrDefault(r => r.ImageId == imageId && r.UserId == userId);
             int numberOfRatingsForModel = db.Ratings.Count(r => r.ImageId == imageId);
 
-            if (rating == null)
+            if (existingRating == null)
             {
                 image.OverallScore += score;
                 numberOfRatingsForModel++;
-                db.Ratings.Add(rating1);
+                db.Ratings.Add(rating);
                 db.SaveChanges();
             }
             else
             {
-                image.OverallScore -= rating.Score;
-                rating.Score = score;
+                image.OverallScore -= existingRating.Score;
+                existingRating.Score = score;
                 image.OverallScore += score;
             }
 
