@@ -1,4 +1,4 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900);
+﻿c@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900);
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
 body {
@@ -346,7 +346,7 @@ textarea {
         color: #fff;
         border-width: 1px;
         border-radius: 5px;
-        background: none;
+        background: rgb(35,68,100);
         font-family: Oswald;
         margin-top: 5px;
         margin-bottom: 5px;
