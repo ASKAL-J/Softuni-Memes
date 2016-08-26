@@ -33,7 +33,7 @@
                     @if (Request.IsAuthenticated)
                     {
 
-                        <input id="rank-@item.Id" class="rating rating-loading" value="@($"{item.AverageScore:F1}")" data-step="0.1" data-max="5" data-min="0" data-show-clear="false" data-size="sm" data-show-caption="false" />
+                        <input id="rank-@item.Id" class="rating rating-loading" value="@($"{item.AverageScore:F1}")" data-step="0.5" data-max="5" data-min="0" data-show-clear="false" data-size="sm" data-show-caption="false" />
                             <input id="rate" class="rate btn btn-default" type="submit" value="Rate" />
                     }
                 </div>

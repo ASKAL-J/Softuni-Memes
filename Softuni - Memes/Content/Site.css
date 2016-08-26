@@ -2,12 +2,14 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    height: 100%;
-    background: url("/Images/softuni.png");
-    background-size: 100%;
+    padding: 5%;
+    background: url("/Images/softuni.png") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -45,22 +47,17 @@ textarea {
 }
 
 #headhomeview {
-
-   margin-top: 610px;
-   display: flex;
-   align-content: center;
-   justify-content: center;
-   
-   
+    margin-top: 610px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 #bodyhomeview {
-
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: -5px;
-
 }
 
 .meme-button {
@@ -69,52 +66,48 @@ textarea {
     width: 200px;
     height: 50px;
     background: url('/Images/create-meme-button.png') repeat-y;
-    
 }
 
-.meme-button:hover {
-    border-radius: 10px;
-    width: 200px;
-    height: 50px;
-    background: url('/Images/create-meme-button-hover.png') repeat-y;
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
+    .meme-button:hover {
+        border-radius: 10px;
+        width: 200px;
+        height: 50px;
+        background: url('/Images/create-meme-button-hover.png') repeat-y;
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
 
 @keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
 
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
 
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
 }
 
 .wizzard-view-left {
     width: 40em;
     height: 25em;
-
 }
 
 .wizzard-view-right {
-
     width: 40em;
-    height: 25em; 
+    height: 25em;
 }
 
 .homelogo-view {
-
     margin-top: -30px;
     width: 250px;
     height: 250px;
@@ -126,14 +119,13 @@ textarea {
 
 
 #footer {
-     
-     position: absolute;
-     z-index: 10;
-     width: 100%;
-     margin: auto;
-     bottom: 0px;
-     left: 0px;   
-     background: #224364;
+    background: #224364;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    margin: auto;
+    bottom: 0px;
+    left: 0px;
 }
 
 
@@ -145,16 +137,15 @@ textarea {
     min-width: 100px;
 }
 
-#registerLink:hover {
-    background: url("/Images/reg-hover.png") no-repeat;
-    height: auto;
-    width: auto;
-    min-height: 50px;
-    min-width: 100px;
-}
+    #registerLink:hover {
+        background: url("/Images/reg-hover.png") no-repeat;
+        height: auto;
+        width: auto;
+        min-height: 50px;
+        min-width: 100px;
+    }
 
 #loginLink {
-
     background: url("/Images/login.png") no-repeat;
     height: auto;
     width: auto;
@@ -178,42 +169,38 @@ textarea {
    */
 
 #downloads {
-    
     width: 120px;
     height: 50px;
     background: url("/Images/download.png");
     margin-top: -5px;
 }
 
-#homelogo1{
-    
+#homelogo1 {
     display: inline-block;
     width: 400px;
     height: 400px;
-    margin-top:5%;
+    margin-top: 5%;
     background: url("/Images/homelogo1.png");
-    
 }
 
-#formGroup{
+#formGroup {
     margin-left: 36%;
-    margin-right:36%;
+    margin-right: 36%;
 }
 
-#formButton{
+#formButton {
     margin-left: 39%;
-    margin-right:39%;
+    margin-right: 39%;
 }
 
 #registerTitle {
-   margin-top: 80px;
-   text-align:center;
-   font-family: Lato;
+    margin-top: 80px;
+    text-align: center;
+    font-family: Lato;
 }
 
 
-#bodyRegister{
-
+#bodyRegister {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -223,11 +210,10 @@ textarea {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-    background-size: cover; 
+    background-size: cover;
 }
 
 #registerView {
-    
     background: #224364;
     width: 40%;
     height: auto;
@@ -237,11 +223,10 @@ textarea {
     margin-right: 5em;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 2px 6px 5px #fff ;
+    box-shadow: 0px 2px 6px 5px #fff;
 }
 
 #loginView {
-    
     background: #224364;
     width: 40%;
     height: auto;
@@ -251,29 +236,28 @@ textarea {
     margin-right: 5em;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 2px 6px 5px #fff ;
+    box-shadow: 0px 2px 6px 5px #fff;
 }
 
 
-#button-register{
+#button-register {
     background: #D18003;
     font-family: Oswald;
     margin-top: 5px;
-    font: 20px Lato; 
+    font: 20px Lato;
     width: 400%;
     margin-left: -5.3em;
 }
 
-#button-register:hover{
-    background: #224364;
-    font-family: Oswald;
-    color: #fff;
-    margin-top: 5px;
-    font: 20px Lato; 
-    width: 400%;
-    margin-left: -5.3em;
-
-}
+    #button-register:hover {
+        background: #224364;
+        font-family: Oswald;
+        color: #fff;
+        margin-top: 5px;
+        font: 20px Lato;
+        width: 400%;
+        margin-left: -5.3em;
+    }
 
 #createAccount {
     margin-top: 20px;
@@ -283,17 +267,18 @@ textarea {
 
 
 
-#headerButton{
-    display:inline;
+#headerButton {
+    display: inline;
     margin: 0 0 0 5px;
 }
-.btn-group{
-  bottom: 15px;
-  position: relative;
-  top: 15px;
+
+.btn-group {
+    bottom: 15px;
+    position: relative;
+    top: 15px;
 }
 
-#button{
+#button {
     border-radius: 5px;
     background: #D18003;
     color: white;
@@ -303,22 +288,21 @@ textarea {
     font: 20px Lato;
     margin-right: 0px;
     margin-left: 0px;
-
-}
-#button:hover{
-    border-color: #D18003;
-    color: #fff;
-    border-width: 1px;
-    border-radius: 5px;
-    background: none;
-    font-family: Oswald;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font: 20px Lato;
-
 }
 
-#create-button{
+    #button:hover {
+        border-color: #D18003;
+        color: #fff;
+        border-width: 1px;
+        border-radius: 5px;
+        background: none;
+        font-family: Oswald;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font: 20px Lato;
+    }
+
+#create-button {
     border-radius: 5px;
     background: #D18003;
     color: white;
@@ -328,21 +312,21 @@ textarea {
     font: 20px Lato;
     margin-right: 0px;
     margin-left: 0px;
-
 }
-#create-button:hover{
-    border-color: #D18003;
-    color: #fff;
-    border-width: 1px;
-    border-radius: 5px;
-    background: none;
-    font-family: Oswald;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font: 20px Lato;
 
-}
-#loginBody{
+    #create-button:hover {
+        border-color: #D18003;
+        color: #fff;
+        border-width: 1px;
+        border-radius: 5px;
+        background: none;
+        font-family: Oswald;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font: 20px Lato;
+    }
+
+#loginBody {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -352,493 +336,529 @@ textarea {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-    background-size: cover; 
+    background-size: cover;
 }
 
-#registerNewUserLink{
+#registerNewUserLink {
     font-family: Lato;
     text-align: center;
     font: 20px Lato;
 }
 
-#registerNewUserLink:hover {
-    font-family: Lato;
-    color: #fff;
-    text-decoration: underline;
-    text-align: center;
-    font: 20px Lato;
-    cursor: pointer;
-}
+    #registerNewUserLink:hover {
+        font-family: Lato;
+        color: #fff;
+        text-decoration: underline;
+        text-align: center;
+        font: 20px Lato;
+        cursor: pointer;
+    }
 
-#rememberMeCheckbox{
+#rememberMeCheckbox {
     font: 15px Lato;
 }
-#img{
+
+#img {
     text-align: center;
 }
 
-#buttons{
-    float:right;
+#buttons {
+    float: right;
 }
-#menuLogout{
-    display:inline;
+
+#menuLogout {
+    display: inline;
 }
-#greeting{
+
+#greeting {
     font: 20px Lato;
 }
-#checkbox{
+
+#checkbox {
     font: 17px Lato;
 }
 
 /*---------------------Loading animation------------------------*/
 #loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 3;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 5px solid #D18003;
-  border-radius: 50%;
-  border-top: 5px solid #e8e8e8;
-  width: 9em;
-  height: 9em;
-  -webkit-animation: opacity 2s ease-in-out;
-  animation: opacity 2s ease-in-out;
-  transition: opacity 2s ease-in-out;
-  animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 3;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 5px solid #D18003;
+    border-radius: 50%;
+    border-top: 5px solid #e8e8e8;
+    width: 9em;
+    height: 9em;
+    -webkit-animation: opacity 2s ease-in-out;
+    animation: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+    animation: spin 2s linear infinite;
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
 .animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s;
 }
 
 @-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 }
-  to { bottom:0px; opacity:1 }
+    from {
+        bottom: -100px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
 }
 
 @keyframes animatebottom {
-  from{ bottom:-100px; opacity:0 }
-  to{ bottom:0; opacity:1 }
+    from {
+        bottom: -100px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
 }
 
 #myDiv {
-  opacity: 0;
-  text-align: center;
-  transition-timing-function: ease-in;
-  -webkit-animation: opacity 3s ease-in-out;
-  animation: opacity 3s ease-in-out;
-  transition: opacity 3s ease-in-out;
+    opacity: 0;
+    text-align: center;
+    transition-timing-function: ease-in;
+    -webkit-animation: opacity 3s ease-in-out;
+    animation: opacity 3s ease-in-out;
+    transition: opacity 3s ease-in-out;
 }
 
 
 .wizard-right {
-    -webkit-animation-duration:2s;
-    -moz-animation-duration:2s;
-    -o-animation-duration:2s;
-    animation-duration:2s;
-    -webkit-animation-name:wizard-right;
-    -moz-animation-name:wizard-right;
-    -o-animation-name:wizard-right;
-    animation-name:wizard-right;
-    -webkit-animation-iteration-count:1;
-    -moz-animation-iteration-count:1;
-    -o-animation-iteration-count:1;
-    animation-iteration-count:1;
-    -webkit-animation-timing-function:ease-out;
-    -moz-animation-timing-function:ease-out;
-    -o-animation-timing-function:ease-out;
-    animation-timing-function:ease-out;
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    -o-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-    top:500px;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: wizard-right;
+    -moz-animation-name: wizard-right;
+    -o-animation-name: wizard-right;
+    animation-name: wizard-right;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    top: 500px;
 }
+
 @-webkit-keyframes wizard-right {
     0% {
-        top:150px;
-        opacity:0;
+        top: 150px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
+        opacity: 1;
     }
+
     35% {
-        top:-40px;
-        
+        top: -40px;
     }
+
     100% {
-        top:15px;
+        top: 15px;
     }
 }
+
 @-moz-keyframes wizard-right {
     0% {
-        top:150px;
-        opacity:0;
+        top: 150px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        top:-40px;
-        
+        top: -40px;
     }
+
     100% {
-        top:15px;
-        
+        top: 15px;
     }
 }
+
 @-o-keyframes wizard-right {
     0% {
-        top:150px;
-        opacity:0;
-        
+        top: 150px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        top:-40px;
-        
+        top: -40px;
     }
+
     100% {
-        top:15px;
-        
+        top: 15px;
     }
 }
+
 @-keyframes wizard-right {
 
     0% {
-        top:150px;
-        opacity:0;  
+        top: 150px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-       
+        opacity: 1;
     }
+
     35% {
-        top:-40px;
-        
+        top: -40px;
     }
+
     100% {
-        top:15px;
+        top: 15px;
     }
 }
 
 .wizard-left {
-    -webkit-animation-duration:2s;
-    -moz-animation-duration:2s;
-    -o-animation-duration:2s;
-    animation-duration:2s;
-    -webkit-animation-name:wizard-left;
-    -moz-animation-name:wizard-left;
-    -o-animation-name:wizard-left;
-    animation-name:wizard-left;
-    -webkit-animation-iteration-count:1;
-    -moz-animation-iteration-count:1;
-    -o-animation-iteration-count:1;
-    animation-iteration-count:1;
-    -webkit-animation-timing-function:ease-out;
-    -moz-animation-timing-function:ease-out;
-    -o-animation-timing-function:ease-out;
-    animation-timing-function:ease-out;
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    -o-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-    top:500px;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: wizard-left;
+    -moz-animation-name: wizard-left;
+    -o-animation-name: wizard-left;
+    animation-name: wizard-left;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    top: 500px;
 }
+
 @-webkit-keyframes wizard-left {
     0% {
-        top:150px;
-        opacity:0;
-        
+        top: 150px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        top:-20px;
-        
+        top: -20px;
     }
+
     100% {
-         top:15px;
-        
+        top: 15px;
     }
 }
+
 @-moz-keyframes wizard-left {
     0% {
-        top:150px;
-        opacity:0;
-        
+        top: 150px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        top:-20px;
-        
+        top: -20px;
     }
+
     100% {
-         top:15px;
-        
+        top: 15px;
     }
 }
+
 @-o-keyframes wizard-left {
     0% {
-        top:150px;
-        opacity:0;
-        
+        top: 150px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        top:-20px;
-        
+        top: -20px;
     }
+
     100% {
-         top:15px;
-        
+        top: 15px;
     }
 }
+
 @-keyframes wizard-left {
 
     0% {
-        top:150px;
-        opacity:0;
-        
+        top: 150px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        top:-20px;
-        
+        top: -20px;
     }
+
     100% {
-         top:15px;
-        
+        top: 15px;
     }
 }
+
 .logo {
-    -webkit-animation-duration:2s;
-    -moz-animation-duration:2s;
-    -o-animation-duration:2s;
-    animation-duration:2s;
-    -webkit-animation-name:logo;
-    -moz-animation-name:logo;
-    -o-animation-name:logo;
-    animation-name:logo;
-    -webkit-animation-iteration-count:1;
-    -moz-animation-iteration-count:1;
-    -o-animation-iteration-count:1;
-    animation-iteration-count:1;
-    -webkit-animation-timing-function:ease-out;
-    -moz-animation-timing-function:ease-out;
-    -o-animation-timing-function:ease-out;
-    animation-timing-function:ease-out;
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    -o-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-    bottom:500px;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: logo;
+    -moz-animation-name: logo;
+    -o-animation-name: logo;
+    animation-name: logo;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    bottom: 500px;
 }
+
 @-webkit-keyframes logo {
     0% {
-        bottom:100px;
-        opacity:0;
-        
+        bottom: 100px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        bottom:-20px;
-        
+        bottom: -20px;
     }
+
     100% {
-        bottom:3em;
+        bottom: 3em;
     }
 }
+
 @-moz-keyframes logo {
     0% {
-        bottom:500px;
-        opacity:0;
-        
+        bottom: 500px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        bottom:-20px;
-        
+        bottom: -20px;
     }
+
     100% {
-         bottom:3em;
-        
+        bottom: 3em;
     }
 }
+
 @-o-keyframes logo {
     0% {
-        bottom:500px;
-        opacity:0;
-        
+        bottom: 500px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        bottom:-20px;
-        
+        bottom: -20px;
     }
+
     100% {
-         bottom:3em;
-        
+        bottom: 3em;
     }
 }
+
 @-keyframes logo {
     0% {
-       bottom:100px;
-        opacity:0;
-        
+        bottom: 100px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        bottom:-20px;
-        
+        bottom: -20px;
     }
+
     100% {
-        bottom:3em;
-        
+        bottom: 3em;
     }
 }
 
 .logoButton {
-    -webkit-animation-duration:2s;
-    -moz-animation-duration:2s;
-    -o-animation-duration:2s;
-    animation-duration:2s;
-    -webkit-animation-name:logoButton;
-    -moz-animation-name:logoButton;
-    -o-animation-name:logoButton;
-    animation-name:logoButton;
-    -webkit-animation-iteration-count:1;
-    -moz-animation-iteration-count:1;
-    -o-animation-iteration-count:1;
-    animation-iteration-count:1;
-    -webkit-animation-timing-function:ease-out;
-    -moz-animation-timing-function:ease-out;
-    -o-animation-timing-function:ease-out;
-    animation-timing-function:ease-out;
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    -o-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-    bottom:500px;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: logoButton;
+    -moz-animation-name: logoButton;
+    -o-animation-name: logoButton;
+    animation-name: logoButton;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    bottom: 500px;
 }
+
 @-webkit-keyframes logoButton {
     0% {
-        bottom:100px;
-        opacity:0;
-        
+        bottom: 100px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        bottom:-20px;
-        
+        bottom: -20px;
     }
+
     100% {
-        bottom:2em;
-        
+        bottom: 2em;
     }
 }
+
 @-moz-keyframes logoButton {
     0% {
-        bottom:300px;
-        opacity:0;
-        
+        bottom: 300px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        bottom:-20px;
-        
+        bottom: -20px;
     }
+
     100% {
-       bottom:2em;
-        
+        bottom: 2em;
     }
 }
+
 @-o-keyframes logoButton {
     0% {
-        bottom:300px;
-        opacity:0;
-        
+        bottom: 300px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        bottom:-20px;
-        
+        bottom: -20px;
     }
+
     100% {
-        bottom:2em;
-        
+        bottom: 2em;
     }
 }
+
 @-keyframes logoButton {
     0% {
-       bottom:100px;
-        opacity:0;
-        
+        bottom: 100px;
+        opacity: 0;
     }
+
     25% {
-        opacity:1;
-        
+        opacity: 1;
     }
+
     35% {
-        bottom:-20px;
-        
+        bottom: -20px;
     }
+
     100% {
-        bottom:2em;
-        
+        bottom: 2em;
     }
 }
