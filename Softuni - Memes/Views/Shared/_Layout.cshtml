@@ -23,7 +23,8 @@
                     new {area = ""}, new {@class = "navbar-brand", @id = "softuni-memes"})
                 <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("index", "Image")'">View All Memes</button>
                 <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("TopFive", "Image")'">Top 5 Memes</button>
-            </div>
+                <a href="/Home/About"  class='btn btn-primary' id="button">Team Info</a>
+             </div>
             <div class="navbar-collapse collapse">
                 @Html.Partial("_LoginPartial")
             </div>
