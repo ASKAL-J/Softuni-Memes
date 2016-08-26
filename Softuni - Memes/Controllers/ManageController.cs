@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Softuni___Memes.Models;
@@ -235,6 +236,21 @@ namespace Softuni___Memes.Controllers
             return View(model);
         }
 
+        public ActionResult ChangeFirstName()
+        {
+            return View();
+        }
+        // POST: /Manage/ChangeFirstName
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangeFirstName(string firstName)
+        {
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            user.FirstName = firstName;
+            IdentityResult updated = UserManager.Update(user);
+            return RedirectToAction("Index");
+        }
         // GET: /Manage/SetPassword
         public ActionResult SetPassword()
         {

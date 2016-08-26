@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "ChangeFirstName";
+}
+
+<h2>Change First Name</h2>
+@using (Html.BeginForm("ChangeFirstName", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <hr />
+        <div class="container">
+            <div class="wrapper">
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.Label("First name:",new { @class = "col-md-4 control-label" })
+                    <div class="col-md-12">
+                        @Html.TextBox("firstName","", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-8">
+                        <input type="submit" value="Change name" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        </div>
+}
+
