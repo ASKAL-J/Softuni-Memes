@@ -42,7 +42,10 @@
 
                 @if (item.AuthorId.Equals(User.Identity.GetUserId()))
                 {
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    <div class="class='btn btn-primary' id="button"">
+                        <button type='button' class='btn btn-primary' id="button" onclick="location.href = '  @Url.Action("Delete", new { id = item.Id })'">Delete</button>
+                      
+                    </div>
                 }
             </div>
         }
