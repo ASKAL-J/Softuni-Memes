@@ -153,6 +153,12 @@ textarea {
     margin: auto;
     bottom: 0px;
     left: 0px;
+    width: 100%;
+    padding-left: 36%;
+    padding-right: 36%;
+    font-family: Lato;
+    font-size: 20pt;
+    color: #b2b2b2;
 }
 
 
