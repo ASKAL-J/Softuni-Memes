@@ -1,4 +1,6 @@
-﻿@using Softuni___Memes.Models
+﻿@using System.Security.Policy
+@using Microsoft.Ajax.Utilities
+@using Softuni___Memes.Models
 @{
     ViewBag.Title = "Top 5 Memes";
 }
@@ -9,20 +11,30 @@
 
 @model List<ImageModel>
 <table class="table">
-    @foreach (var item in Model)
+    @if (Model.Count == 0)
     {
-        <tr>
-            <td>
-                <img src="@Url.Action("GetImage", "Image",new { id = item.Id})" onclick="location.href='@Url.Action($"Details/{item.Id}")'" />
-            </td>
-            <td>
-                <div style="align-content:center">@Html.ActionLink(" ", "DownloadImage", new { id = item.Id }, new { @class = "navbar-brand", @id = "downloads" })</div>
-            </td>
-            <td>
-                <div>Average score: @($"{item.AverageScore:F1}")</div>
-            </td>
-        </tr>
+        <div id="no-memes">There are no memes yet</div>
+        <center>
+            <div id="sadface">
+                <img src="/Images/sadface.png" />
+            </div>
+        </center>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Url.Action("GetImage", "Image", new {id = item.Id})" onclick="location.href = '@Url.Action($"Details/{item.Id}")'" />
+                </td>
+                <td>
+                    <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new { id = item.Id }, new { @class = "navbar-brand", @id = "downloads" })</div>
+                </td>
+                <td>
+                    <div>Average score: @($"{item.AverageScore:F1}")</div>
+                </td>
+            </tr>
+        }
     }
 </table>
-
-
