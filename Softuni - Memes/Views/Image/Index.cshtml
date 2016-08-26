@@ -34,7 +34,7 @@
                     {
 
                         <input id="rank-@item.Id" class="rating rating-loading" value="@($"{item.AverageScore:F1}")" data-step="0.5" data-max="5" data-min="0" data-show-clear="false" data-size="sm" data-show-caption="false" />
-                            <input id="rate" class="rate btn btn-default" type="submit" value="Rate" />
+                        <input id="rate" class="rate btn btn-default" type="submit" value="Rate" />
                     }
                 </div>
 
@@ -51,6 +51,7 @@
 </div>
 @section Styles {
     <link href="@Url.Content("~/Content/star-rating.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
