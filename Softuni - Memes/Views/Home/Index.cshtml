@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Security.Policy
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -14,7 +15,7 @@
 
     <div class="row">
         <div class="col-md-offset-4 col-md-4 logoButton">
-            <input type="button" class="meme-button" onclick="location.href = '@Url.Action("Create", "Image")'"/>
+            <input type="button" class="meme-button shake-slow shake-constant shake-constant--hover" onclick="location.href = '@Url.Action("Create", "Image")'"/>
         </div>
     </div>
     <div class="row">
