@@ -35,7 +35,7 @@ body {
         .work-item a img {
             margin-bottom: 10px;
             float: left;
-            border: 10px solid transparent;
+            border: 1px solid transparent;
             -webkit-transition: 0.5s;
             -o-transition: 0.5s;
             transition: 0.5s;
@@ -58,7 +58,11 @@ body {
         }
 
             .work-item a:hover img, .work-item a:active img, .work-item a:focus img {
-                border: 10px solid #000;
+                border: 1px solid #224364;
+                box-shadow: 0px 2px 5px 5px #224364;
+                opacity: 0.8;
+                cursor: pointer;
+                
             }
 
 
@@ -202,7 +206,7 @@ textarea {
    */
 
 #downloads {
-    width: 120px;
+    width: 50px;
     height: 50px;
     background: url("/Images/download.png");
     margin-top: -5px;
