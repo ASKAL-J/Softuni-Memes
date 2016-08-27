@@ -144,7 +144,7 @@ textarea {
     background: #224364;
 }
 
-
+/*
 #footer {
     background: #224364;
     position: fixed;
@@ -160,7 +160,7 @@ textarea {
     font-size: 20pt;
     color: #b2b2b2;
 }
-
+*/
 
 #registerLink {
     background: url("/Images/reg.png") no-repeat;
@@ -1043,4 +1043,54 @@ h2 {
         animation: swing 1s ease;
         -webkit-animation-iteration-count: 1;
         animation-iteration-count: 1;
+}
+
+#footer{
+    position: absolute;
+    background: #224364;
+    height: auto;
+    width: 100%;
+    min-width: 100%;
+    left: 0;
+    margin-top: 2em;
+}
+
+h1.footerh1 {
+    font-family: Lato;
+    color: #fff;
+      
+
+}
+
+#menu {
+    color: #fff;
+    font-family: Lato Thin;
+    font-size: 1.5em;
+    float: left;
+    text-align: left;
+    padding: 0em 4em;
+}
+
+#contactus {
+    color: #fff;
+    font-family: Lato Thin;
+    font-size: 1.5em;
+    padding: 0em 2em;
+    text-align: left;
+    margin-left: 2em;
+}
+
+a.footer-link {
+    
+    color: #fff;
+    font-family: Lato Thin;
+    text-decoration: none;    
+}
+
+a.footer-link:hover {
+    
+    color: #fff;
+    font-family: Lato Thin;
+    text-decoration: none; 
+    opacity: 0.5;   
 }

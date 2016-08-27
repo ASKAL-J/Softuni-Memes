@@ -23,7 +23,7 @@
                     new {area = ""}, new {@class = "navbar-brand", @id = "softuni-memes"})
                 <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("index", "Image")'">View All Memes</button>
                 <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("TopFive", "Image")'">Top 5 Memes</button>
-                <a href="/Home/About"  class='btn btn-primary' id="button">Team Info</a>
+                
              </div>
             <div class="navbar-collapse collapse">
                 @Html.Partial("_LoginPartial")
@@ -55,6 +55,34 @@
                 500);
         });
 </script>
+
+    <div id="footer">
+
+    <div class="col-md-4">
+            <div id="menu">
+                <h1 class="footerh1"><b>Menu:</b></h1>
+                <a href="/Image/Create" class="footer-link">Create meme</a><br />
+                <a href="/Image/Index" class="footer-link">View All Memea</a><br />
+                <a href="/Image/TopFive" class="footer-link">Top 5 Memes</a><br />
+                <a href="/Home/About" class="footer-link">Team Info</a>
+               
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="contactus">
+                <h1 class="footerh1"><b>Contact us:</b></h1>
+                <img src="~/Images/mapicon.png" /> Tintyava 15-17 <br />
+                <img src="~/Images/softunicap.png" /> <a href="http://softuni.bg" class="footer-link">Softuni</a><br />
+                <img src="~/Images/team.png" /> <a href="/Home/About" class="footer-link">ASKAL-J </a><br /><br />
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.7494573265208!2d23.348494815008543!3d42.66666442367692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85cb55c36753%3A0xbde203f1e5db85d1!2z0YPQuy4g4oCe0KLQuNC90YLRj9Cy0LDigJwgMTUtMTcsIDExMTMg0KHQvtGE0LjRjw!5e0!3m2!1sbg!2sbg!4v1472300758046" width="450" height="170" frameborder="0" style="border:0; margin-top: 1.5em;margin-left: -5em;box-shadow: 0px 2px 5px 4px #fff;" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!--
     <footer>
         <div id="footer">
             <ul class="nav navbar-nav">
@@ -62,5 +90,6 @@
             </ul>
         </div>
     </footer>
+        -->
 </body>
 </html>
