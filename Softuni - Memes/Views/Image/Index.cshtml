@@ -28,11 +28,13 @@
                     @if (Request.IsAuthenticated)
                     {
                         <div class="col-md-4">
+                            <p>Average score: @($"{item.AverageScore:F1}")</p>
                         </div>
                     }
                     else
                     {
                         <div class="col-md-offset-4 col-md-4">
+                            <p>Average score: @($"{item.AverageScore:F1}")</p>
                         </div>
 
                     }
