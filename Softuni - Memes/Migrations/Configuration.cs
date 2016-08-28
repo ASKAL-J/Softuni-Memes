@@ -16,7 +16,7 @@ namespace Softuni___Memes.Migrations
 
         protected override void Seed(Softuni___Memes.Models.ApplicationDbContext context)
         {
-            
+           
         }
     }
 }
