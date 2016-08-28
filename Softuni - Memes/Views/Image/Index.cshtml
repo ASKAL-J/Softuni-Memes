@@ -19,32 +19,36 @@
     <div class="row animate-box" data-animate-effect="fadeInLeft">
         @foreach (var item in ViewBag.OnePageOfImages)
         {
-            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
+            <div class="col-md-3 work-item">
                 <a>
-                    <img img src="@Url.Action("GetImage", "Image",new { id = item.Id})" onclick="location.href='@Url.Action($"Details/{item.Id}")'" class="img-responsive" />
+                    <img src="@Url.Action("GetImage", "Image",new { id = item.Id})" onclick="location.href='@Url.Action($"Details/{item.Id}")'" class="img-responsive" />
                 </a>
-                <div class="fh5co-work-title">
-                    <div class="col-md-4 col-sm-4 col-xs-4 col-xxs-4" style="align-content:center">
-                        @Html.ActionLink(" ", "DownloadImage", new { id = item.Id }, new { @class = "navbar-brand", @id = "downloads" })
-                    </div>
-                    <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-4 col-xxs-4">
-                        <p>Average score: @($"{item.AverageScore:F1}")</p>
-                    </div>
+                <div class="work-title">
+                    @Html.ActionLink(" ", "DownloadImage", new { id = item.Id }, new { @class = "navbar-brand col-md-2", @id = "downloads" })
                     @if (Request.IsAuthenticated)
                     {
+                        <div class="col-md-4">
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-md-offset-4 col-md-4">
+                        </div>
 
+                    }
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        <input id="rate" class="col-md-offset-1 col-md-3 rate btn btn-default" type="submit" value="Rate" style="padding-left: 10px" />
                         <input id="rank-@item.Id" class="rating rating-loading" value="@($"{item.AverageScore:F1}")" data-step="0.5" data-max="5" data-min="0" data-show-clear="false" data-size="sm" data-show-caption="false" />
-                        <input id="rate" class="rate btn btn-default" type="submit" value="Rate" />
+
                     }
                 </div>
-
-
-
                 @if (item.AuthorId.Equals(User.Identity.GetUserId()))
                 {
-                    <div class="class='btn btn-primary' id="button"">
+                    <div class="class='btn btn-primary' id=" button"">
                         <button type='button' class='btn btn-primary' id="button" onclick="location.href = '  @Url.Action("Delete", new { id = item.Id })'">Delete</button>
-                      
+
                     </div>
                 }
             </div>
