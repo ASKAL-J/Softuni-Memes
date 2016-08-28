@@ -83,7 +83,7 @@ body {
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 50em;
 }
 
 
@@ -1088,3 +1088,12 @@ a.footer-link {
         text-decoration: none;
         opacity: 0.5;
     }
+
+
+.textarea-view {
+    margin-right: 10em;
+}
+
+.tb {
+    width: 30%;
+}
