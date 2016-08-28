@@ -62,7 +62,6 @@ body {
                 box-shadow: 0px 2px 5px 5px #224364;
                 opacity: 0.8;
                 cursor: pointer;
-                
             }
 
 
@@ -400,6 +399,7 @@ textarea {
 
 #buttons {
     float: right;
+    list-style-type: none;
 }
 
 #menuLogout {
@@ -916,13 +916,13 @@ textarea {
     display: inline-block;
     height: 20em;
     width: 20em;
-   padding: 3em 2em;
+    padding: 3em 2em;
 }
 
-.imgview:hover{
-    cursor: pointer;
-    box-shadow: 0px 2px 6px 5px #000;
-}
+    .imgview:hover {
+        cursor: pointer;
+        box-shadow: 0px 2px 6px 5px #000;
+    }
 
 h2 {
     color: #000;
@@ -931,125 +931,119 @@ h2 {
 /*------------------FLIP ANIMATION IN ABOUT VIEW--------------------*/
 /* entire container, keeps perspective */
 .flip-container {
-	perspective: 1000px;
+    perspective: 1000px;
 }
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
+    /* flip the pane when hovered */
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
 
 .flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
+    width: 320px;
+    height: 480px;
 }
 
 /* flip speed goes here */
 .flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
-	backface-visibility: hidden;
-
-	position: absolute;
-	top: 0;
-	left: 0;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* front pane, placed above back */
 .front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
-	transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 /*-------------ABout title animation-------------------*/
 
-@-webkit-keyframes swing
-{
-    15%
-    {
+@-webkit-keyframes swing {
+    15% {
         -webkit-transform: translateX(5px);
         transform: translateX(5px);
     }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-       transform: translateX(-5px);
-    } 
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-@keyframes swing
-{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-    30%
-    {
+
+    30% {
         -webkit-transform: translateX(-5px);
         transform: translateX(-5px);
     }
-    50%
-    {
+
+    50% {
         -webkit-transform: translateX(3px);
         transform: translateX(3px);
     }
-    65%
-    {
+
+    65% {
         -webkit-transform: translateX(-3px);
         transform: translateX(-3px);
     }
-    80%
-    {
+
+    80% {
         -webkit-transform: translateX(2px);
         transform: translateX(2px);
     }
-    100%
-    {
+
+    100% {
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
 }
 
-.swing:hover
-{
-        -webkit-animation: swing 1s ease;
-        animation: swing 1s ease;
-        -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
+@keyframes swing {
+    15% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+
+    30% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+
+    50% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+
+    65% {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+
+    80% {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }
 
-#footer{
+.swing:hover {
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+#footer {
     position: absolute;
     background: #224364;
     height: auto;
@@ -1062,8 +1056,6 @@ h2 {
 h1.footerh1 {
     font-family: Lato;
     color: #fff;
-      
-
 }
 
 #menu {
@@ -1085,16 +1077,14 @@ h1.footerh1 {
 }
 
 a.footer-link {
-    
     color: #fff;
     font-family: Lato Thin;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
-a.footer-link:hover {
-    
-    color: #fff;
-    font-family: Lato Thin;
-    text-decoration: none; 
-    opacity: 0.5;   
-}
+    a.footer-link:hover {
+        color: #fff;
+        font-family: Lato Thin;
+        text-decoration: none;
+        opacity: 0.5;
+    }
