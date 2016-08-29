@@ -27,7 +27,7 @@
                     @Html.ActionLink(" ", "DownloadImage", new { id = item.Id }, new { @class = "navbar-brand col-md-2", @id = "downloads" })
                     @if (Request.IsAuthenticated)
                     {
-                        <div class="col-md-4">
+                        <div class="col-md-offset-3 col-md-4">
                             <p>Average score: @($"{item.AverageScore:F1}")</p>
                         </div>
                     }
@@ -41,9 +41,9 @@
 
                     @if (Request.IsAuthenticated)
                     {
-                        <input id="rate" class="col-md-offset-1 col-md-3 rate btn btn-default" type="submit" value="Rate" style="padding-left: 10px" />
+                        
                         <input id="rank-@item.Id" class="rating rating-loading" value="@($"{item.AverageScore:F1}")" data-step="0.5" data-max="5" data-min="0" data-show-clear="false" data-size="sm" data-show-caption="false" />
-
+                        <input id="rate" class="col-md-offset-1 col-md-3 rate btn btn-default" type="submit" value="Rate" style="padding-left: 10px" />
                     }
                 </div>
                 @if (item.AuthorId.Equals(User.Identity.GetUserId()))
