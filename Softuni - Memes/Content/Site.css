@@ -332,24 +332,11 @@ textarea {
     background: #D18003;
     color: white;
     font-family: Oswald;
-    margin-top: 5px;
-    margin-bottom: 5px;
     font: 20px Lato;
-    margin-right: 0px;
-    margin-left: 0px;
 }
-
-    #button:hover {
-        color: #fff;
-        border-width: 1px;
-        border-radius: 5px;
-        background: #224364;
-        font-family: Oswald;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        font: 20px Lato;
-    }
-
+#button:hover {
+    background: rgb(35,68,100);
+}
 #create-button {
     border-radius: 5px;
     background: #D18003;
