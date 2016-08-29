@@ -231,9 +231,16 @@
     <Content Include="Images\loading.gif" />
     <Content Include="Images\log-off.png" />
     <Content Include="Images\login.png" />
+    <Content Include="Images\logo-askalj.png" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\mapicon.png" />
+    <Content Include="Images\reg-hover.png" />
     <Content Include="Images\reg.png" />
+    <Content Include="Images\sadface.png" />
     <Content Include="Images\softuni.png" />
+    <Content Include="Images\softuni2background.jpg" />
+    <Content Include="Images\softunicap.png" />
+    <Content Include="Images\team.png" />
     <Content Include="Images\wizzard-left.png" />
     <Content Include="Images\wizzard-right.png" />
     <Content Include="Scripts\bootstrap.js" />
