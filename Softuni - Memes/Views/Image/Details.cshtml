@@ -9,7 +9,12 @@
         <dd>
             <img src="@Url.Action("GetImage","Image",new { id = Model.Id})"/>
         </dd>
-
+        <dd>
+            @if (Model.AuthorId.Equals(User.Identity.GetUserId()))
+            {
+                <button type="button" id="button" onclick="window.location= '@Url.Action("Delete", "Image", new { id = Model.Id })'">Delete</button>
+            }
+        </dd>
         <dt>
             @Html.DisplayName("Comments")
         </dt>
@@ -22,7 +27,7 @@
         @foreach (var item in ViewBag.Comments)
         {
             <dd>
-                <p>Comment by <b>@item.UserName</b> On <em>@item.Date<em></p>
+                <p>Comment by <b>@item.UserName</b> On <em>@item.Date</em></p>
                 <p>@item.Body</p>
             </dd>
         }

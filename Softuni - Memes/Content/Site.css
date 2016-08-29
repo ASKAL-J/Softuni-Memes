@@ -14,7 +14,9 @@ body {
     width: 80%;
     margin: 0 auto;
 }
-
+#rate {
+    width: 50%;
+}
 .wrapper {
     box-shadow: 2px 2px 2px 2px #224364;
     background: rgba(255, 255, 255, 0.60);
