@@ -209,6 +209,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\csshake.css" />
@@ -226,8 +227,11 @@
     <Content Include="Images\6.jpg" />
     <Content Include="Images\create-meme-button-hover.png" />
     <Content Include="Images\create-meme-button.png" />
+    <Content Include="Images\download.png" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\homelogo.png" />
+    <Content Include="Images\homelogo1-glow.png" />
+    <Content Include="Images\homelogo1.png" />
     <Content Include="Images\loading.gif" />
     <Content Include="Images\log-off.png" />
     <Content Include="Images\login.png" />
@@ -261,6 +265,12 @@
     <Content Include="Scripts\star-rating.js" />
     <Content Include="Scripts\star-rating.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="team\alexm.jpg" />
+    <Content Include="team\alexr.jpg" />
+    <Content Include="team\johny.jpg" />
+    <Content Include="team\kiril.jpg" />
+    <Content Include="team\lusi.jpg" />
+    <Content Include="team\simona.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -312,6 +322,7 @@
     <Content Include="Views\Ratings\Index.cshtml" />
     <Content Include="Views\Image\TopFive.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Manage\ChangeFirstName.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
