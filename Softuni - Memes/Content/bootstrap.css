@@ -2225,8 +2225,8 @@ textarea.input-lg {
     }
 
 .btn-default {
-    color: #333333;
-    background-color: #ffffff;
+    color: white;
+    background-color: #224364;
     border-color: #cccccc;
 }
 
@@ -2235,8 +2235,8 @@ textarea.input-lg {
     .btn-default:active,
     .btn-default.active,
     .open .dropdown-toggle.btn-default {
-        color: #333333;
-        background-color: #ebebeb;
+        color: white;
+        background-color: #ffa000;
         border-color: #adadad;
     }
 

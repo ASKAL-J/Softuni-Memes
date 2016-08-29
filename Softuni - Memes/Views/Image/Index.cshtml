@@ -7,41 +7,36 @@
     ViewBag.Title = "All Memes";
 }
 
-<center>
-    <h2>@ViewBag.Title</h2>
-</center>
 <div class="wrapper">
+    <div id="memesTitle">@ViewBag.Title</div>
     <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
     <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("Create", "Image")'">Create new</button>
-
 
     <div class="row animate-box" data-animate-effect="fadeInLeft">
         @foreach (var item in ViewBag.OnePageOfImages)
         {
             <div class="col-md-3 work-item">
                 <a>
-                    <img src="@Url.Action("GetImage", "Image",new { id = item.Id})" onclick="location.href='@Url.Action($"Details/{item.Id}")'" class="img-responsive" />
+                    <img src="@Url.Action("GetImage", "Image", new {id = item.Id})" onclick="location.href = '@Url.Action($"Details/{item.Id}")'" class="img-responsive" />
                 </a>
                 <div class="work-title">
                     @Html.ActionLink(" ", "DownloadImage", new { id = item.Id }, new { @class = "navbar-brand col-md-2 img-responsive", @id = "downloads" })
                     @if (Request.IsAuthenticated)
                     {
-                        <div class="col-md-offset-1 col-md-4 col-xs-4">
-                            <p>Average score: @($"{item.AverageScore:F1}")</p>
+                        <div class="col-md-offset-1 col-md-4 col-xs-4 average">
+                            Average score: @($"{item.AverageScore:F1}")
                         </div>
                     }
                     else
                     {
-                        <div class="col-md-offset-4 col-md-4">
-                            <p>Average score: @($"{item.AverageScore:F1}")</p>
+                        <div class="col-md-offset-4 col-md-4 average">
+                            Average score: @($"{item.AverageScore:F1}")
                         </div>
-
                     }
                     @if (Request.IsAuthenticated)
                     {
-                        
-                        <input id="rank-@item.Id" class="rating rating-loading"  value="@($"{item.AverageScore:F1}")" data-step="1.0" data-max="5" data-min="0" data-show-clear="false" data-size="xxs" data-show-caption="false" />
+                        <input id="rank-@item.Id" class="rating rating-loading" value="@($"{item.AverageScore:F1}")" data-step="1.0" data-max="5" data-min="0" data-show-clear="false" data-size="xxs" data-show-caption="false" />
                         <input id="rate" class="col-md-offset-3 col-md-4 rate btn btn-default" type="submit" value="Rate" />
                     }
                 </div>
@@ -59,4 +54,3 @@
     @Scripts.Render("~/Scripts/star-rating.js")
     @Scripts.Render("~/Scripts/rateIt.js")
 }
-

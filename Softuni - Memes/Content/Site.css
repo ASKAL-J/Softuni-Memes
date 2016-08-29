@@ -15,6 +15,20 @@ body {
     margin: 0 auto;
 }
 
+#memesTitle {
+    color: #224364;
+    font-size: 2em;
+    font-family: Lato;
+    font-weight: 700;
+}
+
+.average {
+    font-family: Lato;
+    font-size: 12px;
+    color: #224364;
+    font-weight: 700;
+}
+
 #rate {
     width: 50%;
 }
@@ -25,6 +39,8 @@ body {
     border-radius: 20px;
     padding: 50px;
     margin: 5%;
+    padding-top: 15px;
+
 }
 
 /* view all memes styles */
@@ -119,6 +135,7 @@ textarea {
     color: #00bfff;
     background-image: url("/Images/logo.png");
     width: 200px;
+    margin-top: 0.15em;
     height: 45px;
 }
 
@@ -261,6 +278,7 @@ textarea {
     margin-top: 80px;
     text-align: center;
     font-family: Lato;
+    color: white;
 }
 
 
@@ -305,7 +323,8 @@ textarea {
 
 
 #button-register {
-    background: #D18003;
+    background: #ffa000;
+    color: white;
     font-family: Oswald;
     margin-top: 5px;
     font: 20px Lato;
@@ -314,9 +333,9 @@ textarea {
 }
 
     #button-register:hover {
-        background: #224364;
+        background: white;
         font-family: Oswald;
-        color: #fff;
+        color: #224364;
         margin-top: 5px;
         font: 20px Lato;
         width: 400%;
@@ -344,7 +363,7 @@ textarea {
 
 #button {
     border-radius: 5px;
-    background: #D18003;
+    background: #ffa000;
     color: white;
     font-family: Oswald;
     font: 20px Lato;
@@ -441,7 +460,7 @@ textarea {
     width: 150px;
     height: 150px;
     margin: -75px 0 0 -75px;
-    border: 5px solid #D18003;
+    border: 5px solid #ffa000;
     border-radius: 50%;
     border-top: 5px solid #e8e8e8;
     width: 9em;
