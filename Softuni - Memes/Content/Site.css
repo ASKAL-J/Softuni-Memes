@@ -351,7 +351,8 @@ textarea {
 }
 
     #button:hover {
-        background: rgb(35,68,100);
+        background: #fff;
+        color: #224364;
     }
 
 #create-button {
