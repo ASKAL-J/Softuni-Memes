@@ -15,6 +15,10 @@ body {
     margin: 0 auto;
 }
 
+.team-names {
+    color: #224364;
+}
+
 #memesTitle {
     color: #224364;
     font-size: 2em;
@@ -445,6 +449,7 @@ textarea {
 
 #greeting {
     font: 20px Lato;
+    padding-top: 5px;
 }
 
 #checkbox {
