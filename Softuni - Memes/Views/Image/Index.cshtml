@@ -27,7 +27,7 @@
                     @Html.ActionLink(" ", "DownloadImage", new { id = item.Id }, new { @class = "navbar-brand col-md-2 img-responsive", @id = "downloads" })
                     @if (Request.IsAuthenticated)
                     {
-                        <div class="col-md-offset-3 col-md-4">
+                        <div class="col-md-offset-1 col-md-4 col-xs-4">
                             <p>Average score: @($"{item.AverageScore:F1}")</p>
                         </div>
                     }

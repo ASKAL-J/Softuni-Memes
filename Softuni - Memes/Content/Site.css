@@ -14,25 +14,38 @@ body {
     width: 80%;
     margin: 0 auto;
 }
+
 #rate {
     width: 50%;
 }
+
 .wrapper {
     box-shadow: 2px 2px 2px 2px #224364;
     background: rgba(255, 255, 255, 0.60);
     border-radius: 20px;
     padding: 50px;
-    padding-left: 10%;
+    margin: 5%;
 }
 
 /* view all memes styles */
+
+.work-text {
+    font-size: 18px;
+    vertical-align: central;
+    text-align: center;
+}
+
+.work-img {
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
 
 .work-item {
     background-color: #DDD;
     border: 2px solid #224364;
     margin-bottom: 30px;
-    margin: 15px 3%;
-    padding: 25px;
+    margin: 15px 4%;
+    padding: 10px;
     border-radius: 20px;
     font: Lato bold;
 }
@@ -336,9 +349,11 @@ textarea {
     font-family: Oswald;
     font: 20px Lato;
 }
-#button:hover {
-    background: rgb(35,68,100);
-}
+
+    #button:hover {
+        background: rgb(35,68,100);
+    }
+
 #create-button {
     border-radius: 5px;
     background: #D18003;
