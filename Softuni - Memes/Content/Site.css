@@ -1134,3 +1134,14 @@ a.footer-link {
 .tb {
     width: 30%;
 }
+
+#comment-view {
+    background: #DDD;
+    width: auto;
+    height: auto;
+    opacity: 0.9;
+    border-radius: 10px;
+    color: #000;
+    border: 2px solid rgb(35,68,100);
+    margin-bottom: 10px;
+}

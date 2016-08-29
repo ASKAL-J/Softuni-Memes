@@ -4,15 +4,15 @@
 @{
     ViewBag.Title = "Details";
 }
-<div>
-    <dl class="dl-horizontal">
+<div class="wrapper">
+    
         <dd>
-            <img src="@Url.Action("GetImage","Image",new { id = Model.Id})"/>
+            <img src="@Url.Action("GetImage","Image",new { id = Model.Id})" />
         </dd>
         <dd>
             @if (Model.AuthorId.Equals(User.Identity.GetUserId()))
             {
-                <button type="button" id="button" onclick="window.location= '@Url.Action("Delete", "Image", new { id = Model.Id })'">Delete</button>
+                <button type="button" id="button" onclick="window.location= '@Url.Action("Delete", "Image", new { id = Model.Id })'" style="margin-top: 0.5em;height: 2em;width: 5em;">Delete</button>
             }
         </dd>
         <dt>
@@ -26,27 +26,32 @@
         }
         @foreach (var item in ViewBag.Comments)
         {
-            <dd>
-                <p>Comment by <b>@item.UserName</b> On <em>@item.Date</em></p>
-                <p>@item.Body</p>
-                @if (Request.IsAuthenticated && item.UserName.Equals(User.Identity.GetUserName()))
+            <div id="comment-view">
+                <dd>
+                    <p>Comment by <b>@item.UserName</b> On <em>@item.Date</em></p>
+                    <p>@item.Body</p>
+                    @if (Request.IsAuthenticated && item.UserName.Equals(User.Identity.GetUserName()))
                 {
-                    <button type="submit" onclick="location.href ='@Url.Action("Edit", "Comments", new {id = item.Id})'">
-                        Edit
-                    </button>
-                    <button type = "submit" onclick = "location.href ='@Url.Action("Delete", "Comments", new {id = item.Id})'" >
-                         Delete
-                     </button>
-                }
-            </dd>
+                        <button type="submit" onclick="location.href ='@Url.Action("Edit", "Comments", new {id = item.Id})'">
+                            Edit
+                        </button>
+                        <button type="submit" onclick="location.href ='@Url.Action("Delete", "Comments", new {id = item.Id})'">
+                            Delete
+                        </button>
+
+                    }
+
+                </dd>
+            </div>
         }
-        
+
         @if (User.Identity.GetUserId() != null)
         {
             <dd>
                 <button class="btn btn-default" onclick="window.location='@Url.Action("Create","Comments",new { id = Model.Id})'">Add Comment</button>
             </dd>
         }
-        
+
     </dl>
+
 </div>
