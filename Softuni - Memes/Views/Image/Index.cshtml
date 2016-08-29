@@ -48,10 +48,7 @@
                 </div>
                 @if (item.AuthorId.Equals(User.Identity.GetUserId()))
                 {
-                    <div class="class='btn btn-primary' id=" button"">
-                        <button type='button' class='btn btn-primary' id="button" onclick="location.href = '  @Url.Action("Delete", new { id = item.Id })'">Delete</button>
-
-                    </div>
+                        <button type='button'  id="button" onclick="location.href = @Url.Action("Delete", new { id = item.Id })'">Delete</button>
                 }
             </div>
         }
