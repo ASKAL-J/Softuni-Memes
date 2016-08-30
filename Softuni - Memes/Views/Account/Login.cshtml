@@ -4,7 +4,8 @@
     ViewBag.Title = "Log in";
 }
 
-
+<link rel="stylesheet" href="~/Content/Site.css" type="text/css"/>
+<link rel="stylesheet" href="~/Content/bootstrap.css" type="text/css" />
 <div id="loginBody">
     <div id="homelogo1"></div>
     <div class="navbar-form" id="loginView">
@@ -16,18 +17,16 @@
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="row">
                 <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10">
                         @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })
                         @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="form-group">
-                    <div class="col-md-offset-1 col-md-10">
+
                         @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
+
                 </div>
             </div>
             <div class="form-group">
@@ -57,9 +56,6 @@
         </section>
     </div>
 </div>
-@section Styles {
-    @Styles.Render("~/Content/css")
-}
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

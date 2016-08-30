@@ -8,11 +8,13 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+        margin-bottom: 4em;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
+
 }
 
 .team-names {
@@ -300,11 +302,10 @@ textarea {
 
 #registerView {
     background: #224364;
-    width: 40%;
+    width: 50%;
     height: auto;
     float: right;
     color: #fff;
-    margin-top: 5em;
     margin-right: 5em;
     border-radius: 10px;
     text-align: center;
