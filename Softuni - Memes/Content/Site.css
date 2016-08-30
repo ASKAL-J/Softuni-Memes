@@ -1101,6 +1101,7 @@ h2 {
     min-width: 100%;
     left: 0;
     margin-top: 2em;
+    font-family: Lato;
 }
 
 h1.footerh1 {
@@ -1109,8 +1110,8 @@ h1.footerh1 {
 }
 
 #menu {
-    color: #fff;
-    font-family: Lato Thin;
+    color: #ffa000;
+    font-family: Lato;
     font-size: 1.5em;
     float: left;
     text-align: left;
@@ -1118,8 +1119,8 @@ h1.footerh1 {
 }
 
 #contactus {
-    color: #fff;
-    font-family: Lato Thin;
+    color: #ffa000;
+    font-family: Lato;
     font-size: 1.5em;
     padding: 0em 2em;
     text-align: left;
@@ -1128,13 +1129,13 @@ h1.footerh1 {
 
 a.footer-link {
     color: #fff;
-    font-family: Lato Thin;
+    font-family: Lato;
     text-decoration: none;
 }
 
     a.footer-link:hover {
         color: #fff;
-        font-family: Lato Thin;
+        font-family: Lato;
         text-decoration: none;
         opacity: 0.5;
     }
@@ -1158,3 +1159,14 @@ a.footer-link {
     border: 2px solid rgb(35,68,100);
     margin-bottom: 10px;
 }
+
+#createComment{
+    font-family: Lato;
+}
+
+#label{
+    font-family: Lato;
+    font-size: 15pt;
+    color: #224364;
+}
+

@@ -4,6 +4,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Softuni___Memes.Controllers
 {
@@ -36,8 +38,11 @@ namespace Softuni___Memes.Controllers
         // GET: Comments/Create
         public ActionResult Create(int id)
         {
-            Comment comment = new Comment();
-            comment.ImageId = id;
+            Comment comment = new Comment
+            {
+                ImageId = id,
+            };
+
             return View(comment);
         }
 
@@ -50,6 +55,12 @@ namespace Softuni___Memes.Controllers
         {
             if (ModelState.IsValid)
             {
+                UserManager<ApplicationUser> userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                ApplicationUser user = userManager.FindById(this.User.Identity.GetUserId());
+
+                comment.AuthorFirstName = user.FirstName;
+                comment.AuthorLastName = user.LastName;
+
                 db.Comments.Add(comment);
                 db.SaveChanges();
                 this.AddNotification("You have successfully commented.", NotificationType.SUCCESS);
