@@ -276,15 +276,6 @@ textarea {
     background: url("/Images/homelogo1.png");
 }
 
-#formGroup {
-    margin-left: 36%;
-    margin-right: 36%;
-}
-
-#formButton {
-    margin-left: 39%;
-    margin-right: 39%;
-}
 
 #registerTitle {
     margin-top: 80px;
@@ -1100,8 +1091,8 @@ h2 {
     width: 100%;
     min-width: 100%;
     left: 0;
-    margin-top: 2em;
     font-family: Lato;
+    vertical-align: bottom;
 }
 
 h3.footerh3 {
