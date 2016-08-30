@@ -23,7 +23,7 @@
         @foreach (var item in ViewBag.Comments)
             {
             <div id="comment-view" class="work-text">
-                <p>Comment by <b>@item.UserName</b> On <em>@item.Date</em></p>
+                <p>Comment by <b>@item.AuthorFirstName, @item.AuthorLastName</b> (<b>@item.UserName</b>) On <em>@item.Date</em></p>
                 <p>@item.Body</p>
                 @if (Request.IsAuthenticated && item.UserName.Equals(User.Identity.GetUserName()))
                 {
