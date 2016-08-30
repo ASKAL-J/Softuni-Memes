@@ -303,6 +303,34 @@
     <Content Include="Images\wizzard-right.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\6.jpg" />
+    <Content Include="Images\create-meme-button-hover.png" />
+    <Content Include="Images\create-meme-button.png" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\homelogo.png" />
+    <Content Include="Images\homelogo1-glow.png" />
+    <Content Include="Images\homelogo1.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\log-off.png" />
+    <Content Include="Images\login.png" />
+    <Content Include="Images\logo-askalj.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mapicon.png" />
+    <Content Include="Images\reg-hover.png" />
+    <Content Include="Images\reg.png" />
+    <Content Include="Images\sadface.png" />
+    <Content Include="Images\softuni.png" />
+    <Content Include="Images\softuni2background.jpg" />
+    <Content Include="Images\softunicap.png" />
+    <Content Include="Images\team.png" />
+    <Content Include="Images\wizzard-left.png" />
+    <Content Include="Images\wizzard-right.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -339,6 +367,12 @@
     <Content Include="team\simona.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="team\alexm.jpg" />
+    <Content Include="team\alexr.jpg" />
+    <Content Include="team\johny.jpg" />
+    <Content Include="team\kiril.jpg" />
+    <Content Include="team\lusi.jpg" />
+    <Content Include="team\simona.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
