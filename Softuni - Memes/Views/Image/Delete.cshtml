@@ -6,11 +6,9 @@
 
 <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Are you sure you want to delete this image?</h3>
 <div>
-    <h4>Image</h4>
     <hr />
-
     <img src="@Url.Action("GetImage","Image",new { id = Model.Id})" />
 
     @using (Html.BeginForm()) {
