@@ -39,7 +39,9 @@ namespace Softuni___Memes.Controllers
 
             //number of images
             var images = db.ImageModels
-                .OrderByDescending(img => img.DateCreated).ToList();
+                .OrderByDescending(img => img.DateCreated)
+                .ToList();
+
             //If no page specified in query, we set the default to 1
             var pageNumber = page ?? 1;
 
@@ -67,6 +69,7 @@ namespace Softuni___Memes.Controllers
             List<ImageModel> topRatedImages =
                 this.db.ImageModels
                 .OrderByDescending(img => img.AverageScore)
+                .ThenByDescending(img => img.OverallScore)
                 .Take(5)
                 .ToList();
 
@@ -209,6 +212,7 @@ namespace Softuni___Memes.Controllers
             }
 
             image.AverageScore = image.OverallScore / numberOfRatingsForModel;
+            image.NumberOfPeopleVoted = numberOfRatingsForModel;
             db.SaveChanges();
             this.AddNotification("Image successfully rated.", NotificationType.SUCCESS);
         }

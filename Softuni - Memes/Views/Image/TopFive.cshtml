@@ -23,7 +23,7 @@
             <div class="col-md-5 work-item">
                 <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[0].Id})" onclick="location.href = '@Url.Action($"Details/{Model[0].Id}")'"/>
                 <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new {id = Model[0].Id}, new {@class = "navbar-brand", @id = "downloads"})</div>
-                <div class="work-text average">Average score: @($"{Model[0].AverageScore:F1}")</div>
+                <div class="work-text average">Average score: @($"{Model[0].AverageScore:F1}")/@Model[0].NumberOfPeopleVoted</div>
             </div>
             <div class="col-md-5 work-item">
                 <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[1].Id})" onclick="location.href = '@Url.Action($"Details/{Model[1].Id}")'"/>

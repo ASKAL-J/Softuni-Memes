@@ -33,5 +33,7 @@ namespace Softuni___Memes.Models
         public double OverallScore { get; set; }
 
         public double AverageScore { get; set; }
+
+        public int NumberOfPeopleVoted { get; set; }
     }
 }
