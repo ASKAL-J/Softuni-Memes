@@ -1158,3 +1158,13 @@ a.footer-link {
     border: 2px solid rgb(35,68,100);
     margin-bottom: 10px;
 }
+
+#createComment{
+    font-family: Lato;
+}
+
+#label{
+    font-family: Lato;
+    font-size: 15pt;
+    color: #224364;
+}
