@@ -4,25 +4,26 @@
 }
 
 <div class="wrapper">
-    <h2>@ViewBag.Title</h2>
+    <h2 style="font-family: Lato; color: #224364">@ViewBag.Title</h2>
     <p class="text-success">@ViewBag.StatusMessage</p>
     <div>
-        <h4>Change your account settings</h4>
+        <h4 style="font-family: Lato; color: #224364">Change your account settings</h4>
         <hr/>
         <div class="div-horizontal">
-            <div>Password:</div>
             <div>
-                [
+                
                 @if (Model.HasPassword)
                 {
-                    @Html.ActionLink("Change your password", "ChangePassword")
+                    <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("ChangePassword", "Manage")'">Change your password</button>
+                   
                 }
                 else
                 {
                     @Html.ActionLink("Create", "SetPassword")
                 }
-                ]
-                [@Html.ActionLink("Change your First name", "ChangeFirstName")]
+                
+                <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("ChangeFirstName", "Manage")'">Change your First Name</button>
+                
             </div>
         </div>
     </div>
