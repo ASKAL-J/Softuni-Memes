@@ -1,11 +1,15 @@
 var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d');
 window.onload = (function () {
+    ctx.beginPath();
+    ctx.rect(0,0, 600, 500);
+    ctx.fillStyle = "white";
+    ctx.fill();
     ctx.fillStyle = '#224364';
-    ctx.font = 50 + 'px impact';
+    ctx.font = 70 + 'px impact';
     ctx.textAlign = "center";
-    ctx.shadowColor = "black";
-    wrapTopText(ctx, "Upload image or choose from given below", canvas.width / 2, canvas.height / 3, canvas.width - 60, 50);
+    ctx.lineWidth = 2;
+    wrapTopText(ctx, "Upload image or choose from given below", canvas.width / 2, canvas.height / 3, canvas.width - 60, 70);
 })
 // Draw in canvas tag
 lines = 0;

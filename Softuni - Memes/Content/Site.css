@@ -1,6 +1,76 @@
 ﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900);
 @import url(https://fonts.googleapis.com/css?family=Oswald);
+/*create view styling*/
 
+    #chose-file-style {
+        background-color: rgb(255,160,0);
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(35,68,100);
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 2px;
+    }
+
+    .templates {
+        color: #224364;
+        font-family: Lato;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    #chose-fail-style > div > input {
+        background-color: rgb(35,68,100);
+        color: #ffffff;
+        box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
+    }
+
+
+    .panel-body {
+        height: 200px;
+    }
+
+    .choose-button {
+        background-color: rgb(255,160,0);
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        padding: 5px 25px;
+        border-radius: 8px;
+        box-shadow: 2px;
+    }
+
+        .choose-button:hover {
+            background-color: white;
+            color: #224364;
+            box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
+        }
+
+    #create-greetings {
+        color: #224364;
+    }
+
+    .import {
+        color: white;
+    }
+
+    #canvas-text {
+        color: #224364;
+        top: 13px;
+    }
+
+    .new-button-create {
+        border-radius: 5px;
+        background: #ffa000;
+        color: white;
+        font-family: Oswald;
+        font: 20px Lato;
+    }
+
+        .new-button-create:hover {
+            background: #fff;
+            color: #224364;
+        }
 body {
     padding: 5%;
     background: url("/Images/softuni.png") no-repeat center center fixed;

@@ -3,82 +3,7 @@
     ViewBag.Title = "Create";
 }
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<style>
-    body {
-        background: url('../Images/softuni.png') no-repeat center center fixed;
-        background-size: cover;
-    }
-
-    #chose-file-style {
-        background-color: rgb(255,160,0);
-        font-size: 16px;
-        font-weight: bold;
-        color: rgb(35,68,100);
-        padding: 10px 20px;
-        border-radius: 8px;
-        box-shadow: 2px;
-    }
-
-    .templates {
-        color: #224364;
-        font-family: Lato;
-        font-weight: 700;
-        font-size: 18px;
-    }
-
-    #chose-fail-style > div > input {
-        background-color: rgb(35,68,100);
-        color: #ffffff;
-        box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
-    }
-
-
-    .panel-body {
-        height: 200px;
-    }
-
-    .choose-button {
-        background-color: rgb(255,160,0);
-        font-size: 16px;
-        font-weight: bold;
-        color: white;
-        padding: 5px 25px;
-        border-radius: 8px;
-        box-shadow: 2px;
-    }
-
-        .choose-button:hover {
-            background-color: white;
-            color: #224364;
-            box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
-        }
-
-    #create-greetings {
-        color: #224364;
-    }
-
-    .import {
-        color: white;
-    }
-
-    #canvas-text {
-        color: #224364;
-        top: 13px;
-    }
-
-    .new-button-create {
-        border-radius: 5px;
-        background: #ffa000;
-        color: white;
-        font-family: Oswald;
-        font: 20px Lato;
-    }
-
-        .new-button-create:hover {
-            background: #fff;
-            color: #224364;
-        }
-</style>
+<link rel="stylesheet" href="~/Content/Site.css" type="text/css" />
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -133,14 +58,14 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="panel panel-primary">
-                                <div class="panel-heading">Nakov</div>
+                                <div class="panel-heading" style="background-color: rgb(35,68,100)">Nakov</div>
                                 <div class="panel-body"><img src="~/Images/2.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
                                 <div class="panel-footer"><button type="button" id="2" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="panel panel-primary">
-                                <div class="panel-heading">Nakov</div>
+                                <div class="panel-heading" style="background-color: rgb(35,68,100)">Nakov</div>
                                 <div class="panel-body"><img src="~/Images/3.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
                                 <div class="panel-footer"><button type="button" id="3" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
                             </div>
@@ -149,21 +74,21 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="panel panel-primary">
-                                <div class="panel-heading">RoYaL</div>
+                                <div class="panel-heading" style="background-color: rgb(35,68,100)">RoYaL</div>
                                 <div class="panel-body"><img src="~/Images/4.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
                                 <div class="panel-footer"><button type="button" id="4" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="panel panel-primary">
-                                <div class="panel-heading">Jicata</div>
+                                <div class="panel-heading" style="background-color: rgb(35,68,100)">Jicata</div>
                                 <div class="panel-body"><img src="~/Images/5.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
                                 <div class="panel-footer"><button type="button" id="5" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="panel panel-primary">
-                                <div class="panel-heading"> Bat Simo</div>
+                                <div class="panel-heading" style="background-color: rgb(35,68,100)"> Bat Simo</div>
                                 <div class="panel-body"><img src="~/Images/6.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
                                 <div class="panel-footer"><button type="button" id="6" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
                             </div>
