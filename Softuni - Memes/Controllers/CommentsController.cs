@@ -126,7 +126,7 @@ namespace Softuni___Memes.Controllers
             db.Comments.Remove(comment);
             db.SaveChanges();
             this.AddNotification("Comment successfully deleted.", NotificationType.INFO);
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "Image", new { id = comment.ImageId });
         }
 
         protected override void Dispose(bool disposing)

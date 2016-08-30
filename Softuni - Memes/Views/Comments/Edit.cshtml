@@ -58,7 +58,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    <a href='@Url.Action("Details", "Image",new { id = Model.ImageId})'>Go back</a>
 </div>
 
 @section Scripts {

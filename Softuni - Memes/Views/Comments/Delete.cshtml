@@ -50,7 +50,8 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <a href='@Url.Action("Details", "Image",new { id = Model.ImageId})'>Go back</a>
+            
         </div>
     }
 </div>
