@@ -249,6 +249,7 @@
     <Content Include="Images\favicon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\footer.png" />
     <Content Include="Images\homelogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
