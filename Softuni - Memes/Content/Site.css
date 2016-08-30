@@ -388,7 +388,7 @@ textarea {
 
 #create-button {
     border-radius: 5px;
-    background: #D18003;
+    background: #ffa000;
     color: white;
     font-family: Oswald;
     margin-top: 5px;
@@ -399,11 +399,11 @@ textarea {
 }
 
     #create-button:hover {
-        border-color: #D18003;
-        color: #fff;
+        border-color: #224364;
+        color: #224364;
         border-width: 1px;
         border-radius: 5px;
-        background: rgb(35,68,100);
+        background: white;
         font-family: Oswald;
         margin-top: 5px;
         margin-bottom: 5px;
