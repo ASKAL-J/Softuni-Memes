@@ -1,11 +1,10 @@
 var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d');
 window.onload = (function () {
-    ctx.fillStyle = '#fff';
-    ctx.font = 60 + 'px impact';
+    ctx.fillStyle = '#224364';
+    ctx.font = 50 + 'px impact';
     ctx.textAlign = "center";
-    ctx.shadowBlur = 25;
-    ctx.shadowColor = "black"
+    ctx.shadowColor = "black";
     wrapTopText(ctx, "Upload image or choose from given below", canvas.width / 2, canvas.height / 3, canvas.width - 60, 50);
 })
 // Draw in canvas tag

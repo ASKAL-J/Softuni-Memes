@@ -19,27 +19,19 @@
         box-shadow: 2px;
     }
 
+    .templates {
+        color: #224364;
+        font-family: Lato;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
     #chose-fail-style > div > input {
         background-color: rgb(35,68,100);
         color: #ffffff;
         box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
     }
 
-    .btn btn-default {
-        background-color: rgb(255,160,0);
-        font-size: 16px;
-        font-weight: bold;
-        color: rgb(35,68,100);
-        padding: 5px 25px;
-        border-radius: 8px;
-        box-shadow: 2px;
-    }
-
-        .btn btn-default:hover {
-            background-color: rgb(35,68,100);
-            color: #ffffff;
-            box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
-        }
 
     .panel-body {
         height: 200px;
@@ -49,18 +41,43 @@
         background-color: rgb(255,160,0);
         font-size: 16px;
         font-weight: bold;
-        color: rgb(35,68,100);
+        color: white;
         padding: 5px 25px;
         border-radius: 8px;
         box-shadow: 2px;
     }
 
         .choose-button:hover {
-            background-color: rgb(35,68,100);
-            color: #ffffff;
+            background-color: white;
+            color: #224364;
             box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
         }
-        
+
+    #create-greetings {
+        color: #224364;
+    }
+
+    .import {
+        color: white;
+    }
+
+    #canvas-text {
+        color: #224364;
+        top: 13px;
+    }
+
+    .new-button-create {
+        border-radius: 5px;
+        background: #ffa000;
+        color: white;
+        font-family: Oswald;
+        font: 20px Lato;
+    }
+
+        .new-button-create:hover {
+            background: #fff;
+            color: #224364;
+        }
 </style>
 @using (Html.BeginForm())
 {
@@ -70,41 +87,46 @@
         <div class="wrapper">
             <div class="row">
 
-                <h1 style="font: 40px Lato"><b>Welcome</b></h1>
-                <p style="font: 18px Lato;">Here you can make meme for your favourite quote from Software University. </p>
-                <hr>
-                <canvas width="600" height="500" id="canvas" style="border: 1px solid black"></canvas><br>
+                <h1 style="font: 40px Lato" id="create-greetings"><b>Welcome</b></h1>
+                <p style="font: 18px Lato;" id="create-greetings">Here you can make meme for your favourite quote from Software University. </p>
+                <hr style="border-color: #224364"/>
+                <canvas width="600" height="500" id="canvas" style="border: 1px solid #224364"></canvas><br>
                 <div id="chose-file-style" class="row" style="margin-top: 10px; margin-bottom: 10px;">
-                    <div class="col-md-2 col-md-offset-3">Template:</div>
+                    <div class="col-md-2 col-md-offset-3 import">Import:</div>
                     <div class="col-md-2">
                         <input id="img" type="file" accept="image/*" />
                     </div>
                 </div>
                 <aside id="aside" hidden>
-                    <a href="#" id="download">Download as image</a><br />
+                    <a href="#" id="download">Download as image</a><br/>
                     <div class="row">
-                        <div class="col-md-offset-1 col-md-4 control-label" ><strong>Top text:</strong></div>
+                        <div class="col-md-offset-1 col-md-4 control-label" id="canvas-text"><strong>Top text:</strong>
+                        </div>
                         <input class="col-md-4 form-control tb" id="text-box1" type="text"><input class="col-md-2 form-control tb" id="size-font1" type="number" value="60" min="40" max="80" style="width: 60px; margin-left: 0;"><br>
                     </div>
                     <div class="row">
-                        <div class="col-md-offset-1 col-md-4 control-label" ><strong>Bottom text:</strong></div>
+                        <div class="col-md-offset-1 col-md-4 control-label" id="canvas-text"><strong>Bottom text:</strong>
+                        </div>
                         <input class="col-md-4 form-control tb" id="text-box2" type="text"><input class="col-md-2 form-control tb" id="size-font2" type="number" value="60" min="40" max="80" style="width: 60px; margin-left: 0;"><br>
                     </div>
-                        
-                        <div class="form-group">
-                            @if (Request.IsAuthenticated)
-                {
-                                <div>
-                                    <input type="button" value="Create" class="btn btn-default" id="create-button" />
-                                </div>
-                            }
-                        </div>
-</aside>
+
+                    <div class="form-group">
+                        @if (Request.IsAuthenticated)
+                        {
+                            <div>
+                                <input type="button" value="Create" class="new-button-create" id="create-button"/>
+                            </div>
+                        }
+                    </div>
+                </aside>
+                <hr style="border-color: #224364"/>
+                <div class="templates">You can choose from our favourite SoftUni templates</div>
+                <br />
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="panel panel-primary">
-                                <div class="panel-heading" style="background-color: rgb(35,68,100)">Soft Uni Memes</div>
+                                <div class="panel-heading" style="background-color: rgb(35,68,100)">SoftUni Memes</div>
                                 <div class="panel-body"><img src="~/Images/1.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
                                 <div class="panel-footer"><button type="button" id="1" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
                             </div>
@@ -153,7 +175,7 @@
     </div>
 }
 <script>
-    $('#create-button').on('click', function() {
+    $('#create-button').on('click', function () {
         $('#create-button').attr('disabled', 'disabled');
     })
 </script>
