@@ -41,7 +41,7 @@
     <div class="row">
         @if (User.Identity.GetUserId() != null)
             {
-            <div class="col-md-offset-2 col-md-4">
+            <div class="col-md-offset-4 col-md-4">
                 <button class="btn btn-default" onclick="window.location='@Url.Action("Create","Comments",new { id = Model.Id})'">Add Comment</button>
             </div>
         }
