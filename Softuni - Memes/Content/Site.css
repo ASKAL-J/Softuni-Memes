@@ -1095,7 +1095,7 @@ h2 {
 
 #footer {
     position: absolute;
-    background: url("/Images/footer.png");
+    background: #224364;
     height: auto;
     width: 100%;
     min-width: 100%;
@@ -1104,24 +1104,24 @@ h2 {
     font-family: Lato;
 }
 
-h3.footerh3 {
+h1.footerh1 {
     font-family: Lato;
-    color: #ffa000;
+    color: #fff;
 }
 
 #menu {
-    color: #fff;
+    color: #ffa000;
     font-family: Lato;
-    font-size: 1.2em;
+    font-size: 1.5em;
     float: left;
     text-align: left;
     padding: 0em 4em;
 }
 
 #contactus {
-    color: #fff;
+    color: #ffa000;
     font-family: Lato;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 0em 2em;
     text-align: left;
     margin-left: 2em;
