@@ -6,32 +6,31 @@
 
 <div class="wrapper">
     <h3 style="font-family: Lato; color: #224364">Are you sure you want to delete this comment?</h3>
-    <hr />
-    <dl class="dl-horizontal">
+    <hr style="border-color: #224364"/>
+    <br/>
+    <dl class="dl-horizontal" style="color: #224364">
         <dt>
             @Html.DisplayNameFor(model => model.Body)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Body)
         </dd>
-
+        <hr style="border-color: #224364" />
         <dt>
             @Html.DisplayNameFor(model => model.Date)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Date)
         </dd>
-
+        <hr  style="border-color: #224364"/>
+        
         <dt>
             @Html.DisplayNameFor(model => model.UserName)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.UserName)
         </dd>
-
+        <hr style="border-color: #224364" />
     </dl>
 
     @using (Html.BeginForm()) {
