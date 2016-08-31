@@ -3,8 +3,7 @@
     ViewBag.Title = "Create";
 }
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<link rel="stylesheet" href="~/Content/Site.css" type="text/css"/>
-
+<link rel="stylesheet" href="~/Content/Site.css" type="text/css" />
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()

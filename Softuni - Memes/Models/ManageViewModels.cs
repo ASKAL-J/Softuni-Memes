@@ -13,6 +13,9 @@ namespace Softuni___Memes.Models
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
     }
+	
+	
+	//omg
 
     public class ManageLoginsViewModel
     {
