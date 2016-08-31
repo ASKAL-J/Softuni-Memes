@@ -20,7 +20,7 @@
 /*create view styling*/
 
     #chose-file-style {
-        background-color: rgb(255,160,0);
+        background-color: #224364;
         font-size: 16px;
         font-weight: bold;
         color: rgb(35,68,100);
@@ -235,14 +235,6 @@ textarea {
 #softuni-memes {
     color: #00bfff;
     background-image: url("/Images/logo.png");
-    width: 200px;
-    margin-top: 0.15em;
-    height: 45px;
-}
-
-#softuni-memes:hover {
-    color: #00bfff;
-    background-image: url("/Images/cheers.png");
     width: 200px;
     margin-top: 0.15em;
     height: 45px;
@@ -529,8 +521,36 @@ textarea {
     font: 15px Lato-Bold;
 }
 
-#img {
-    text-align: center;
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    vertical-align: middle;
+    width: 200px;
+    line-height: 18px;
+     padding: 10px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: #ffa000;
+    display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: white;
+    color: #224364;
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
 }
 
 #buttons {
@@ -1257,53 +1277,4 @@ a.footer-link {
     font-size: 15pt;
     color: #224364;
 }
-
-
-#footer {
-    position: absolute;
-    background: url("/Images/footer.png");
-    height: auto;
-    width: 100%;
-    min-width: 100%;
-    left: 0;
-    font-family: Lato;
-    vertical-align: bottom;
-}
-
-h3.footerh3 {
-    font-family: Lato;
-    color: #fff;
-    font-size: 1.2em;
-}
-
-#menu {
-    color: #fff;
-    font-family: Lato Thin;
-    font-size: 1.3em;
-    float: left;
-    text-align: left;
-    padding: 0em 4em;
-}
-
-#contactus {
-    color: #fff;
-    font-family: Lato Thin;
-    font-size: 1.3em;
-    padding: 0em 2em;
-    text-align: left;
-    margin-left: 2em;
-}
-
-a.footer-link {
-    color: #fff;
-    font-family: Lato Thin;
-    text-decoration: none;
-}
-
-    a.footer-link:hover {
-        color: #fff;
-        font-family: Lato Thin;
-        text-decoration: none;
-        opacity: 0.5;
-    }
 

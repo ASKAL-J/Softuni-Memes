@@ -54,7 +54,7 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
-$("#img").change(function () {
+$("#file").change(function () {
     readURL(this);
     $('#text-box1').val('');
     $('#text-box2').val('');
