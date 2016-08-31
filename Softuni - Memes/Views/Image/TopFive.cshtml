@@ -28,7 +28,7 @@
             <div class="col-md-5 work-item">
                 <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[1].Id})" onclick="location.href = '@Url.Action($"Details/{Model[1].Id}")'"/>
                 <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new {id = Model[1].Id}, new {@class = "navbar-brand", @id = "downloads"})</div>
-                <div class="work-text average">Average score: @($"{Model[1].AverageScore:F1}")</div>
+                <div class="work-text average">Average score: @($"{Model[1].AverageScore:F1}")/@Model[1].NumberOfPeopleVoted</div>
             </div>
 
         </div>
@@ -37,18 +37,21 @@
                 <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[2].Id})" onclick="
 location.href = '@Url.Action($"Details/{Model[2].Id}")'"/>
                 <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new {id = Model[2].Id}, new {@class = "navbar-brand", @id = "downloads"})</div>
-                <div class="work-text average">Average score: @($"{Model[2].AverageScore:F1}")</div>
+                <div class="work-text average">Average score: @($"{Model[2].AverageScore:F1}")/@Model[2].NumberOfPeopleVoted</div>
+              
             </div>
             <div class="col-md-3 work-item">
                 <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[3].Id})" onclick="location.href = '@Url.Action($"Details/{Model[3].Id}")'"/>
                 <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new {id = Model[3].Id}, new {@class = "navbar-brand", @id = "downloads"})</div>
-                <div class="work-text average">Average score: @($"{Model[3].AverageScore:F1}")</div>
+                <div class="work-text average">Average score: @($"{Model[3].AverageScore:F1}")/@Model[3].NumberOfPeopleVoted</div>
+               
             </div>
             <div class="col-md-3 work-item">
                 <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[4].Id})" onclick="
 location.href = '@Url.Action($"Details/{Model[4].Id}")'"/>
                 <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new {id = Model[4].Id}, new {@class = "navbar-brand", @id = "downloads"})</div>
-                <div class="work-text average">Average score: @($"{Model[4].AverageScore:F1}")</div>
+                <div class="work-text average">Average score: @($"{Model[4].AverageScore:F1}")/@Model[4].NumberOfPeopleVoted</div>
+            
             </div>
         </div>
 
