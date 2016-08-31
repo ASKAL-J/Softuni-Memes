@@ -485,13 +485,7 @@
     <Content Include="Views\Comments\Create.cshtml" />
     <Content Include="Views\Comments\Delete.cshtml" />
     <Content Include="Views\Comments\Details.cshtml" />
-    <Content Include="Views\Comments\Edit.cshtml" />
     <Content Include="Views\Shared\_Notifications.cshtml" />
-    <Content Include="Views\Ratings\Create.cshtml" />
-    <Content Include="Views\Ratings\Delete.cshtml" />
-    <Content Include="Views\Ratings\Details.cshtml" />
-    <Content Include="Views\Ratings\Edit.cshtml" />
-    <Content Include="Views\Ratings\Index.cshtml" />
     <Content Include="Views\Image\TopFive.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Manage\ChangeFirstName.cshtml" />
@@ -499,6 +493,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Ratings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
