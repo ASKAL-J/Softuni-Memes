@@ -2,6 +2,8 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ShowAllFiles</ProjectView>
+    <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
+    <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_Layout.Mobile.cshtml</WebStackScaffolding_LayoutPageFile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

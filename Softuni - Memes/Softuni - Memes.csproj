@@ -184,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\BundleMobileConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -194,6 +195,7 @@
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RatingsController.cs" />
+    <Compile Include="Controllers\ViewSwitcherController.cs" />
     <Compile Include="Extensions\NotificationExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -213,7 +215,20 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\csshake.css" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\ajax-loader.png" />
+    <Content Include="Content\images\icons-18-black.png" />
+    <Content Include="Content\images\icons-18-white.png" />
+    <Content Include="Content\images\icons-36-black.png" />
+    <Content Include="Content\images\icons-36-white.png" />
+    <Content Include="Content\jquery.mobile-1.1.0.css" />
+    <Content Include="Content\jquery.mobile-1.1.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.1.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.1.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.1.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.1.0.min.css" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\Site.Mobile.css" />
     <Content Include="Content\star-rating.css" />
     <Content Include="Content\star-rating.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -288,6 +303,7 @@
     <Content Include="Images\sadface.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\SimoWarning.png" />
     <Content Include="Images\softuni.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -379,6 +395,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.mobile-1.1.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.1.0.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -457,6 +475,9 @@
     <Content Include="Views\Manage\ChangeFirstName.cshtml" />
     <Content Include="Views\Comments\Index.cshtml" />
     <Content Include="Views\Comments\Edit.cshtml" />
+    <Content Include="Views\Shared\_ViewSwitcher.cshtml" />
+    <Content Include="Views\Shared\_Layout.Mobile.cshtml" />
+    <Content Include="Views\Home\Index.Mobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
