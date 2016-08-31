@@ -12,7 +12,8 @@ namespace Softuni___Memes.Models
         public Comment()
         {
             this.UserName = HttpContext.Current.User.Identity.GetUserName();
-            this.Date = DateTime.Now;
+            DateTime date = DateTime.Now;
+            this.Date = date.ToLocalTime();
         }
 
         [Key]
