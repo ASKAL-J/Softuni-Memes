@@ -451,7 +451,6 @@
     <Content Include="Views\Image\Index.cshtml" />
     <Content Include="Views\Comments\Create.cshtml" />
     <Content Include="Views\Comments\Delete.cshtml" />
-    <Content Include="Views\Comments\Details.cshtml" />
     <Content Include="Views\Shared\_Notifications.cshtml" />
     <Content Include="Views\Image\TopFive.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
