@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using X.PagedList;
 
 namespace Softuni___Memes.Controllers
@@ -148,10 +149,12 @@ namespace Softuni___Memes.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             ImageModel imageModel = db.ImageModels.Find(id);
-            if (imageModel == null)
+            if (this.User.Identity.GetUserId() != imageModel.AuthorId)
             {
-                return HttpNotFound();
+                this.AddNotification("You are not authorized to delete this image", NotificationType.ERROR);
+                return RedirectToAction($"Details", new { id = imageModel.Id});
             }
+
             return View(imageModel);
         }
 
@@ -161,13 +164,16 @@ namespace Softuni___Memes.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             ImageModel imageModel = db.ImageModels.Find(id);
-            var ratings = db.Ratings.Where(r => r.ImageId == id);
-            var comments = db.Comments.Where(comment => comment.ImageId == id);
-            db.Comments.RemoveRange(comments);
-            db.ImageModels.Remove(imageModel);
-            db.Ratings.RemoveRange(ratings);
-            db.SaveChanges();
-            this.AddNotification("Image deleted.", NotificationType.INFO);
+            if (this.User.Identity.GetUserId() == imageModel.AuthorId)
+            {
+                var ratings = db.Ratings.Where(r => r.ImageId == id);
+                var comments = db.Comments.Where(comment => comment.ImageId == id);
+                db.Comments.RemoveRange(comments);
+                db.ImageModels.Remove(imageModel);
+                db.Ratings.RemoveRange(ratings);
+                db.SaveChanges();
+                this.AddNotification("Image deleted.", NotificationType.INFO);
+            }
 
             return RedirectToAction("Index");
         }

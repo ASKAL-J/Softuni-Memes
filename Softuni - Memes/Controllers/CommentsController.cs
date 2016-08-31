@@ -1,4 +1,5 @@
-﻿using Softuni___Memes.Extensions;
+﻿using System;
+using Softuni___Memes.Extensions;
 using Softuni___Memes.Models;
 using System.Data.Entity;
 using System.Linq;
@@ -78,9 +79,10 @@ namespace Softuni___Memes.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Comment comment = db.Comments.Find(id);
-            if (comment == null)
+            if (this.User.Identity.GetUserName() != comment.UserName)
             {
-                return HttpNotFound();
+                this.AddNotification("You are not authorized to edit this comment", NotificationType.ERROR);
+                return RedirectToAction("Details", "Image", new { id = comment.ImageId });
             }
             return View(comment);
         }
@@ -90,14 +92,16 @@ namespace Softuni___Memes.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Body,DateCreated,ImageId,UserId")] Comment comment)
+        public ActionResult Edit([Bind(Include = "Id,Body,ImageId,UserId")] Comment comment)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(comment).State = EntityState.Modified;
+                var cm = this.db.Comments.Find(comment.Id);
+                cm.Body = comment.Body;
+                db.Entry(cm).State = EntityState.Modified;
                 db.SaveChanges();
                 this.AddNotification("Comment successfully updated.", NotificationType.SUCCESS);
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Image", new { id = cm.ImageId });
             }
             return View(comment);
         }
@@ -110,9 +114,10 @@ namespace Softuni___Memes.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Comment comment = db.Comments.Find(id);
-            if (comment == null)
+            if (this.User.Identity.GetUserName() != comment.UserName)
             {
-                return HttpNotFound();
+                this.AddNotification("You are not authorized to delete this comment", NotificationType.ERROR);
+                return RedirectToAction("Details", "Image", new { id = comment.ImageId });
             }
             return View(comment);
         }
