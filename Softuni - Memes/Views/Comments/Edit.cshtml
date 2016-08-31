@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2 style="font-family: Lato; color: #224364">Edit comment</h2>
+
 
 
 @using (Html.BeginForm())
@@ -13,6 +13,8 @@
 
     <div class="container">
         <div class="wrapper">
+            <h2 style="font-family: Lato; color: #224364">Edit comment</h2>
+            <hr />
             <div class="row">
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 @Html.HiddenFor(model => model.Id)
