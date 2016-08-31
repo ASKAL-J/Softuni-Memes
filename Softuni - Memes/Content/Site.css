@@ -1,5 +1,22 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900);
-@import url(https://fonts.googleapis.com/css?family=Oswald);
+﻿@font-face {
+  font-family: 'Lato-Bold';
+  src: url('../fonts/Lato-Bold.ttf');
+}
+.btn-default {
+    color: white;
+    background-color: #224364;
+    border-color: #cccccc;
+}
+
+    .btn-default:hover,
+    .btn-default:focus,
+    .btn-default:active,
+    .btn-default.active,
+    .open .dropdown-toggle.btn-default {
+        color: white;
+        background-color: #ffa000;
+        border-color: #adadad;
+    }
 /*create view styling*/
 
     #chose-file-style {
@@ -14,8 +31,8 @@
 
     .templates {
         color: #224364;
-        font-family: Lato;
-        font-weight: 700;
+        font-family: Lato-Bold;
+        
         font-size: 18px;
     }
 
@@ -64,7 +81,7 @@
         background: #ffa000;
         color: white;
         font-family: Oswald;
-        font: 20px Lato;
+        font: 20px Lato-Bold;
     }
 
         .new-button-create:hover {
@@ -94,15 +111,15 @@ body {
 #memesTitle {
     color: #224364;
     font-size: 2em;
-    font-family: Lato;
-    font-weight: 700;
+    font-family: Lato-Bold;
+    
 }
 
 .average {
-    font-family: Lato;
+    font-family: Lato-Bold;
     font-size: 12px;
     color: #224364;
-    font-weight: 700;
+    
 }
 
 #rate {
@@ -126,7 +143,7 @@ body {
     margin-bottom: 30px;
     padding: 30px;
     border-radius: 20px;
-    font: Lato bold;
+    font: Lato-Bold bold;
 }
 .work-text {
     font-size: 18px;
@@ -147,7 +164,7 @@ body {
     margin: 15px 4%;
     padding: 10px;
     border-radius: 20px;
-    font: Lato bold;
+    font: Lato-Bold bold;
 }
 
     .work-item > a > img {
@@ -155,7 +172,7 @@ body {
     }
 
     .work-item > div {
-        font-family: Lato;
+        font-family: Lato-Bold;
     }
 
     .work-item a {
@@ -288,7 +305,7 @@ textarea {
     width: 100%;
     padding-left: 36%;
     padding-right: 36%;
-    font-family: Lato;
+    font-family: Lato-Bold;
     font-size: 20pt;
     color: #b2b2b2;
 }
@@ -352,7 +369,7 @@ textarea {
 #registerTitle {
     margin-top: 80px;
     text-align: center;
-    font-family: Lato;
+    font-family: Lato-Bold;
     color: white;
 }
 
@@ -401,7 +418,7 @@ textarea {
     color: white;
     font-family: Oswald;
     margin-top: 5px;
-    font: 20px Lato;
+    font: 20px Lato-Bold;
     width: 400%;
     margin-left: -5.3em;
 }
@@ -411,7 +428,7 @@ textarea {
         font-family: Oswald;
         color: #224364;
         margin-top: 5px;
-        font: 20px Lato;
+        font: 20px Lato-Bold;
         width: 400%;
         margin-left: -5.3em;
     }
@@ -419,7 +436,7 @@ textarea {
 #createAccount {
     margin-top: 20px;
     text-align: center;
-    font-family: Lato;
+    font-family: Lato-Bold;
 }
 
 
@@ -440,7 +457,7 @@ textarea {
     background: #ffa000;
     color: white;
     font-family: Oswald;
-    font: 20px Lato;
+    font: 20px Lato-Bold;
 }
 
     #button:hover {
@@ -455,7 +472,7 @@ textarea {
     font-family: Oswald;
     margin-top: 5px;
     margin-bottom: 5px;
-    font: 20px Lato;
+    font: 20px Lato-Bold;
     margin-right: 0px;
     margin-left: 0px;
 }
@@ -469,7 +486,7 @@ textarea {
         font-family: Oswald;
         margin-top: 5px;
         margin-bottom: 5px;
-        font: 20px Lato;
+        font: 20px Lato-Bold;
     }
 
 #loginBody {
@@ -486,22 +503,22 @@ textarea {
 }
 
 #registerNewUserLink {
-    font-family: Lato;
+    font-family: Lato-Bold;
     text-align: center;
-    font: 20px Lato;
+    font: 20px Lato-Bold;
 }
 
     #registerNewUserLink:hover {
-        font-family: Lato;
+        font-family: Lato-Bold;
         color: #fff;
         text-decoration: underline;
         text-align: center;
-        font: 20px Lato;
+        font: 20px Lato-Bold;
         cursor: pointer;
     }
 
 #rememberMeCheckbox {
-    font: 15px Lato;
+    font: 15px Lato-Bold;
 }
 
 #img {
@@ -518,12 +535,12 @@ textarea {
 }
 
 #greeting {
-    font: 20px Lato;
+    font: 20px Lato-Bold;
     padding-top: 5px;
 }
 
 #checkbox {
-    font: 17px Lato;
+    font: 17px Lato-Bold;
 }
 
 /*---------------------Loading animation------------------------*/
@@ -1162,19 +1179,19 @@ h2 {
     width: 100%;
     min-width: 100%;
     left: 0;
-    font-family: Lato;
+    font-family: Lato-Bold;
     vertical-align: bottom;
 }
 
 h3.footerh3 {
-    font-family: Lato;
+    font-family: Lato-Bold;
     color: #ffa000;
     font-size: 1.5em;
 }
 
 #menu {
     color: #fff;
-    font-family: Lato;
+    font-family: Lato-Bold;
     font-size: 1.3em;
     float: left;
     text-align: left;
@@ -1183,7 +1200,7 @@ h3.footerh3 {
 
 #contactus {
     color: #fff;
-    font-family: Lato;
+    font-family: Lato-Bold;
     font-size: 1.3em;
     padding: 0em 2em;
     text-align: left;
@@ -1192,13 +1209,13 @@ h3.footerh3 {
 
 a.footer-link {
     color: #fff;
-    font-family: Lato;
+    font-family: Lato-Bold;
     text-decoration: none;
 }
 
     a.footer-link:hover {
         color: #fff;
-        font-family: Lato;
+        font-family: Lato-Bold;
         text-decoration: none;
         opacity: 0.5;
     }
@@ -1224,11 +1241,11 @@ a.footer-link {
 }
 
 #createComment{
-    font-family: Lato;
+    font-family: Lato-Bold;
 }
 
 #label{
-    font-family: Lato;
+    font-family: Lato-Bold;
     font-size: 15pt;
     color: #224364;
 }

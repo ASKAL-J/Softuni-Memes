@@ -2224,21 +2224,7 @@ textarea.input-lg {
         box-shadow: none;
     }
 
-.btn-default {
-    color: white;
-    background-color: #224364;
-    border-color: #cccccc;
-}
 
-    .btn-default:hover,
-    .btn-default:focus,
-    .btn-default:active,
-    .btn-default.active,
-    .open .dropdown-toggle.btn-default {
-        color: white;
-        background-color: #ffa000;
-        border-color: #adadad;
-    }
 
     .btn-default:active,
     .btn-default.active,
