@@ -18,7 +18,7 @@
 
                 <div class="form-group">
                     <p id="label" class="col-md-offset-2 col-md-8">@Html.Label("Edit body:")</p>
-                    <div class="col-md-offset-2 col-md-4">
+                    <div class="col-md-offset-2 col-md-8">
                         @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
                     </div>
