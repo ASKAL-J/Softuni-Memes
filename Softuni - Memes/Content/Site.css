@@ -614,6 +614,7 @@ textarea {
 }
 
 .snapshot {
+    text-decoration: none !important;
     vertical-align: middle;
     width: 200px;
     line-height: 18px;
@@ -626,7 +627,6 @@ textarea {
     display: inline-block;
 }
 
-.snapshot:focus,
 .snapshot:hover {
     border: 1px solid #224364;
     background-color: white;

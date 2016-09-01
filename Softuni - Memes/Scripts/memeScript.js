@@ -14,6 +14,7 @@ btn.onclick = function () {
 
 span.onclick = function () {
     modal.style.display = "none";
+    Webcam.reset();
 }
 
 window.onclick = function (event) {
@@ -29,6 +30,7 @@ function import_image() {
     image.src = img;
     $('#text-box1').val('');
     $('#text-box2').val('');
+    childs[0].src = "";
     modal.style.display = "none";
     Webcam.reset();
     draw($('#text-box1').val(), $('#text-box2').val(), $('#size-font1').val(), $('#size-font2').val(), image);
