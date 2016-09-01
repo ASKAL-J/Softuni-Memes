@@ -604,11 +604,36 @@ textarea {
 
 .inputfile:focus + label,
 .inputfile + label:hover {
+    border: 1px solid #224364;
     background-color: white;
     color: #224364;
 }
 
 .inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.snapshot {
+    vertical-align: middle;
+    width: 200px;
+    line-height: 18px;
+     padding: 10px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: #ffa000;
+    display: inline-block;
+}
+
+.snapshot:focus,
+.snapshot:hover {
+    border: 1px solid #224364;
+    background-color: white;
+    color: #224364;
+}
+
+.snapshot {
 	cursor: pointer; /* "hand" cursor */
 }
 
@@ -701,6 +726,11 @@ textarea {
         bottom: 0;
         opacity: 1;
     }
+}
+
+#myBtn {
+    background-color: white;
+    color: #224364;
 }
 
 #myDiv {

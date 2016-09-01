@@ -21,8 +21,8 @@
                     <div class="col-md-offset-4 col-md-2">
                         <input type="file" name="file" id="file" class="inputfile" />
                         <label for="file">Choose a file</label>
-                        <button type="button" id="myBtn">Open Modal</button>
-
+                        <button type="button" id="myBtn" class="inputfile"></button>
+                        <label for="myBtn">Take a snap</label>
                         <div id="myModal" class="modal">
 
                             <div class="modal-content">
@@ -33,10 +33,9 @@
                                     <div class="col-md-offset-1 col-md-4" id="my_result" style="width: 600px; height:500px;"></div>
                                 </div>
                                 <br />
-                                <a class="ok_close" href="javascript:void(import_image())">OK</a>
-                                <a href="javascript:void(take_snapshot())">Take Snapshot</a>
+                                <a class="snapshot" href="javascript:void(import_image())">OK</a>
+                                <a class="snapshot" href="javascript:void(take_snapshot())">Take snapshot</a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -152,7 +151,7 @@
             document.getElementById('my_result').innerHTML = '<img src="' + data_uri + '"/>';
         });
     }
-    
+
 </script>
 <script>
     $('#create-button').on('click', function () {
