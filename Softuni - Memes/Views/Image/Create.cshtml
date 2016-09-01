@@ -3,7 +3,7 @@
     ViewBag.Title = "Create";
 }
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<link rel="stylesheet" href="~/Content/Site.css" type="text/css"/>
+<link rel="stylesheet" href="~/Content/Site.css" type="text/css" />
 
 @using (Html.BeginForm())
 {
@@ -15,23 +15,42 @@
 
                 <h1 style="font: 40px Lato" id="create-greetings"><b>Welcome</b></h1>
                 <p style="font: 24px Lato;" id="create-greetings">Here you can make meme for your favourite quote from Software University.</p>
-                <hr style="border-color: #224364"/>
+                <hr style="border-color: #224364" />
                 <canvas width="600" height="500" id="canvas" style="border: 1px solid #224364"></canvas><br>
                 <div id="chose-file-style" class="row" style="margin-top: 10px; margin-bottom: 10px;">
                     <div class="col-md-offset-4 col-md-2">
-                        <input type="file" name="file" id="file" class="inputfile"/>
+                        <input type="file" name="file" id="file" class="inputfile" />
                         <label for="file">Choose a file</label>
+                        <button type="button" id="myBtn">Open Modal</button>
+
+                        <div id="myModal" class="modal">
+
+                            <div class="modal-content">
+
+                                <span class="close">×</span>
+                                <div class="row">
+                                    <div class="col-md-4" id="my_camera" style="width: 600px; height:500px;"></div>
+                                    <div class="col-md-offset-1 col-md-4" id="my_result" style="width: 600px; height:500px;"></div>
+                                </div>
+                                <br />
+                                <a class="ok_close" href="javascript:void(import_image())">OK</a>
+                                <a href="javascript:void(take_snapshot())">Take Snapshot</a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 <aside id="aside" hidden>
-                    <a href="#" id="download">Download as image</a><br/>
+                    <a href="#" id="download"><img src="~/Images/downloads.png" /></a><br />
                     <div class="row">
-                        <div class="col-md-offset-1 col-md-4 control-label" id="canvas-text"><strong>Top text:</strong>
+                        <div class="col-md-offset-1 col-md-4 control-label" id="canvas-text">
+                            <strong>Top text:</strong>
                         </div>
                         <input class="col-md-4 form-control tb" id="text-box1" type="text"><input class="col-md-2 form-control tb" id="size-font1" type="number" value="60" min="40" max="80" style="width: 60px; margin-left: 0;"><br>
                     </div>
                     <div class="row">
-                        <div class="col-md-offset-1 col-md-4 control-label" id="canvas-text"><strong>Bottom text:</strong>
+                        <div class="col-md-offset-1 col-md-4 control-label" id="canvas-text">
+                            <strong>Bottom text:</strong>
                         </div>
                         <input class="col-md-4 form-control tb" id="text-box2" type="text"><input class="col-md-2 form-control tb" id="size-font2" type="number" value="60" min="40" max="80" style="width: 60px; margin-left: 0;"><br>
                     </div>
@@ -40,12 +59,12 @@
                         @if (Request.IsAuthenticated)
                         {
                             <div>
-                                <input type="button" value="Create" class="new-button-create" id="create-button"/>
+                                <input type="button" value="Create" class="new-button-create" id="create-button" />
                             </div>
                         }
                     </div>
                 </aside>
-                <hr style="border-color: #224364"/>
+                <hr style="border-color: #224364" />
                 <div class="templates">You can choose from our favourite SoftUni templates</div>
                 <br />
                 <div class="container">
@@ -123,6 +142,18 @@
         </div>
     </div>
 }
+<script src="~/Scripts/webcam.js"></script>
+<script language="JavaScript">
+    $('#myBtn').click(function () {
+        Webcam.attach('#my_camera');
+    })
+    function take_snapshot() {
+        Webcam.snap(function (data_uri) {
+            document.getElementById('my_result').innerHTML = '<img src="' + data_uri + '"/>';
+        });
+    }
+    
+</script>
 <script>
     $('#create-button').on('click', function () {
         $('#create-button').attr('disabled', 'disabled');

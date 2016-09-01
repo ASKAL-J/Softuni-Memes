@@ -408,6 +408,9 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\star-rating.js" />
     <Content Include="Scripts\star-rating.min.js" />
+    <Content Include="Scripts\webcam.js" />
+    <Content Include="Scripts\webcam.swf" />
+    <Content Include="Views\Image\webcam.swf" />
     <Content Include="Scripts\_references.js" />
     <Content Include="team\alexm.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

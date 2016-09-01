@@ -1,5 +1,40 @@
 var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d');
+
+//snap dial box open/close
+var modal = document.getElementById('myModal');
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// snap import in canvas
+function import_image() {
+    var childs = document.getElementById('my_result').childNodes;
+    var img = childs[0].src;
+    image = new Image();
+    image.src = img;
+    $('#text-box1').val('');
+    $('#text-box2').val('');
+    modal.style.display = "none";
+    Webcam.reset();
+    draw($('#text-box1').val(), $('#text-box2').val(), $('#size-font1').val(), $('#size-font2').val(), image);
+}
+
+
 window.onload = (function () {
     ctx.beginPath();
     ctx.rect(0,0, 600, 500);
