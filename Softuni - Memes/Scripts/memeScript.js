@@ -32,8 +32,8 @@ function import_image() {
     $('#text-box2').val('');
     childs[0].src = "";
     modal.style.display = "none";
-    Webcam.reset();
     draw($('#text-box1').val(), $('#text-box2').val(), $('#size-font1').val(), $('#size-font2').val(), image);
+    Webcam.reset();
 }
 
 
