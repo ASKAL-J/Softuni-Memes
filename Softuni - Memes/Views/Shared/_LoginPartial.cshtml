@@ -1,32 +1,43 @@
 ﻿@using System.Security.Policy
 @using Microsoft.AspNet.Identity
 @using Softuni___Memes.Models
+
+
+
 @if (Request.IsAuthenticated)
 {
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-    {
-    @Html.AntiForgeryToken()
-    <ul class="nav navbar-nav navbar-right">
-        <li id="greeting">
-           @Html.ActionLink("Hello, " + @Html.Raw(Html.Action("GetCurrentUserName", "Account")) + "!", "Index", "Manage", routeValues: new { area = "" }, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li>
-        <a id="menuLogout" href="javascript:document.getElementById('logoutForm').submit()">
-            <button style="margin: 10px" type='button' class='btn btn-primary' id="button">Log out</button>
-        </a>
+
+
+
+    <ul class="nav pull-left">
+        <li class="dropdown pull-right">
+            <a href="#" data-toggle="dropdown" style="color:#777;" class="dropdown-toggle">
+                <span class="glyphicon glyphicon-user"></span>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="/users/id" title="Profile">Profile</a>
+                </li>
+                <li>
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-left" }))
+                    {
+                        @Html.AntiForgeryToken();
+                        <a id="menuLogout" href="javascript:document.getElementById('logoutForm').submit()">
+                            <button style="margin: 10px" type='button' class='btn btn-primary' id="button">Log out</button>
+                        </a>
+                    }
+                </li>
+            </ul>
         </li>
     </ul>
-    }
+
+
 }
 else
 {
-    <li id="buttons">
-        <button style="margin: 10px" type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Login", "Account")'">Login</button>
-        <button style="margin: 10px" type='button' class='btn btn-primary' id="button" onclick="location.href='@Url.Action("Register", "Account")'">Sign up</button>
-    </li>
-    
-    /*<ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink(" ", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-        <li>@Html.ActionLink(" ", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>      
-    </ul>*/
+    <ul class="nav pull-left">
+        <li><a href="#" onclick="location.href='@Url.Action("Login", "Account")'"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+
 }

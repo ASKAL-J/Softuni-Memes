@@ -1,22 +1,96 @@
 ﻿@font-face {
-  font-family: 'Lato-Bold';
-  src: url('../fonts/Lato-Bold.ttf');
+    font-family: 'Lato-Bold';
+    src: url('../fonts/Lato-Bold.ttf');
 }
 
-/*snap dialog box*/
+.navbar-brand {
+    padding: 5px 15px;
+}
 
+.navbar-default { 
+    background-color: #224364;
+}
+
+.navbar {
+    border: 0px;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    line-height: 30px;
+    color: #e6e6e6;
+    margin-right: 5px;
+}
+.nav > li > a:hover {
+    color: #ffffff;
+    background-color: #3c6180;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #e6e6e6;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #e6e6e6;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    background-color: #3c6186;
+}
+ .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: #3c6180;
+}
+
+@media (min-width: 768px){
+ .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+
+
+
+
+
+
+
+/* Nice style for (clickable)labels */
+.snapshot {
+    text-decoration: none !important;
+    vertical-align: middle;
+    width: 200px;
+    line-height: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: #ffa000;
+    display: inline-block;
+}
+
+    .snapshot:hover {
+        border: 1px solid #224364;
+        background-color: white;
+        color: #224364;
+    }
+/*snap dialog box*/
 .modal {
-    display: none; 
-    position: fixed; 
+    display: none;
+    position: fixed;
     z-index: 1;
-    padding-top: 100px; 
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgba(0,0,0,0.4);
 }
 
 
@@ -42,25 +116,7 @@
         cursor: pointer;
     }
 
-
-.btn-default {
-    color: white;
-    background-color: #224364;
-    border-color: #cccccc;
-}
-
-    .btn-default:hover,
-    .btn-default:focus,
-    .btn-default:active,
-    .btn-default.active,
-    .open .dropdown-toggle.btn-default {
-        color: white;
-        background-color: #ffa000;
-        border-color: #adadad;
-    }
-/*create view styling*/
-
-    #chose-file-style {
+/*#chose-file-style {
         background-color: #224364;
         font-size: 16px;
         font-weight: bold;
@@ -130,13 +186,8 @@
             color: #224364;
         }
 body {
-    padding: 5%;
     background: url("/Images/softuni.png") no-repeat center center fixed;
     background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-        margin-bottom: 4em;
 }
 
 .container {
@@ -177,7 +228,7 @@ body {
 
 }
 
-/* view all memes styles */
+/*/ * view all memes styles * /*/
 .work-item-comments {
     background-color: #DDD;
     border: 2px solid #224364;
@@ -262,20 +313,21 @@ body {
                 opacity: 0.8;
                 cursor: pointer;
             }
-/* Set padding to keep content from hitting the edges */
+/*/ * Set padding to keep content from hitting the edges * /*/
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
+/** Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
-*/
+*
 .dl-horizontal dt {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
+/*/ * Set width on the form input elements since they 100% wide by default * /*/
+
 input,
 select,
 textarea {
@@ -352,23 +404,7 @@ textarea {
     background: #224364;
 }
 
-/*
-#footer {
-    background: #224364;
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    margin: auto;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    padding-left: 36%;
-    padding-right: 36%;
-    font-family: Lato-Bold;
-    font-size: 20pt;
-    color: #b2b2b2;
-}
-*/
+
 
 #registerLink {
     background: url("/Images/reg.png") no-repeat;
@@ -394,20 +430,6 @@ textarea {
     min-width: 100px;
 }
 
-/*
-    #reglogview {
-
-    text-align: center;
-    margin-top: -4em;
-}
-
-    #reglogbutton {
-
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
-}
-   */
 
 #downloads {
     width: 30px;
@@ -610,7 +632,7 @@ textarea {
 }
 
 .inputfile + label {
-	cursor: pointer; /* "hand" cursor */
+	cursor: pointer; /*/ * "hand" cursor * /*/
 }
 
 .snapshot {
@@ -634,7 +656,7 @@ textarea {
 }
 
 .snapshot {
-	cursor: pointer; /* "hand" cursor */
+	cursor: pointer;
 }
 
 #buttons {
@@ -655,7 +677,7 @@ textarea {
     font: 17px Lato-Bold;
 }
 
-/*---------------------Loading animation------------------------*/
+/*/ *---------------------Loading animation------------------------* /*/
 #loader {
     position: absolute;
     left: 50%;
@@ -674,478 +696,6 @@ textarea {
     transition: opacity 2s ease-in-out;
     animation: spin 2s linear infinite;
 }
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
-.animate-bottom {
-    position: relative;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
-    animation-duration: 1s;
-}
-
-@-webkit-keyframes animatebottom {
-    from {
-        bottom: -100px;
-        opacity: 0;
-    }
-
-    to {
-        bottom: 0px;
-        opacity: 1;
-    }
-}
-
-@keyframes animatebottom {
-    from {
-        bottom: -100px;
-        opacity: 0;
-    }
-
-    to {
-        bottom: 0;
-        opacity: 1;
-    }
-}
-
-#myBtn {
-    background-color: white;
-    color: #224364;
-}
-
-#myDiv {
-    opacity: 0;
-    text-align: center;
-    transition-timing-function: ease-in;
-    -webkit-animation: opacity 3s ease-in-out;
-    animation: opacity 3s ease-in-out;
-    transition: opacity 3s ease-in-out;
-}
-
-
-.wizard-right {
-    -webkit-animation-duration: 2s;
-    -moz-animation-duration: 2s;
-    -o-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-name: wizard-right;
-    -moz-animation-name: wizard-right;
-    -o-animation-name: wizard-right;
-    animation-name: wizard-right;
-    -webkit-animation-iteration-count: 1;
-    -moz-animation-iteration-count: 1;
-    -o-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    top: 500px;
-}
-
-@-webkit-keyframes wizard-right {
-    0% {
-        top: 150px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        top: -40px;
-    }
-
-    100% {
-        top: 15px;
-    }
-}
-
-@-moz-keyframes wizard-right {
-    0% {
-        top: 150px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        top: -40px;
-    }
-
-    100% {
-        top: 15px;
-    }
-}
-
-@-o-keyframes wizard-right {
-    0% {
-        top: 150px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        top: -40px;
-    }
-
-    100% {
-        top: 15px;
-    }
-}
-
-@-keyframes wizard-right {
-
-    0% {
-        top: 150px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        top: -40px;
-    }
-
-    100% {
-        top: 15px;
-    }
-}
-
-.wizard-left {
-    -webkit-animation-duration: 2s;
-    -moz-animation-duration: 2s;
-    -o-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-name: wizard-left;
-    -moz-animation-name: wizard-left;
-    -o-animation-name: wizard-left;
-    animation-name: wizard-left;
-    -webkit-animation-iteration-count: 1;
-    -moz-animation-iteration-count: 1;
-    -o-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    top: 500px;
-}
-
-@-webkit-keyframes wizard-left {
-    0% {
-        top: 150px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        top: -20px;
-    }
-
-    100% {
-        top: 15px;
-    }
-}
-
-@-moz-keyframes wizard-left {
-    0% {
-        top: 150px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        top: -20px;
-    }
-
-    100% {
-        top: 15px;
-    }
-}
-
-@-o-keyframes wizard-left {
-    0% {
-        top: 150px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        top: -20px;
-    }
-
-    100% {
-        top: 15px;
-    }
-}
-
-@-keyframes wizard-left {
-
-    0% {
-        top: 150px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        top: -20px;
-    }
-
-    100% {
-        top: 15px;
-    }
-}
-
-.logo {
-    -webkit-animation-duration: 2s;
-    -moz-animation-duration: 2s;
-    -o-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-name: logo;
-    -moz-animation-name: logo;
-    -o-animation-name: logo;
-    animation-name: logo;
-    -webkit-animation-iteration-count: 1;
-    -moz-animation-iteration-count: 1;
-    -o-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    bottom: 500px;
-}
-
-@-webkit-keyframes logo {
-    0% {
-        bottom: 100px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        bottom: -20px;
-    }
-
-    100% {
-        bottom: 3em;
-    }
-}
-
-@-moz-keyframes logo {
-    0% {
-        bottom: 500px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        bottom: -20px;
-    }
-
-    100% {
-        bottom: 3em;
-    }
-}
-
-@-o-keyframes logo {
-    0% {
-        bottom: 500px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        bottom: -20px;
-    }
-
-    100% {
-        bottom: 3em;
-    }
-}
-
-@-keyframes logo {
-    0% {
-        bottom: 100px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        bottom: -20px;
-    }
-
-    100% {
-        bottom: 3em;
-    }
-}
-
-.logoButton {
-    -webkit-animation-duration: 2s;
-    -moz-animation-duration: 2s;
-    -o-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-name: logoButton;
-    -moz-animation-name: logoButton;
-    -o-animation-name: logoButton;
-    animation-name: logoButton;
-    -webkit-animation-iteration-count: 1;
-    -moz-animation-iteration-count: 1;
-    -o-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    bottom: 500px;
-}
-
-@-webkit-keyframes logoButton {
-    0% {
-        bottom: 100px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        bottom: -20px;
-    }
-
-    100% {
-        bottom: 2em;
-    }
-}
-
-@-moz-keyframes logoButton {
-    0% {
-        bottom: 300px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        bottom: -20px;
-    }
-
-    100% {
-        bottom: 2em;
-    }
-}
-
-@-o-keyframes logoButton {
-    0% {
-        bottom: 300px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        bottom: -20px;
-    }
-
-    100% {
-        bottom: 2em;
-    }
-}
-
-@-keyframes logoButton {
-    0% {
-        bottom: 100px;
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    35% {
-        bottom: -20px;
-    }
-
-    100% {
-        bottom: 2em;
-    }
-}
-
-
 
 #team-info {
     display: inline-block;
@@ -1172,147 +722,6 @@ textarea {
 
 h2 {
     color: #000;
-}
-
-/*------------------FLIP ANIMATION IN ABOUT VIEW--------------------*/
-/* entire container, keeps perspective */
-.flip-container {
-    perspective: 1000px;
-}
-    /* flip the pane when hovered */
-    .flip-container:hover .flipper, .flip-container.hover .flipper {
-        transform: rotateY(180deg);
-    }
-
-.flip-container, .front, .back {
-    width: 320px;
-    height: 350px;
-}
-
-/* flip speed goes here */
-.flipper {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-    z-index: 2;
-    /* for firefox 31 */
-    transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-    transform: rotateY(180deg);
-}
-
-/*-------------ABout title animation-------------------*/
-
-@-webkit-keyframes swing {
-    15% {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-
-    30% {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
-    }
-
-    50% {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-
-    65% {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-
-    80% {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-
-@keyframes swing {
-    15% {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-
-    30% {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
-    }
-
-    50% {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-
-    65% {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-
-    80% {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-
-.swing:hover {
-    -webkit-animation: swing 1s ease;
-    animation: swing 1s ease;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-}
-
-#footer {
-    position: absolute;
-    background: url("/Images/footer.png");
-    height: auto;
-    width: 100%;
-    min-width: 100%;
-    left: 0;
-    font-family: Lato-Bold;
-    vertical-align: bottom;
-}
-
-h3.footerh3 {
-    font-family: Lato-Bold;
-    color: #ffa000;
-    font-size: 1.5em;
-}
-
-#menu {
-    color: #fff;
-    font-family: Lato-Bold;
-    font-size: 1.3em;
-    float: left;
-    text-align: left;
-    padding: 0em 4em;
 }
 
 #contactus {
@@ -1365,5 +774,5 @@ a.footer-link {
     font-family: Lato-Bold;
     font-size: 15pt;
     color: #224364;
-}
+} */
 
