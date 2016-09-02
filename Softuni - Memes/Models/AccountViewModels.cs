@@ -66,10 +66,12 @@ namespace Softuni___Memes.Models
     {
         [Required]
         [Display(Name = "First name")]
+        [MinLength(5)]
         public string FirstName { get; set; }
 
         [Required]
         [Display(Name = "Last name")]
+        [MinLength(5)]
         public string LastName { get; set; }
 
         [Required]
