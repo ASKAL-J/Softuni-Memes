@@ -2,12 +2,8 @@
 @using Microsoft.AspNet.Identity
 @using Softuni___Memes.Models
 
-
-
 @if (Request.IsAuthenticated)
 {
-
-
 
     <ul class="nav pull-left">
         <li class="dropdown pull-right">
@@ -17,7 +13,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                    <a href="/users/id" title="Profile">Profile</a>
+                    <a href="#" onclick="location.href = '@Url.Action("Profile", "Account")'">Profile</a>
                 </li>
                 <li>
                     @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-left" }))
