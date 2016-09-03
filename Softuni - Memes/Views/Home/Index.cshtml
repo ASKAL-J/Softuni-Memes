@@ -2,20 +2,16 @@
 @{
     ViewBag.Title = "Home Page";
 }
-
-
-<link href="~/Content/Site.css" rel="stylesheet"/>
-<link href="~/Content/csshake.css" rel="stylesheet" type="text/css" />
-<div class="container">
+<div class="content container">
     <div class="row">
-        <div class="col-md-offset-3 col-md-6 logo">
+        <div class="col-md-offset-4  col-sm-offset-2 col-md-4">
             <img class="img-responsive" src="/Images/homelogo.png">
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-offset-4 col-md-4 logoButton">
-            <input type="button" class="meme-button img-responsive shake-slow shake-constant shake-constant--hover" onclick="location.href = '@Url.Action("Create", "Image")'"/>
+        <div class="col-md-offset-5 col-sm-offset-4 col-xs-offset-2 col-md-3 logoButton">
+            <img class="meme-button img-responsive shake-slow shake-constant shake-constant--hover" onclick="location.href = '@Url.Action("Create", "Image")'" />
         </div>
     </div>
     <div class="row">

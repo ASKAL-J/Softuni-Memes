@@ -25,7 +25,8 @@ namespace Softuni___Memes
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/Site.css",
-                      "~/Content/PagedList.css"));
+                      "~/Content/PagedList.css",
+                      "~/Content/csshake.css"));
         }
     }
 }

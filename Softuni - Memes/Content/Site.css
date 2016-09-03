@@ -3,11 +3,22 @@
     src: url('../fonts/Lato-Bold.ttf');
 }
 
+body {
+    font-family: Lato-Bold;
+    background: url("/Images/softuni.png") no-repeat center center fixed;
+    background-size: cover;
+}
+.content{
+    padding-top: 50px;
+}
+
+/* Header */
+
 .navbar-brand {
     padding: 5px 15px;
 }
 
-.navbar-default { 
+.navbar-default {
     background-color: #224364;
 }
 
@@ -25,36 +36,84 @@
     color: #e6e6e6;
     margin-right: 5px;
 }
-.nav > li > a:hover {
-    color: #ffffff;
-    background-color: #3c6180;
+
+    .nav > li > a:hover {
+        color: #ffffff;
+        background-color: #3c6180;
+    }
+
+.navbar-default .navbar-nav > li > a {
+    color: #e6e6e6;
 }
 
 .navbar-default .navbar-nav > li > a {
     color: #e6e6e6;
 }
-.navbar-default .navbar-nav > li > a {
+
+    .navbar-default .navbar-nav > li > a:hover {
+        background-color: #3c6186;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+        color: #ffffff;
+        background-color: #3c6180;
+    }
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+
+/* Content styles*/
+.meme-button {
+    border: none !important;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    background: url('/Images/create-meme-button.png') repeat-y;
+}
+
+    .meme-button:hover {
+        border-radius: 10px;
+        width: 200px;
+        height: 50px;
+        background: url('/Images/create-meme-button-hover.png') repeat-y;
+    }
+
+/* Footer */
+footer {
+    background-color: #224364;
+    color: #e7e7e7;
+    padding-bottom: 25px;
+}
+footer > div > h3 {
+    color: #ffa000;
+}
+footer > div > a {
     color: #e6e6e6;
+    text-decoration: none;
+
 }
-.navbar-default .navbar-nav > li > a:hover {
-    background-color: #3c6186;
+footer > div > a:hover {
+    color: #888;
+    text-decoration: none;
 }
- .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #ffffff;
-    background-color: #3c6180;
+footer > div > a > p {
+    color: #e6e6e6;
+    margin-bottom: 0px;
+    vertical-align: bottom;
 }
-
-@media (min-width: 768px){
- .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
+iframe {
+    width: 90%;
+    height: 90%;
+    border: 0;
+    margin-top: 1.5em;
+    box-shadow: 0px 2px 5px 4px #fff;
+    margin: 20px;
 }
-
-
-
-
-
 
 
 
@@ -185,10 +244,7 @@
             background: #fff;
             color: #224364;
         }
-body {
-    background: url("/Images/softuni.png") no-repeat center center fixed;
-    background-size: cover;
-}
+
 
 .container {
     width: 80%;
@@ -369,20 +425,7 @@ textarea {
     margin-top: -5px;
 }
 
-.meme-button {
-    border: none !important;
-    border-radius: 10px;
-    width: 200px;
-    height: 50px;
-    background: url('/Images/create-meme-button.png') repeat-y;
-}
 
-    .meme-button:hover {
-        border-radius: 10px;
-        width: 200px;
-        height: 50px;
-        background: url('/Images/create-meme-button-hover.png') repeat-y;
-    }
 
 .wizzard-view-left {
     width: 40em;
