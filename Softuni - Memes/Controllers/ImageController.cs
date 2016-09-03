@@ -77,6 +77,17 @@ namespace Softuni___Memes.Controllers
             return View(topRatedImages);
         }
 
+        public ActionResult UserMemes()
+        {
+            string currentUserId = this.User.Identity.GetUserId();
+            List<ImageModel> userMemes =
+                this.db.ImageModels
+                .Where(img => img.AuthorId.Equals(currentUserId))
+                .ToList();
+
+            return View(userMemes);
+        }
+
         /// <summary>
         /// Returns the image with the requested id
         /// </summary>
