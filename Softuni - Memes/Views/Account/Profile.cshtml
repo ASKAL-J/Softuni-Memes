@@ -1,13 +1,14 @@
 ﻿@using Softuni___Memes.Models;
 @{
-    ViewBag.Title = "UserMemes";
+    ViewBag.Title = "Profile";
 }
 
 @model List<ImageModel>
-<h2>UserMemes</h2>
+<h2>Profile Memes</h2>
 
 @foreach (var item in Model)
 {
     <img src="@Url.Action("GetImage", "Image", new {id = item.Id})" onclick="location.href = '@Url.Action($"Details/{item.Id}")'" class="img-responsive" />
 }
+
 

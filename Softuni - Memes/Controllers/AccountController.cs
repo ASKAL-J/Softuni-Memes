@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Softuni___Memes.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -13,6 +14,7 @@ namespace Softuni___Memes.Controllers
     [ValidateInput(false)]
     public class AccountController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -133,6 +135,18 @@ namespace Softuni___Memes.Controllers
         public ActionResult Register()
         {
             return View();
+        }
+
+        [Authorize]
+        public ActionResult Profile()
+        {
+            string currentUserId = this.User.Identity.GetUserId();
+            List<ImageModel> userMemes =
+                this.db.ImageModels
+                .Where(img => img.AuthorId.Equals(currentUserId))
+                .ToList();
+
+            return View(userMemes);
         }
 
         // POST: /Account/Register
