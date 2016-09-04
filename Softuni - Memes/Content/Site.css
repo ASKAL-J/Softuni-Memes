@@ -8,10 +8,19 @@ body {
     background: url("/Images/softuni.png") no-repeat center center fixed;
     background-size: cover;
 }
-.content{
-    padding-top: 50px;
+
+.content {
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
+.wrapper {
+    box-shadow: 0px 2px 5px 1.5px #224364;
+    background: rgba(255, 255, 255, 0.60);
+    border-radius: 20px;
+    padding: 50px;
+    padding-top: 15px;
+}
 /* Header */
 
 .navbar-brand {
@@ -46,18 +55,19 @@ body {
     color: #e6e6e6;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color: #e6e6e6;
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus, .nav .open > a:active {
+    background-color: #3c6186;
+    border-color: #3c6186;
 }
 
-    .navbar-default .navbar-nav > li > a:hover {
-        background-color: #3c6186;
-    }
+.navbar-default .navbar-nav > li > a:hover {
+    background-color: #3c6186;
+}
 
-    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-        color: #ffffff;
-        background-color: #3c6180;
-    }
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: #3c6180;
+}
 
 @media (min-width: 768px) {
     .navbar-nav > li > a {
@@ -83,29 +93,50 @@ body {
         background: url('/Images/create-meme-button-hover.png') repeat-y;
     }
 
+.imgview {
+    height: 99%;
+    width: 99%;
+    border-radius: 10px;
+}
+
+.about-box {
+    border-bottom: 3px solid #3c6186;
+    margin-bottom: 5px;
+    text-decoration: none;
+
+}
+
+.imgview:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 3px 2px #000;
+}
 /* Footer */
 footer {
     background-color: #224364;
     color: #e7e7e7;
     padding-bottom: 25px;
 }
-footer > div > h3 {
-    color: #ffa000;
-}
-footer > div > a {
-    color: #e6e6e6;
-    text-decoration: none;
 
-}
-footer > div > a:hover {
-    color: #888;
-    text-decoration: none;
-}
-footer > div > a > p {
-    color: #e6e6e6;
-    margin-bottom: 0px;
-    vertical-align: bottom;
-}
+    footer > div > h3 {
+        color: #ffa000;
+    }
+
+    footer > div > a {
+        color: #e6e6e6;
+        text-decoration: none;
+    }
+
+        footer > div > a:hover {
+            color: #888;
+            text-decoration: none;
+        }
+
+        footer > div > a > p {
+            color: #e6e6e6;
+            margin-bottom: 0px;
+            vertical-align: bottom;
+        }
+
 iframe {
     width: 90%;
     height: 90%;
@@ -274,15 +305,7 @@ iframe {
     width: 50%;
 }
 
-.wrapper {
-    box-shadow: 0px 2px 5px 1.5px #224364;
-    background: rgba(255, 255, 255, 0.60);
-    border-radius: 20px;
-    padding: 50px;
-    margin: 5%;
-    padding-top: 15px;
 
-}
 
 /*/ * view all memes styles * /*/
 .work-item-comments {
@@ -751,17 +774,7 @@ textarea {
     opacity: 0.8;
 }
 
-.imgview {
-    display: inline-block;
-    height: 20em;
-    width: 20em;
-    padding: 3em 2em;
-}
 
-    .imgview:hover {
-        cursor: pointer;
-        box-shadow: 0px 2px 3px 2px #000;
-    }
 
 h2 {
     color: #000;

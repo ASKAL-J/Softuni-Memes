@@ -4,12 +4,9 @@
 }
 
 
-<link rel="stylesheet" href="~/Content/Site.css" type="text/css" />
-<link rel="stylesheet" href="~/Content/bootstrap.css" type="text/css" />
-<div id="bodyRegister">
-    <div id="homelogo1"></div>
-    <div id="registerView" style="margin-top: 5%;">
-        <div class="row"></div>
+
+<div class="content container">
+    <div class="wrapper text-center">
         <h2 id="registerTitle">@ViewBag.Title.</h2>
 
         @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
@@ -17,37 +14,32 @@
             @Html.AntiForgeryToken()
             <h4 id="createAccount">Create a new account.</h4>
             @Html.ValidationSummary("", new { @class = "text-danger" })
-            <div class="form-group" id="formGroup">
-                <div class="col-md-offset-3">
-                    <div>
-                        @Html.TextBoxFor(m => m.FirstName, new
-                   {
-                       @class = "form-control",
-                       @placeholder = "First name*",
-                       @style = "width: 100%;"
-                   })
-                    </div>
-
+            <div class="row col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    @Html.TextBoxFor(m => m.FirstName, new
+               {
+                   @class = "form-control",
+                   @placeholder = "First name*"
+               })
                 </div>
             </div>
+            <div class="row col-md-6 col-md-offset-3">
                 <div class="form-group">
-                    <div class="col-md-offset-3">
-                        <div>@Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @placeholder = "Last name*", @style = "width: 100%;" })</div>
-                    </div>
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @placeholder = "Last name*" })
                 </div>
+            </div>
+            <div class="row col-md-6 col-md-offset-3">
                 <div class="form-group">
-                    <div class="col-md-offset-3">
-                        <div>@Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email*", @style = "width: 100%;" })</div>
-                    </div>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email*" })
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-3">
-                        <div>@Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password*", @style = "width: 100%;" })</div>
+            </div>
+                <div class="row col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password*" })
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-3">
-                        <div>@Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirm password*",@style="width: 100%;" })</div>
+                </div>        <div class="row col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirm password*" })
                     </div>
                 </div>
                 <div class="form-group" id="formButton">
@@ -62,8 +54,6 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
-<style>
-    #footer {
-        margin-top: 40em;
-    }
-</style>
+@section Styles {
+    @Styles.Render("~/bundles/css")
+}
