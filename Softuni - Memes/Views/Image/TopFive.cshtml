@@ -6,56 +6,47 @@
 }
 
 @model List<ImageModel>
-<div class="wrapper">
-    <div id="memesTitle">@ViewBag.Title</div>
-    @if (Model.Count < 5)
-    {
-        <div id="no-memes">Not enough memes to show</div>
-        <center>
-            <div id="sadface">
-                <img src="/Images/sadface.png"/>
+<div class="content container">
+    <div class="wrapper text-center">
+        <div id="memesTitle">@ViewBag.Title</div>
+        @if (Model.Count < 5)
+        {
+            <div id="no-memes">Not enough memes to show</div>
+            <center>
+                <div id="sadface">
+                    <img src="/Images/sadface.png" />
+                </div>
+            </center>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-md-5 work-item">
+                    <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[0].Id})" onclick="location.href = '@Url.Action($"Details/{Model[0].Id}")'" />
+                    <div class="work-text average">Average score: @($"{Model[0].AverageScore:F1}")/@Model[0].NumberOfPeopleVoted</div>
+                </div>
+                <div class="col-md-5 work-item">
+                    <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[1].Id})" onclick="location.href = '@Url.Action($"Details/{Model[1].Id}")'" />
+                    <div class="work-text average">Average score: @($"{Model[1].AverageScore:F1}")/@Model[1].NumberOfPeopleVoted</div>
+                </div>
             </div>
-        </center>
-    }
-    else
-    {
-        <div class="row">
-            <div class="col-md-5 work-item">
-                <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[0].Id})" onclick="location.href = '@Url.Action($"Details/{Model[0].Id}")'"/>
-                <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new {id = Model[0].Id}, new {@class = "navbar-brand", @id = "downloads"})</div>
-                <div class="work-text average">Average score: @($"{Model[0].AverageScore:F1}")/@Model[0].NumberOfPeopleVoted</div>
-            </div>
-            <div class="col-md-5 work-item">
-                <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[1].Id})" onclick="location.href = '@Url.Action($"Details/{Model[1].Id}")'"/>
-                <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new {id = Model[1].Id}, new {@class = "navbar-brand", @id = "downloads"})</div>
-                <div class="work-text average">Average score: @($"{Model[1].AverageScore:F1}")/@Model[1].NumberOfPeopleVoted</div>
+            <div class="row">
+                <div class="col-md-3 work-item">
+                    <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[2].Id})" onclick="location.href='@Url.Action($"Details/{Model[2].Id}")' " />
+                    <div class="work-text average">Average score: @($"{Model[2].AverageScore:F1}")/@Model[2].NumberOfPeopleVoted</div>
+                </div>
+                <div class="col-md-3 work-item">
+                    <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[3].Id})" onclick="location.href = '@Url.Action($"Details/{Model[3].Id}")'" />
+
+                    <div class="work-text average">Average score: @($"{Model[3].AverageScore:F1}")/@Model[3].NumberOfPeopleVoted</div>
+                </div>
+                <div class="col-md-3 work-item">
+                    <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[4].Id})" onclick="location.href='@Url.Action($"Details/{Model[4].Id}")' " />
+                    <div class="work-text average">Average score: @($"{Model[4].AverageScore:F1}")/@Model[4].NumberOfPeopleVoted</div>
+                 </div>
             </div>
 
-        </div>
-        <div class="row">
-            <div class="col-md-3 work-item">
-                <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[2].Id})" onclick="
-location.href = '@Url.Action($"Details/{Model[2].Id}")'"/>
-                <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new {id = Model[2].Id}, new {@class = "navbar-brand", @id = "downloads"})</div>
-                <div class="work-text average">Average score: @($"{Model[2].AverageScore:F1}")/@Model[2].NumberOfPeopleVoted</div>
-              
-            </div>
-            <div class="col-md-3 work-item">
-                <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[3].Id})" onclick="location.href = '@Url.Action($"Details/{Model[3].Id}")'"/>
-                <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new {id = Model[3].Id}, new {@class = "navbar-brand", @id = "downloads"})</div>
-                <div class="work-text average">Average score: @($"{Model[3].AverageScore:F1}")/@Model[3].NumberOfPeopleVoted</div>
-               
-            </div>
-            <div class="col-md-3 work-item">
-                <img class="img-responsive work-img" src="@Url.Action("GetImage", "Image", new {id = Model[4].Id})" onclick="
-location.href = '@Url.Action($"Details/{Model[4].Id}")'"/>
-                <div style="align-content: center">@Html.ActionLink(" ", "DownloadImage", new {id = Model[4].Id}, new {@class = "navbar-brand", @id = "downloads"})</div>
-                <div class="work-text average">Average score: @($"{Model[4].AverageScore:F1}")/@Model[4].NumberOfPeopleVoted</div>
-            
-            </div>
-        </div>
+        }
+    </div>
 
-    }
 </div>
-
-

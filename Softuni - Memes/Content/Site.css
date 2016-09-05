@@ -93,6 +93,107 @@ body {
         background: url('/Images/create-meme-button-hover.png') repeat-y;
     }
 
+
+/* View All Memes Style-box  */
+.work-item-comments {
+    background-color: #DDD;
+    border: 2px solid #224364;
+    margin-bottom: 30px;
+    padding: 5%;
+    border-radius: 20px;
+    font: Lato-Bold bold;
+}
+
+.work-text {
+    font-size: 18px;
+    vertical-align: central;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.work-img {
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+    .work-img:hover {
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 1px solid #224364;
+        box-shadow: 0px 2px 5px 5px #224364;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+
+.work-item {
+    background-color: #DDD;
+    border: 2px solid #224364;
+    margin: 30px 4%;
+    padding: 10px;
+    border-radius: 20px;
+    font: Lato-Bold bold;
+}
+
+    .work-item > a > img {
+        border-radius: 10px;
+    }
+
+    .work-item > div {
+        font-family: Lato-Bold;
+    }
+
+    .work-item a {
+        border: none;
+        text-align: center;
+    }
+
+        .work-item a img {
+            margin-bottom: 10px;
+            float: left;
+            border: 1px solid transparent;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        .work-item a h3 {
+            font-size: 20px;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .work-item a p {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 0;
+        }
+
+        .work-item a:hover, .work-item a:active, .work-item a:focus {
+            text-decoration: none;
+        }
+
+            .work-item a:hover img, .work-item a:active img, .work-item a:focus img {
+                border: 1px solid #224364;
+                box-shadow: 0px 2px 5px 5px #224364;
+                opacity: 0.8;
+                cursor: pointer;
+            }
+
+.average {
+    font-family: Lato-Bold;
+    font-size: 12px;
+    color: #224364;
+}
+
+
+#downloads {
+    width: 30px;
+    height: 30px;
+    background: url("/Images/downloads.png");
+    margin-top: 0.5em;
+}
+
 .imgview {
     height: 99%;
     width: 99%;
@@ -103,13 +204,23 @@ body {
     border-bottom: 3px solid #3c6186;
     margin-bottom: 5px;
     text-decoration: none;
-
 }
 
 .imgview:hover {
     cursor: pointer;
     box-shadow: 0px 2px 3px 2px #000;
 }
+
+#comment-view {
+    background: #DDD;
+    width: auto;
+    height: auto;
+    opacity: 0.9;
+    border-radius: 10px;
+    color: #000;
+    border: 2px solid rgb(35,68,100);
+    margin-bottom: 10px;
+} 
 /* Footer */
 footer {
     background-color: #224364;
@@ -294,104 +405,12 @@ iframe {
     
 }
 
-.average {
-    font-family: Lato-Bold;
-    font-size: 12px;
-    color: #224364;
-    
-}
 
-#rate {
-    width: 50%;
-}
 
 
 
 /*/ * view all memes styles * /*/
-.work-item-comments {
-    background-color: #DDD;
-    border: 2px solid #224364;
-    margin-bottom: 30px;
-    padding: 30px;
-    border-radius: 20px;
-    font: Lato-Bold bold;
-}
-.work-text {
-    font-size: 18px;
-    vertical-align: central;
-    text-align: center;
-    padding: 15px 10px;
-}
 
-.work-img {
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-
-.work-img:hover {
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border: 1px solid #224364;
-    box-shadow: 0px 2px 5px 5px #224364;
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-
-.work-item {
-    background-color: #DDD;
-    border: 2px solid #224364;
-    margin-bottom: 30px;
-    margin: 15px 4%;
-    padding: 10px;
-    border-radius: 20px;
-    font: Lato-Bold bold;
-}
-
-    .work-item > a > img {
-        border-radius: 10px;
-    }
-
-    .work-item > div {
-        font-family: Lato-Bold;
-    }
-
-    .work-item a {
-        border: none;
-        text-align: center;
-    }
-
-        .work-item a img {
-            margin-bottom: 10px;
-            float: left;
-            border: 1px solid transparent;
-            -webkit-transition: 0.5s;
-            -o-transition: 0.5s;
-            transition: 0.5s;
-        }
-
-        .work-item a h3 {
-            font-size: 20px;
-            color: #000;
-            margin-bottom: 10px;
-        }
-
-        .work-item a p {
-            font-size: 14px;
-            color: #cccccc;
-            margin-bottom: 0;
-        }
-
-        .work-item a:hover, .work-item a:active, .work-item a:focus {
-            text-decoration: none;
-        }
-
-            .work-item a:hover img, .work-item a:active img, .work-item a:focus img {
-                border: 1px solid #224364;
-                box-shadow: 0px 2px 5px 5px #224364;
-                opacity: 0.8;
-                cursor: pointer;
-            }
 /*/ * Set padding to keep content from hitting the edges * /*/
 .body-content {
     padding-left: 15px;
@@ -497,12 +516,7 @@ textarea {
 }
 
 
-#downloads {
-    width: 30px;
-    height: 30px;
-    background: url("/Images/downloads.png");
-    margin-top: 0.5em;
-}
+
 
 #homelogo1 {
     display: inline-block;
@@ -811,16 +825,7 @@ a.footer-link {
     width: 30%;
 }
 
-#comment-view {
-    background: #DDD;
-    width: auto;
-    height: auto;
-    opacity: 0.9;
-    border-radius: 10px;
-    color: #000;
-    border: 2px solid rgb(35,68,100);
-    margin-bottom: 10px;
-}
+
 
 #createComment{
     font-family: Lato-Bold;
