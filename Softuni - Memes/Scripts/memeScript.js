@@ -47,6 +47,7 @@ window.onload = (function () {
     ctx.textAlign = "center";
     ctx.lineWidth = 2;
     wrapTopText(ctx, "Upload image or choose from given below", canvas.width / 2, canvas.height / 3, canvas.width - 60, 70);
+    document.getElementById('preview').setAttribute("src", document.getElementById('canvas').toDataURL());
 })
 // Draw in canvas tag
 lines = 0;
@@ -62,6 +63,8 @@ function draw(text1, text2, size1, size2, img) {
         ctx.font = size2 + 'px impact';
         ctx.font = 'impact';
         wrapBottomText(ctx, text2, canvas.width / 2, canvas.height - lines * (size2 - 10) - 10, canvas.width - 60, size2 - 10);
+        
+        document.getElementById('preview').setAttribute("src", document.getElementById('canvas').toDataURL());
     }
 }
 

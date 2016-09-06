@@ -78,6 +78,54 @@ body {
 
 
 /* Content styles*/
+#preview {
+    border: 2px solid #224364;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+    .inputfile + label {
+        vertical-align: middle;
+        width: 200px;
+        line-height: 18px;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 1.25em;
+        font-weight: 700;
+        color: white;
+        background-color: #ffa000;
+        display: inline-block;
+    }
+
+        .inputfile:focus + label,
+        .inputfile + label:hover {
+            border: 1px solid #224364;
+            background-color: white;
+            color: #224364;
+        }
+
+    .inputfile + label {
+        cursor: pointer;
+    }
+
+
+#chose-file-style {
+    background-color: #224364;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(35,68,100);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 2px;
+}
+
 .meme-button {
     border: none !important;
     border-radius: 10px;
@@ -220,7 +268,66 @@ body {
     color: #000;
     border: 2px solid rgb(35,68,100);
     margin-bottom: 10px;
-} 
+}
+
+.templates {
+    color: #224364;
+    font-family: Lato-Bold;
+    font-size: 18px;
+}
+
+#chose-fail-style > div > input {
+    background-color: rgb(35,68,100);
+    color: #ffffff;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
+}
+
+
+.panel-body {
+    height: 200px;
+}
+
+.choose-button {
+    background-color: rgb(255,160,0);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 25px;
+    border-radius: 8px;
+    box-shadow: 2px;
+}
+
+    .choose-button:hover {
+        background-color: white;
+        color: #224364;
+        box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
+    }
+
+#create-greetings {
+    color: #224364;
+}
+
+.import {
+    color: white;
+}
+
+#canvas-text {
+    color: #224364;
+    top: 13px;
+}
+
+.new-button-create {
+    border-radius: 5px;
+    background: #ffa000;
+    color: white;
+    font-family: Oswald;
+    font: 20px Lato-Bold;
+}
+
+    .new-button-create:hover {
+        background: #fff;
+        color: #224364;
+    }
 /* Footer */
 footer {
     background-color: #224364;
@@ -317,7 +424,38 @@ iframe {
         cursor: pointer;
     }
 
-/*#chose-file-style {
+
+
+.tb {
+    width: 30%;
+    margin-top: 10px;
+}
+
+@media (min-width:320px) { 
+    .tb {
+    width: 100%;
+} }
+@media (min-width:481px) { 
+    .tb {
+    width: 100%;
+}
+}
+@media (min-width:641px) { 
+    .tb {
+    width: 100%;
+}
+}
+
+
+#createComment {
+    font-family: Lato-Bold;
+}
+
+#label {
+    font-family: Lato-Bold;
+    font-size: 15pt;
+    color: #224364;
+    /*#chose-file-style {
         background-color: #224364;
         font-size: 16px;
         font-weight: bold;
@@ -682,38 +820,7 @@ textarea {
     font: 15px Lato-Bold;
 }
 
-.inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
 
-.inputfile + label {
-    vertical-align: middle;
-    width: 200px;
-    line-height: 18px;
-     padding: 10px;
-    border-radius: 10px;
-    font-size: 1.25em;
-    font-weight: 700;
-    color: white;
-    background-color: #ffa000;
-    display: inline-block;
-}
-
-.inputfile:focus + label,
-.inputfile + label:hover {
-    border: 1px solid #224364;
-    background-color: white;
-    color: #224364;
-}
-
-.inputfile + label {
-	cursor: pointer; /*/ * "hand" cursor * /*/
-}
 
 .snapshot {
     text-decoration: none !important;
@@ -757,7 +864,7 @@ textarea {
     font: 17px Lato-Bold;
 }
 
-/*/ *---------------------Loading animation------------------------* /*/
+/*/ *---------------------Loading animation------------------------*; /*/
 #loader {
     position: absolute;
     left: 50%;
@@ -821,19 +928,5 @@ a.footer-link {
     margin-right: 10em;
 }
 
-.tb {
-    width: 30%;
-}
 
-
-
-#createComment{
-    font-family: Lato-Bold;
-}
-
-#label{
-    font-family: Lato-Bold;
-    font-size: 15pt;
-    color: #224364;
 } */
-
