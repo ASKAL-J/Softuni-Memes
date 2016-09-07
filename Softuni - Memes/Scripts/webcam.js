@@ -258,7 +258,7 @@ var Webcam = {
 
 		if (this.userMedia !== true) {
 			// call for turn off camera in flash
-			this.getMovie()._releaseCamera;
+			this.getMovie()._releaseCamera();
 		}
 
 		if (this.container) {
