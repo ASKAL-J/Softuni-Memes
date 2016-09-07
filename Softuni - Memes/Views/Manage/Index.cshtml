@@ -3,27 +3,29 @@
     ViewBag.Title = "Manage";
 }
 
-<div class="wrapper">
-    <h2 style="font-family: Lato; color: #224364">@ViewBag.Title</h2>
-    <p class="text-success">@ViewBag.StatusMessage</p>
-    <div>
-        <h4 style="font-family: Lato; color: #224364">Change your account settings</h4>
-        <hr/>
-        <div class="div-horizontal">
-            <div>
-                
-                @if (Model.HasPassword)
-                {
-                    <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("ChangePassword", "Manage")'">Change your password</button>
-                   
-                }
-                else
-                {
-                    @Html.ActionLink("Create", "SetPassword")
-                }
-                
-                <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("ChangeFirstName", "Manage")'">Change your First Name</button>
-                
+<div class="content container">
+    <div class="wrapper text-center">
+        <h2 style="font-family: Lato; color: #224364">@ViewBag.Title</h2>
+        <p class="text-success">@ViewBag.StatusMessage</p>
+        <div>
+            <h4 style="font-family: Lato; color: #224364">Change your account settings</h4>
+            <hr />
+            <div class="div-horizontal">
+                <div>
+
+                    @if (Model.HasPassword)
+                    {
+                        <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("ChangePassword", "Manage")'">Change your password</button>
+
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Create", "SetPassword")
+                    }
+
+                    <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("ChangeFirstName", "Manage")'">Change your First Name</button>
+
+                </div>
             </div>
         </div>
     </div>
