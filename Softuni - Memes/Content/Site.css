@@ -284,7 +284,7 @@ body {
 
 
 .panel-body {
-    height: 200px;
+    height: 100%;
 }
 
 .choose-button {
@@ -431,26 +431,6 @@ iframe {
     }
 
 
-
-.tb {
-    width: 30%;
-    margin-top: 10px;
-}
-
-@media (min-width:320px) { 
-    .tb {
-    width: 100%;
-} }
-@media (min-width:481px) { 
-    .tb {
-    width: 100%;
-}
-}
-@media (min-width:641px) { 
-    .tb {
-    width: 100%;
-}
-}
 
 
 #createComment {

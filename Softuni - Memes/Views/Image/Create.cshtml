@@ -32,11 +32,10 @@
 
                                 <span class="close">×</span>
                                 <div class="row">
-                                    <div class="col-md-2" id="my_camera" style="width: 100px; height:100px;"></div>
-                                    <div class="col-md-offset-1 col-md-7" id="my_result" style="border: 1px solid black; padding: 0px 0px; width: 600px; height:500px;"></div>
+                                    <div class="col-md-offset-5 col-md-2" id="my_camera" style="width: 100px; height:100px;"></div>
+                                    <div class="col-md-offset-1 col-md-7" id="my_result" style="width: 600px; height:500px;" hidden></div>
                                 </div>
                                 <br />
-                                <a class="snapshot" href="javascript:void(import_image())">OK</a>
                                 <a class="snapshot" href="javascript:void(take_snapshot())">Take snapshot</a>
                             </div>
                         </div>
@@ -44,38 +43,36 @@
                 </div>
                 <aside id="aside" hidden>
                     <a href="#" id="download"><img src="~/Images/downloads.png" /></a><br />
-                    <div class="row" style="width: 90%">
-                        <div class="col-md-offset-1 col-md-3 control-label" id="canvas-text">
-                            <strong>Top text:</strong>
+                    <div class="form-inline">
+                        <div class="col-md-offset-2 col-md-8 form-group">
+                            <input class="form-control tb" id="text-box1" type="text" placeholder="Top Text"><input class="form-control tb" id="size-font1" type="number" value="60" min="40" max="80" style="width: 60px; margin-left: 0;"><br>
                         </div>
-                        <input class="col-md-3 form-control tb" id="text-box1" type="text"><input class="col-md-2 form-control tb" id="size-font1" type="number" value="60" min="40" max="80" style="width: 60px; margin-left: 0;"><br>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-offset-4 col-md-4 control-label" id="canvas-text" style="width: 90%">
-                            <strong>Bottom text:</strong>
+                        <div class="col-md-offset-2 col-md-8 form-group">
+                            <input class="form-control tb" id="text-box2" type="text" placeholder="Bottom Text"><input class="form-control tb" id="size-font2" type="number" value="60" min="40" max="80" style="width: 60px; margin-left: 0;"><br>
                         </div>
-                        <input class="col-md-3 form-control tb" id="text-box2" type="text"><input class="col-md-2 form-control tb" id="size-font2" type="number" value="60" min="40" max="80" style="width: 60px; margin-left: 0;"><br>
-                    </div>
-
-                    <div class="form-group">
-                        @if (Request.IsAuthenticated)
-                        {
-                            <div>
-                                <input type="button" value="Create" class="new-button-create" id="create-button" />
-                            </div>
-                        }
+                        <div class="col-md-offset-5 col-md-2 form-group">
+                            @if (Request.IsAuthenticated)
+                            {
+                                <div>
+                                    <input type="button" value="Create" class="new-button-create" id="create-button" />
+                                </div>
+                            }
+                        </div>
                     </div>
                 </aside>
-                <hr style="border-color: #224364" />
-                <div class="templates">You can choose from our favourite SoftUni templates</div>
+                <div class="col-md-12">
+                    <hr style="border-color: #224364" />
+                    <div class="templates">You can choose from our favourite SoftUni templates</div>
+                </div>
+               
                 <br />
                 <div class="col-md-offset-1 container">
                     <div class="row">
                         <div class="col-md-3">
                             <div class="panel panel-primary">
-                                <div class="panel-heading" style="background-color: rgb(35,68,100)">Божо</div>
-                                <div class="panel-body"><img src="~/Images/7.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
-                                <div class="panel-footer"><button type="button" id="7" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
+                                <div class="panel-heading" style="background-color: rgb(35,68,100)">Наков</div>
+                                <div class="panel-body"><img src="~/Images/1.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
+                                <div class="panel-footer"><button type="button" id="1" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -95,10 +92,11 @@
                     </div>
                     <div class="row">
                         <div class="col-md-3">
+                           
                             <div class="panel panel-primary">
-                                <div class="panel-heading" style="background-color: rgb(35,68,100)">Наков</div>
-                                <div class="panel-body"><img src="~/Images/1.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
-                                <div class="panel-footer"><button type="button" id="1" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
+                                <div class="panel-heading" style="background-color: rgb(35,68,100)">Божо</div>
+                                <div class="panel-body"><img src="~/Images/7.jpg" class="img-responsive" style="width:100%; height:100%" alt="Image"></div>
+                                <div class="panel-footer"><button type="button" id="7" class="choose-button" onClick="reply_click(this.id)">Choose</button></div>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -152,6 +150,7 @@
     function take_snapshot() {
         Webcam.snap(function (data_uri) {
             document.getElementById('my_result').innerHTML = '<img src="' + data_uri + '"/>';
+            import_image();
         });
     }
 
