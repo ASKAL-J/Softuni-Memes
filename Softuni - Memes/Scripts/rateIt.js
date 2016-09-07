@@ -1,5 +1,5 @@
 ﻿$('.rate').on('click', function () {
-    var rankId = $(this).prev().children().last()[0].id;
+    var rankId = $(this).parent().parent().children().first().children().children().last()[0].id;
     var score = $("#" + rankId).val();
     var imageId = rankId.split('-')[1];
     

@@ -9,7 +9,7 @@
 <div class="content container">
     <div class="wrapper text-center">
         <div id="memesTitle">@ViewBag.Title</div>
-        <br/>
+        <br />
         <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
         <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("Create", "Image")'">Create new</button>
@@ -18,31 +18,32 @@
             @foreach (var item in ViewBag.OnePageOfImages)
             {
                 <div class="col-md-3 work-item">
-                       
+
                     <div class="work-title work-img">
                         <img src="@Url.Action("GetImage", "Image", new {id = item.Id})" onclick="location.href = '@Url.Action($"Details/{item.Id}")'" class="img-responsive" />
-                        @if (Request.IsAuthenticated)
-                        {
-                            <div class="col-md-4 average">
-                                Average score: @($"{item.AverageScore:F1}")/@item.NumberOfPeopleVoted
-                            </div>
+                    </div>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <div class="col-md-4 average">
+                            Average score: @($"{item.AverageScore:F1}")/@item.NumberOfPeopleVoted
+                        </div>
                             <div class="col-md-4">
                                 <div class="col-md-6">
                                     <input id="rank-@item.Id" class="rating rating-loading" value="@($"{item.AverageScore:F1}")" data-step="1.0" data-max="5" data-min="0" data-show-clear="false" data-size="xxs" data-show-caption="false" />
                                 </div>
                                 <div class="col-md-6">
-                                    <input class="btn btn-primary" type="submit" value="Rate" />
+                                    <input id="rate" class="rate btn btn-primary" type="submit" value="Rate" />
                                 </div>
 
                             </div>
-                        }
-                        else
-                        {
-                            <div class="col-md-4 average">
-                                Average score: @($"{item.AverageScore:F1}")/@item.NumberOfPeopleVoted
-                            </div>
-                        }
-                    </div>
+                    }
+                    else
+                    {
+                        <div class="col-md-4 average">
+                            Average score: @($"{item.AverageScore:F1}")/@item.NumberOfPeopleVoted
+                        </div>
+                    }
+
                 </div>
             }
         </div>
@@ -51,7 +52,7 @@
 </div>
 @section Styles {
     <link href="@Url.Content("~/Content/star-rating.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css"/>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

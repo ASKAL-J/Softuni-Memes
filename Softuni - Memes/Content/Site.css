@@ -181,6 +181,7 @@ body {
     padding: 10px;
     border-radius: 20px;
     font: Lato-Bold bold;
+    
 }
 
     .work-item > a > img {
@@ -284,7 +285,7 @@ body {
 
 
 .panel-body {
-    height: 100%;
+    height: 250px;
 }
 
 .choose-button {
