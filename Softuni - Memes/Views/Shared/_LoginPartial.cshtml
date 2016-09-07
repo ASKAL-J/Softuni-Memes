@@ -12,15 +12,17 @@
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
+                <div style="padding-left: 40px; color: #224364">My account</div>
                 <li>
-                    <a href="#" onclick="location.href = '@Url.Action("Profile", "Account")'">Profile</a>
+                    <a style="margin: 5px;" class="btn btn-primary" href="#" onclick="location.href = '@Url.Action("Profile", "Account")'">Profile</a>
                 </li>
                 <li>
-                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-left" }))
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new {id = "logoutForm", @class = "navbar-left"}))
                     {
-                        @Html.AntiForgeryToken();
+                        @Html.AntiForgeryToken()
+                        ;
                         <a id="menuLogout" href="javascript:document.getElementById('logoutForm').submit()">
-                            <button style="margin: 10px" type='button' class='btn btn-primary' id="button">Log out</button>
+                            <button style="margin: 5px; width: 150px;" type='button' class='btn btn-primary' id="button">Log out</button>
                         </a>
                     }
                 </li>

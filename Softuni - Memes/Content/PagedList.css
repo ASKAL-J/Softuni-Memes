@@ -19,7 +19,7 @@
             text-decoration: none;
             background-color: #ffffff;
             border: 1px solid #dddddd;
-            color: #224364;
+            color: #286090;
         }
 
         .pagination > li:first-child > a,
@@ -51,8 +51,8 @@
         z-index: 2;
         color: #ffffff;
         cursor: default;
-        background-color: #224364;
-        border-color: #224364;
+        background-color: #286090;
+        border-color: #286090;
     }
 
     .pagination > .disabled > span,

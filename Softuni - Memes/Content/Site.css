@@ -167,8 +167,8 @@ body {
     .work-img:hover {
         margin-bottom: 10px;
         border-radius: 10px;
-        border: 1px solid #224364;
-        box-shadow: 0px 2px 5px 5px #224364;
+        border: 0.2px #f0fff0;
+        box-shadow: 0px 2px 5px 5px #f0fff0;
         opacity: 0.8;
         cursor: pointer;
     }
@@ -314,6 +314,12 @@ body {
 #canvas-text {
     color: #224364;
     top: 13px;
+}
+
+#memesTitle {
+    color: #224364;
+    font-size: 2em;
+    font-family: Lato-Bold;
 }
 
 .new-button-create {
@@ -536,12 +542,7 @@ iframe {
     color: #224364;
 }
 
-#memesTitle {
-    color: #224364;
-    font-size: 2em;
-    font-family: Lato-Bold;
-    
-}
+
 
 
 

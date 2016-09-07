@@ -9,6 +9,7 @@
 <div class="content container">
     <div class="wrapper text-center">
         <div id="memesTitle">@ViewBag.Title</div>
+        <br/>
         <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
         <button type='button' class='btn btn-primary' id="button" onclick="location.href = '@Url.Action("Create", "Image")'">Create new</button>
@@ -18,7 +19,7 @@
             {
                 <div class="col-md-3 work-item">
                        
-                    <div class="work-title">
+                    <div class="work-title work-img">
                         <img src="@Url.Action("GetImage", "Image", new {id = item.Id})" onclick="location.href = '@Url.Action($"Details/{item.Id}")'" class="img-responsive" />
                         @if (Request.IsAuthenticated)
                         {
@@ -50,7 +51,7 @@
 </div>
 @section Styles {
     <link href="@Url.Content("~/Content/star-rating.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css"/>
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
