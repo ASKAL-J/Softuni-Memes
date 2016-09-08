@@ -1,4 +1,5 @@
-﻿using Softuni___Memes.Extensions;
+﻿using Microsoft.AspNet.Identity;
+using Softuni___Memes.Extensions;
 using Softuni___Memes.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,6 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
 using X.PagedList;
 
 namespace Softuni___Memes.Controllers
@@ -152,7 +152,7 @@ namespace Softuni___Memes.Controllers
             if (this.User.Identity.GetUserId() != imageModel.AuthorId)
             {
                 this.AddNotification("You are not authorized to delete this image", NotificationType.ERROR);
-                return RedirectToAction($"Details", new { id = imageModel.Id});
+                return RedirectToAction($"Details", new { id = imageModel.Id });
             }
 
             return View(imageModel);
@@ -173,6 +173,7 @@ namespace Softuni___Memes.Controllers
                 db.Ratings.RemoveRange(ratings);
                 db.SaveChanges();
                 this.AddNotification("Image deleted.", NotificationType.INFO);
+                return RedirectToAction("Index");
             }
 
             return RedirectToAction("Index");

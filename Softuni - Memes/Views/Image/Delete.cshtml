@@ -3,20 +3,25 @@
 @{
     ViewBag.Title = "Delete";
 }
-<div class="content container">
-<div class="wrapper text-center">
-    <h3 style="color: #2f4f4f">Are you sure you want to delete this image?</h3>
-    <hr style="border-color: #2f4f4f"/>
-    <img src="@Url.Action("GetImage", "Image", new {id = Model.Id})"/>
 
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <br/>
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-primary"/> |
-            @Html.ActionLink("Back to List", "Index")
+<div class="content container">
+    <div class="wrapper text-center">
+        <h3 style="color: #2f4f4f">Are you sure you want to delete this image?</h3>
+        <hr style="border-color: #2f4f4f" />
+
+        <div class="row">
+            <img class="col-md-offset-2 col-md-8 img-responsive" src="@Url.Action("GetImage", "Image", new {id = Model.Id})" />
+            <div class="form-group col-md-12">
+                @using (Html.BeginForm())
+            {
+                    @Html.AntiForgeryToken()
+                    <br />
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-primary" /> |
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+                }
+            </div>
         </div>
-    }
-</div>
     </div>
+</div>

@@ -23,6 +23,12 @@ body {
 }
 /* Header */
 
+#registerTitle {
+    text-align: center;
+    font-family: Lato-Bold;
+    color: #224364;
+}
+
 .dropdown-menu>li>a {
     color: #fff;
     height: 34px;
@@ -50,6 +56,28 @@ body {
     color: #e6e6e6;
     margin-right: 5px;
 }
+
+#createAccount {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Lato-Bold;
+    color: #224364;
+}
+
+#registerNewUserLink {
+    font-family: Lato-Bold;
+    text-align: center;
+    font: 20px Lato-Bold;
+}
+
+    #registerNewUserLink:hover {
+        font-family: Lato-Bold;
+        color: #224364;
+        text-decoration: underline;
+        text-align: center;
+        font: 20px Lato-Bold;
+        cursor: pointer;
+    }
 
     .nav > li > a:hover {
         color: #ffffff;
@@ -652,12 +680,6 @@ textarea {
 }
 
 
-#registerTitle {
-    margin-top: 80px;
-    text-align: center;
-    font-family: Lato-Bold;
-    color: white;
-}
 
 
 #bodyRegister {
@@ -719,11 +741,6 @@ textarea {
         margin-left: -5.3em;
     }
 
-#createAccount {
-    margin-top: 20px;
-    text-align: center;
-    font-family: Lato-Bold;
-}
 
 
 
@@ -788,20 +805,7 @@ textarea {
     background-size: cover;
 }
 
-#registerNewUserLink {
-    font-family: Lato-Bold;
-    text-align: center;
-    font: 20px Lato-Bold;
-}
 
-    #registerNewUserLink:hover {
-        font-family: Lato-Bold;
-        color: #fff;
-        text-decoration: underline;
-        text-align: center;
-        font: 20px Lato-Bold;
-        cursor: pointer;
-    }
 
 #rememberMeCheckbox {
     font: 15px Lato-Bold;
