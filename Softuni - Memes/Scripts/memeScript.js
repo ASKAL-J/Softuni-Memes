@@ -26,7 +26,7 @@ window.onclick = function (event) {
 function import_image() {
     var childs = document.getElementById('my_result').childNodes;
     var img = childs[0].src;
-    image = new Image();
+    var image = new Image();
     image.src = img;
     $('#text-box1').val('');
     $('#text-box2').val('');
