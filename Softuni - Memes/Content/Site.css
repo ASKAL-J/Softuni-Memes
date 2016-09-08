@@ -23,6 +23,11 @@ body {
 }
 /* Header */
 
+.dropdown-menu>li>a {
+    color: #fff;
+    height: 34px;
+}
+
 .navbar-brand {
     padding: 5px 15px;
 }
